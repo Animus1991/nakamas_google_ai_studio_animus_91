@@ -1,0 +1,6 @@
+{
+  "name": "Parea - Event Companion App",
+  "description": "An interest-first, event-driven social experience platform to find small, safe groups for attending real-world events.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": []
+}
