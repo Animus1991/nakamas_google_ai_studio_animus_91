@@ -531,7 +531,7 @@ export default function EventDetailBentoDark() {
         {/* Right Column: Groups & Actions */}
         <div className="space-y-6 md:col-span-2 lg:col-span-1">
           <div className="rounded-xl border border-gray-700 bg-gray-800 border-gray-700 text-white p-6 shadow-sm sticky top-24">
-            <h3 className="text-[11px] font-bold text-[#6B7280] tracking-wide mb-4">{t('Αυτόματη προτεινόμενη Μικρών Ομάδων', 'Auto-Suggest Small Groups')}</h3>
+            <h3 className="text-[11px] font-bold text-white tracking-wide mb-4">{t('Αυτόματη προτεινόμενη Μικρών Ομάδων', 'Auto-Suggest Small Groups')}</h3>
             <div className="mb-4 bg-emerald-900/30 border border-emerald-800 rounded-lg p-3 flex flex-col xl:flex-row xl:justify-between items-start xl:items-center gap-2 text-sm font-bold text-emerald-400">
               <span className="flex items-center gap-1.5"><Ticket className="h-4 w-4" /> {t('Συνολική Χωρητικότητα Εκδήλωσης', 'Overall Event Capacity')}</span>
               <span className="text-emerald-400 xl:text-emerald-400 bg-gray-800 border-gray-700 text-white xl:bg-transparent px-2 py-0.5 xl:p-0 rounded-full text-xs xl:text-sm border border-emerald-800 xl:border-transparent">{Math.max(0, spotsLeftEvent)} {t('θέσεις έμειναν', 'spots left')}</span>

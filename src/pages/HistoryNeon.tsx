@@ -23,7 +23,7 @@ export default function HistoryNeon() {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
           <h1 className="text-[20.104264919475px] md:text-[26.7902365993px] font-bold text-[#111827]">{t(`Ιστορικό`, `History`)}</h1>
-          <p className="text-gray-900 font-medium text-[13.551608211075px] md:text-[14.626916949961px] mt-1">{t(`Εκδηλώσεις που έχετε παρακολουθήσει`, `Events you've attended`)}</p>
+          <p className="text-black font-medium text-[13.551608211075px] md:text-[14.626916949961px] mt-1">{t(`Εκδηλώσεις που έχετε παρακολουθήσει`, `Events you've attended`)}</p>
         </div>
       </div>
 
@@ -31,15 +31,15 @@ export default function HistoryNeon() {
       <div className="grid grid-cols-3 gap-3">
         <Card className="p-3 text-center">
           <p className="text-[23px] font-black text-[#111827]">3</p>
-          <p className="text-[11.2px] text-gray-900 font-medium tracking-wide">{t(`Εκδηλώσεις`, `Events`)}</p>
+          <p className="text-[11.2px] text-black font-medium tracking-wide">{t(`Εκδηλώσεις`, `Events`)}</p>
         </Card>
         <Card className="p-3 text-center">
           <p className="text-[23px] font-black text-[#111827]">4.5</p>
-          <p className="text-[11.2px] text-gray-900 font-medium tracking-wide">{t(`Μ.Ο. Βαθμολογία`, `Avg Rating`)}</p>
+          <p className="text-[11.2px] text-black font-medium tracking-wide">{t(`Μ.Ο. Βαθμολογία`, `Avg Rating`)}</p>
         </Card>
         <Card className="p-3 text-center">
           <p className="text-[23px] font-black text-[#111827]">14</p>
-          <p className="text-[11.2px] text-gray-900 font-medium tracking-wide">{t(`Άτομα`, `People Met`)}</p>
+          <p className="text-[11.2px] text-black font-medium tracking-wide">{t(`Άτομα`, `People Met`)}</p>
         </Card>
       </div>
 
@@ -54,7 +54,7 @@ export default function HistoryNeon() {
                   <Badge variant="success" className="text-[12.1125px]">{t(`Ολοκληρώθηκε`, `Completed`)}</Badge>
                 </div>
                 <h3 className="font-bold text-[16.75971px] text-[#111827] truncate">{event.title}</h3>
-                <div className="flex flex-wrap items-center gap-3 mt-1.5 text-[12.1125px] text-gray-900 font-medium">
+                <div className="flex flex-wrap items-center gap-3 mt-1.5 text-[12.1125px] text-black font-medium">
                   <span className="flex items-center gap-1"><Calendar className="w-3 h-3" />{format(parseISO(event.date), 'dd MMM yyyy')}</span>
                   <span className="flex items-center gap-1"><MapPin className="w-3 h-3" />{event.locationArea}</span>
                   {feedbackStatus[event.id]?.given && feedbackStatus[event.id]?.rating && (

@@ -26,7 +26,7 @@ export default function CategoriesBentoDark() {
     { id: '8', name: t('Επιτραπεζια', 'Board games'), icon: Gamepad2, count: 18, color: 'text--400', bg: 'bg-orange-50', border: 'border-orange-100' },
     { id: '9', name: t('Λεσχες βιβλιου', 'Book clubs'), icon: BookOpen, count: 6, color: 'text--400', bg: 'bg-emerald-50', border: 'border-emerald-100' },
     { id: '10', name: t('Ανταλλαγη γλωσσων', 'Language exchange'), icon: Languages, count: 14, color: 'text-emerald-400', bg: 'bg-emerald-900/30', border: 'border-emerald-800' },
-    { id: '11', name: t('Φιλοσοφια/Επιστημη', 'Philosophy/Science'), icon: BrainCircuit, count: 5, color: 'text-slate-600', bg: 'bg-slate-50', border: 'border-slate-100' },
+    { id: '11', name: t('Φιλοσοφια/Επιστημη', 'Philosophy/Science'), icon: BrainCircuit, count: 5, color: 'text-white', bg: 'bg-slate-50', border: 'border-slate-100' },
     { id: '12', name: t('Περιπατοι στην πολη', 'City walks'), icon: MapPin, count: 20, color: 'text--400', bg: 'bg-teal-50', border: 'border-teal-100' },
     { id: '13', name: t('Πεζοπορια', 'Hiking'), icon: Mountain || Map, count: 32, color: 'text--400', bg: 'bg-green-50', border: 'border-green-100' },
     { id: '14', name: t('Κοντινες αποδρασεις', 'Nearby escapes'), icon: Car, count: 7, color: 'text-sky-600', bg: 'bg-sky-50', border: 'border-sky-100' },
@@ -143,7 +143,7 @@ export default function CategoriesBentoDark() {
           <div className="flex gap-2 overflow-x-auto pb-2 noscrollbar items-center w-full md:w-auto">
             {/* Sort Dropdown */}
             <select 
-              className="text-xs border border-gray-700 rounded-lg shadow-sm focus:border-cyan-500 focus:ring-cyan-500 bg-gray-800 border-gray-700 text-white hover:bg-gray-900 py-1.5 px-3 font-medium outline-none cursor-pointer h-8 shrink-0 appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%236b7280%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[position:right_0.5rem_center] pr-7"
+              className="text-xs border border-gray-700 rounded-lg shadow-sm focus:border-cyan-500 focus:ring-cyan-500 bg-gray-800 border-gray-700 text-white hover:bg-gray-900 py-1.5 px-3 font-medium outline-none cursor-pointer h-8 shrink-0 appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[position:right_0.5rem_center] pr-7"
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
             >

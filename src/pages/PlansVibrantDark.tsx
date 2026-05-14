@@ -87,7 +87,7 @@ export default function PlansVibrantDark() {
               <div className="flex justify-between items-start gap-2 mb-2">
                 <h3 className="font-bold text-[19px] text-white">{event.title}</h3>
                 <div className="text-right shrink-0">
-                  <div className="text-[17.099999999999998px] font-bold text-gray-100">{format(parseISO(event.date), 'MMM d')}</div>
+                  <div className="text-[17.099999999999998px] font-bold text-white">{format(parseISO(event.date), 'MMM d')}</div>
                   <div className="text-[14.107499999999998px] font-medium text-white">{event.time}</div>
                   {(() => {
                     const days = differenceInDays(parseISO(event.date), new Date());
@@ -159,7 +159,7 @@ export default function PlansVibrantDark() {
               <div className="flex justify-between items-start gap-2 mb-2">
                 <h3 className="font-bold text-[19px] text-white opacity-80">{event.title}</h3>
                 <div className="text-right shrink-0">
-                  <div className="text-[17.099999999999998px] font-bold text-gray-100">{format(parseISO(event.date), 'MMM d')}</div>
+                  <div className="text-[17.099999999999998px] font-bold text-white">{format(parseISO(event.date), 'MMM d')}</div>
                 </div>
               </div>
               

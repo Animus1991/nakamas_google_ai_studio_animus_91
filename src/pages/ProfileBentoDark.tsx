@@ -279,7 +279,7 @@ export default function ProfileBentoDark() {
         </div>
 
         <div className="mt-6 pt-6 border-t border-gray-800">
-          <h3 className="text-xs font-bold text-[#6B7280] capitalize tracking-wide mb-3">
+          <h3 className="text-xs font-bold text-white capitalize tracking-wide mb-3">
             {t(
               "Επίπεδα Ταυτότητας & Δικαιώματα",
               "Identity Tiers & Permissions",
@@ -340,7 +340,7 @@ export default function ProfileBentoDark() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-800">
-          <h3 className="text-xs font-bold text-[#6B7280] capitalize tracking-wide mb-3">
+          <h3 className="text-xs font-bold text-white capitalize tracking-wide mb-3">
             {t("Προτιμήσεις Ομάδας", "Group Preferences")}
           </h3>
           <div className="space-y-4">
@@ -395,7 +395,7 @@ export default function ProfileBentoDark() {
 
         <div className="mt-8 pt-6 border-t border-gray-800">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-xs font-bold text-[#6B7280] capitalize tracking-wide">
+            <h3 className="text-xs font-bold text-white capitalize tracking-wide">
               {t("Ιστορικό & Αξιολογήσεις", "History & Reviews")}
             </h3>
             <Button
@@ -438,7 +438,7 @@ export default function ProfileBentoDark() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-800">
-          <h3 className="text-xs font-bold text-[#6B7280] capitalize tracking-wide mb-3">
+          <h3 className="text-xs font-bold text-white capitalize tracking-wide mb-3">
             {t("Ενδιαφέροντα", "Interests")}
           </h3>
           <div className="flex flex-wrap gap-2 items-center">
@@ -513,7 +513,7 @@ export default function ProfileBentoDark() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-800">
-          <h3 className="text-xs font-bold text-[#6B7280] capitalize tracking-wide mb-3">
+          <h3 className="text-xs font-bold text-white capitalize tracking-wide mb-3">
             {t("Προτιμήσεις Διαθεσιμότητας", "Availability Preferences")}
           </h3>
           <div className="flex flex-wrap gap-2">
@@ -532,7 +532,7 @@ export default function ProfileBentoDark() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-800">
-          <h3 className="text-xs font-bold text-[#6B7280] capitalize tracking-wide mb-3">
+          <h3 className="text-xs font-bold text-white capitalize tracking-wide mb-3">
             {t("Ορατότητα, Συνδέσεις & Απόρρητο", "Visibility, Connections & Privacy")}
           </h3>
           <div className="space-y-4">

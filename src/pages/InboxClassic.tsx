@@ -62,12 +62,12 @@ export default function InboxClassic() {
         <div className="flex items-end justify-between mb-4">
           <div>
             <h1 className="text-[20.104264919475px] md:text-[24.11121293937px] font-bold text-[#111827] tracking-tight">{t(`Μηνύματα`, `Messages`)}</h1>
-            <p className="text-gray-900 font-medium text-[12.1964473899675px] md:text-[14.626916949961px] mt-1">{t(`Συνομιλίες ομάδων`, `Group conversations`)}</p>
+            <p className="text-black font-medium text-[12.1964473899675px] md:text-[14.626916949961px] mt-1">{t(`Συνομιλίες ομάδων`, `Group conversations`)}</p>
           </div>
         </div>
 
         <div className="relative mb-4">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-900" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-black" />
           <input
             type="text"
             value={search}
@@ -78,10 +78,10 @@ export default function InboxClassic() {
         </div>
 
         <div className="flex bg-gray-100 p-1 rounded-lg w-fit">
-          <button onClick={() => setActiveTab('active')} className={`px-4 py-1.5 rounded-md text-[13.5px] font-bold transition-colors ${activeTab === 'active' ? 'bg-white shadow-sm text-[#111827]' : 'text-gray-900'}`}>
+          <button onClick={() => setActiveTab('active')} className={`px-4 py-1.5 rounded-md text-[13.5px] font-bold transition-colors ${activeTab === 'active' ? 'bg-white shadow-sm text-[#111827]' : 'text-black'}`}>
             {t(`Ενεργές`, `Active`)}
           </button>
-          <button onClick={() => setActiveTab('past')} className={`px-4 py-1.5 rounded-md text-[13.5px] font-bold transition-colors ${activeTab === 'past' ? 'bg-white shadow-sm text-[#111827]' : 'text-gray-900'}`}>
+          <button onClick={() => setActiveTab('past')} className={`px-4 py-1.5 rounded-md text-[13.5px] font-bold transition-colors ${activeTab === 'past' ? 'bg-white shadow-sm text-[#111827]' : 'text-black'}`}>
             {t(`Παλαιότερες`, `Past`)}
           </button>
         </div>
@@ -90,8 +90,8 @@ export default function InboxClassic() {
       <div className="space-y-2">
         {filteredChats.length === 0 ? (
           <div className="text-center py-12">
-            <MessageSquare className="w-10 h-10 text-gray-900 mx-auto mb-3" />
-            <p className="text-[18px] text-gray-900 font-medium">{t(`Δεν υπάρχουν συνομιλίες`, `No conversations`)}</p>
+            <MessageSquare className="w-10 h-10 text-black mx-auto mb-3" />
+            <p className="text-[18px] text-black font-medium">{t(`Δεν υπάρχουν συνομιλίες`, `No conversations`)}</p>
           </div>
         ) : (
           filteredChats.map(chat => (
@@ -109,8 +109,8 @@ export default function InboxClassic() {
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between">
-                  <h3 className={`text-[14.52px] ${chat.unread > 0 ? 'font-bold text-[#111827]' : 'font-medium text-gray-900'}`}>{chat.title}</h3>
-                  <span className="text-[11.25px] text-gray-900 font-medium shrink-0 ml-2">{chat.time}</span>
+                  <h3 className={`text-[14.52px] ${chat.unread > 0 ? 'font-bold text-[#111827]' : 'font-medium text-black'}`}>{chat.title}</h3>
+                  <span className="text-[11.25px] text-black font-medium shrink-0 ml-2">{chat.time}</span>
                 </div>
                 {chat.isTyping ? (
                   <p className="text-[13.5px] text-cyan-600 font-medium mt-0.5 flex items-center gap-1">
@@ -122,10 +122,10 @@ export default function InboxClassic() {
                     {t(`κάποιος γράφει...`, `someone is typing...`)}
                   </p>
                 ) : (
-                  <p className="text-[12.42px] text-gray-900 truncate mt-0.5">{chat.lastMessage}</p>
+                  <p className="text-[12.42px] text-black truncate mt-0.5">{chat.lastMessage}</p>
                 )}
                 <div className="flex items-center gap-2 mt-1">
-                  <span className="text-[11.25px] text-gray-900 font-medium">{chat.participants} {t(`μέλη`, `members`)}</span>
+                  <span className="text-[11.25px] text-black font-medium">{chat.participants} {t(`μέλη`, `members`)}</span>
                   {chat.online > 0 && <span className="text-[11.25px] text-green-500 font-bold">{chat.online} online</span>}
                   {chat.timeRemaining && <span className="text-[11.25px] text-cyan-600 font-bold flex items-center gap-0.5"><Clock className="w-3 h-3" />{chat.timeRemaining}</span>}
                 </div>

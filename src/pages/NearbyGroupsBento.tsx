@@ -270,7 +270,7 @@ export default function NearbyGroupsBento() {
                 }}
               >
                 {!isSelected && (
-                  <div className="bg-white text-gray-900 text-xs font-bold px-2 py-1 rounded shadow-lg mb-1 group-hover:-translate-y-1 transition-transform whitespace-nowrap border border-gray-200">
+                  <div className="bg-white text-black text-xs font-bold px-2 py-1 rounded shadow-lg mb-1 group-hover:-translate-y-1 transition-transform whitespace-nowrap border border-gray-200">
                     {group.category} • {(1.2 + idx * 0.8).toFixed(1)}km
                   </div>
                 )}
@@ -278,7 +278,7 @@ export default function NearbyGroupsBento() {
                 {isSelected && (
                   <div className="absolute bottom-full mb-2 bg-white rounded-lg shadow-xl border border-gray-200 p-3 w-48 z-20">
                     <button
-                      className="absolute top-1 right-1 text-gray-900 hover:text-gray-900"
+                      className="absolute top-1 right-1 text-black hover:text-black"
                       onClick={(e) => {
                         e.stopPropagation();
                         setSelectedEventId(null);
@@ -286,7 +286,7 @@ export default function NearbyGroupsBento() {
                     >
                       &times;
                     </button>
-                    <div className="font-bold text-[10px] text-gray-900 tracking-widest mb-1">
+                    <div className="font-bold text-[10px] text-black tracking-widest mb-1">
                       {group.category}
                     </div>
                     <GroupImage
@@ -297,12 +297,12 @@ export default function NearbyGroupsBento() {
                     <h3 className="font-bold text-sm text-[#111827] mb-1 line-clamp-1">
                       {group.title}
                     </h3>
-                    <p className="text-xs text-gray-900 mb-3 truncate">
+                    <p className="text-xs text-black mb-3 truncate">
                       <MapPin className="inline w-3 h-3 mr-0.5" />{" "}
                       {group.locationArea}
                     </p>
                     <button
-                      className="w-full bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 text-gray-900 text-[10px] font-bold tracking-wide py-1.5 rounded-md hover:bg-black transition-colors"
+                      className="w-full bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 text-black text-[10px] font-bold tracking-wide py-1.5 rounded-md hover:bg-black transition-colors"
                       onClick={() => navigate(`/events/${group.id}`)}
                     >
                       {t("Προβολή Εκδήλωσης", "View Event")}
@@ -332,7 +332,7 @@ export default function NearbyGroupsBento() {
             <div className="w-32 h-32 border border-blue-500/30 rounded-full absolute bg-blue-500/5 pointer-events-none"></div>
           </div>
 
-          <div className="absolute top-[80px] left-[50%] transform -translate-x-1/2 bg-white/90 backdrop-blur text-gray-900 text-xs px-3 py-1.5 rounded-full border border-gray-200 shadow-sm z-10">
+          <div className="absolute top-[80px] left-[50%] transform -translate-x-1/2 bg-white/90 backdrop-blur text-black text-xs px-3 py-1.5 rounded-full border border-gray-200 shadow-sm z-10">
             {t(
               "Ο διαδραστικός χάρτης απαιτεί API Key της Google Maps",
               "Interactive map requires Google Maps API Key",
@@ -343,7 +343,7 @@ export default function NearbyGroupsBento() {
         {/* Floating Header */}
         <div className="absolute top-4 left-4 right-4 z-10 flex gap-2 pointer-events-none">
           <div className="relative flex-1 max-w-sm pointer-events-auto">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-900" />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-black" />
             <input
               type="text"
               placeholder={t(
@@ -353,7 +353,7 @@ export default function NearbyGroupsBento() {
               className="w-full h-11 pl-10 pr-4 rounded-xl border-0 bg-white/95 backdrop-blur shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-600 text-sm font-medium"
             />
           </div>
-          <button className="h-11 px-4 bg-white/95 backdrop-blur rounded-xl shadow-lg flex items-center justify-center text-gray-900 hover:text-cyan-600 transition-colors pointer-events-auto">
+          <button className="h-11 px-4 bg-white/95 backdrop-blur rounded-xl shadow-lg flex items-center justify-center text-black hover:text-cyan-600 transition-colors pointer-events-auto">
             <SlidersHorizontal className="h-5 w-5" />
           </button>
         </div>
@@ -366,7 +366,7 @@ export default function NearbyGroupsBento() {
             <h2 className="text-xl font-bold text-[#111827]">
               {t("Τοπικές Ομάδες", "Local Groups")}
             </h2>
-            <p className="text-xs text-gray-900 mt-1 font-medium flex items-center gap-1">
+            <p className="text-xs text-black mt-1 font-medium flex items-center gap-1">
               <Navigation className="h-3 w-3" />{" "}
               {t("Εμφάνιση αποτελεσμάτων εντός", "Showing results within")}{" "}
               {radius}
@@ -391,10 +391,10 @@ export default function NearbyGroupsBento() {
               <button className="px-3 py-1.5 bg-cyan-600 text-white rounded-full text-xs font-bold whitespace-nowrap shadow-sm">
                 {t("Όλα", "All Matches")}
               </button>
-              <button className="px-3 py-1.5 bg-gray-50 text-gray-900 border border-gray-200 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-100">
+              <button className="px-3 py-1.5 bg-gray-50 text-black border border-gray-200 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-100">
                 {t("Σήμερα", "Today")}
               </button>
-              <button className="px-3 py-1.5 bg-gray-50 text-gray-900 border border-gray-200 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-100">
+              <button className="px-3 py-1.5 bg-gray-50 text-black border border-gray-200 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-100">
                 {t("Φίλοι Συμμετέχουν", "Friends Going")}
               </button>
             </div>
@@ -426,7 +426,7 @@ export default function NearbyGroupsBento() {
                     <h3 className="font-bold text-sm text-[#111827] line-clamp-1 group-hover:text-cyan-600 transition-colors">
                       {group.title}
                     </h3>
-                    <p className="text-xs text-gray-900 mt-0.5 max-w-[200px] truncate">
+                    <p className="text-xs text-black mt-0.5 max-w-[200px] truncate">
                       {group.locationArea}
                     </p>
                   </div>
@@ -450,12 +450,12 @@ export default function NearbyGroupsBento() {
               <h3 className="text-sm font-bold text-[#111827]">
                 Expand your radius
               </h3>
-              <p className="text-xs text-gray-900 mt-1 mb-4">
+              <p className="text-xs text-black mt-1 mb-4">
                 Discover more local groups by increasing your search area.
               </p>
               <button
                 onClick={() => setRadius(15)}
-                className="text-xs font-bold text-white bg-white text-gray-900 border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] px-4 py-2 rounded-full hover:bg-gray-800 transition-colors"
+                className="text-xs font-bold text-white bg-white text-black border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] px-4 py-2 rounded-full hover:bg-gray-800 transition-colors"
               >
                 Set radius to 15km
               </button>
@@ -481,8 +481,8 @@ export default function NearbyGroupsBento() {
             <div className="w-full h-full flex items-center justify-center bg-[#e5e3df] p-8 text-center">
               <div className="bg-white p-6 rounded-xl shadow-lg max-w-sm border border-red-100">
                 <AlertTriangle className="w-10 h-10 text-red-500 mx-auto mb-3" />
-                <h3 className="font-bold text-gray-900 mb-2">Map Error</h3>
-                <p className="text-xs text-gray-900">
+                <h3 className="font-bold text-black mb-2">Map Error</h3>
+                <p className="text-xs text-black">
                   There was a problem loading the map.
                 </p>
               </div>
@@ -527,11 +527,11 @@ export default function NearbyGroupsBento() {
                     <h3 className="font-bold text-xs text-[#111827] mb-1 line-clamp-1">
                       {group.title}
                     </h3>
-                    <p className="text-[10px] text-gray-900 mb-2 truncate">
+                    <p className="text-[10px] text-black mb-2 truncate">
                       <MapPin className="inline w-3 h-3 mr-0.5" />{" "}
                       {group.locationArea}
                     </p>
-                    <button className="w-full bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 text-gray-900 text-[10px] font-bold tracking-wide py-1.5 rounded-md hover:bg-black transition-colors">
+                    <button className="w-full bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 text-black text-[10px] font-bold tracking-wide py-1.5 rounded-md hover:bg-black transition-colors">
                       View Event
                     </button>
                   </div>
@@ -553,7 +553,7 @@ export default function NearbyGroupsBento() {
       >
         {!isMapFullscreen && (
           <div className="relative flex-1 max-w-sm pointer-events-auto shadow-lg bg-white/95 backdrop-blur rounded-xl">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-900" />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-black" />
             <input
               type="text"
               placeholder="Search nearby areas or groups..."
@@ -564,7 +564,7 @@ export default function NearbyGroupsBento() {
         {!isMapFullscreen && (
           <button
             onClick={() => alert("Search filters coming soon")}
-            className="h-11 px-4 bg-white/95 backdrop-blur rounded-xl shadow-lg flex items-center justify-center text-gray-900 hover:text-cyan-600 transition-colors pointer-events-auto shrink-0"
+            className="h-11 px-4 bg-white/95 backdrop-blur rounded-xl shadow-lg flex items-center justify-center text-black hover:text-cyan-600 transition-colors pointer-events-auto shrink-0"
           >
             <SlidersHorizontal className="h-5 w-5" />
           </button>
@@ -583,7 +583,7 @@ export default function NearbyGroupsBento() {
         )}
         <button
           onClick={() => setIsMapFullscreen(!isMapFullscreen)}
-          className="h-11 px-4 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 text-gray-900 rounded-xl shadow-lg flex items-center justify-center hover:bg-black transition-colors pointer-events-auto shrink-0"
+          className="h-11 px-4 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 text-black rounded-xl shadow-lg flex items-center justify-center hover:bg-black transition-colors pointer-events-auto shrink-0"
           title={isMapFullscreen ? "Exit Fullscreen" : "Fullscreen Map"}
         >
           {isMapFullscreen ? (
@@ -618,7 +618,7 @@ export default function NearbyGroupsBento() {
           onClick={() => setIsPanelExpanded(!isPanelExpanded)}
         >
           <div className="w-12 h-1.5 bg-gray-300 hover:bg-gray-400 rounded-full flex items-center justify-center relative">
-            <span className="absolute -top-3 text-gray-900">
+            <span className="absolute -top-3 text-black">
               {isPanelExpanded ? (
                 <ChevronDown className="w-4 h-4" />
               ) : (
@@ -632,7 +632,7 @@ export default function NearbyGroupsBento() {
           <h2 className="text-xl font-bold text-[#111827]">
             {t("Τοπικές Ομάδες", "Local Groups")}
           </h2>
-          <p className="text-xs text-gray-900 mt-1 font-medium flex items-center gap-1">
+          <p className="text-xs text-black mt-1 font-medium flex items-center gap-1">
             <Navigation className="h-3 w-3" />{" "}
             {t("Εμφάνιση αποτελεσμάτων εντός", "Showing results within")}{" "}
             {radius}km
@@ -656,10 +656,10 @@ export default function NearbyGroupsBento() {
             <button className="px-3 py-1.5 bg-cyan-600 text-white rounded-full text-xs font-bold whitespace-nowrap shadow-sm">
               {t("Όλα", "All Matches")}
             </button>
-            <button className="px-3 py-1.5 bg-gray-50 text-gray-900 border border-gray-200 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-100">
+            <button className="px-3 py-1.5 bg-gray-50 text-black border border-gray-200 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-100">
               {t("Σήμερα", "Today")}
             </button>
-            <button className="px-3 py-1.5 bg-gray-50 text-gray-900 border border-gray-200 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-100">
+            <button className="px-3 py-1.5 bg-gray-50 text-black border border-gray-200 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-100">
               {t("Φίλοι Συμμετέχουν", "Friends Going")}
             </button>
           </div>
@@ -684,7 +684,7 @@ export default function NearbyGroupsBento() {
                   <h3 className="font-bold text-sm text-[#111827] line-clamp-1 group-hover:text-cyan-600 transition-colors">
                     {group.title}
                   </h3>
-                  <p className="text-xs text-gray-900 mt-0.5 max-w-[200px] truncate">
+                  <p className="text-xs text-black mt-0.5 max-w-[200px] truncate">
                     {group.locationArea}
                   </p>
                 </div>
@@ -708,7 +708,7 @@ export default function NearbyGroupsBento() {
             <h3 className="text-sm font-bold text-[#111827]">
               {t("Επέκταση ακτίνας", "Expand your radius")}
             </h3>
-            <p className="text-xs text-gray-900 mt-1 mb-4">
+            <p className="text-xs text-black mt-1 mb-4">
               {t(
                 "Ανακαλύψτε περισσότερες τοπικές ομάδες αυξάνοντας την περιοχή αναζήτησης.",
                 "Discover more local groups by increasing your search area.",
@@ -716,7 +716,7 @@ export default function NearbyGroupsBento() {
             </p>
             <button
               onClick={() => setRadius(15)}
-              className="text-xs font-bold text-white bg-white text-gray-900 border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] px-4 py-2 rounded-full hover:bg-gray-800 transition-colors"
+              className="text-xs font-bold text-white bg-white text-black border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] px-4 py-2 rounded-full hover:bg-gray-800 transition-colors"
             >
               {t("Ορισμός ακτίνας στα 15km", "Set radius to 15km")}
             </button>

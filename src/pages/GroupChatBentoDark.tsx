@@ -1352,7 +1352,7 @@ export default function GroupChatBentoDark() {
                   "Αυτή η αναφορά πηγαίνει απευθείας στην ομάδα ελέγχου. ",
                   "This report goes directly to the Nakamas moderation team. It will ",
                 )}
-                <span className="font-bold text-gray-200">
+                <span className="font-bold text-white">
                   {t("Δεν", "not")}
                 </span>
                 {t(

@@ -320,7 +320,7 @@ export default function HomeVibrantDark() {
         className="bg-gradient-to-br from-slate-950 via-[#0f172a] to-slate-950 text-white p-6 md:p-10 rounded-[24px] shadow-sm relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-8"
       >
         <div className="relative z-10 flex-1">
-          <div className="text-slate-300 text-[14.21px] font-bold tracking-wide mb-4">
+          <div className="text-white text-[14.21px] font-bold tracking-wide mb-4">
             {t("home.hero.badge", "Νεος τροπος εξοδου")}
           </div>
           <h1 className="text-[17.33px] md:text-[22.77px] font-bold tracking-tight mb-4 leading-[1.1] max-w-2xl">
@@ -339,22 +339,22 @@ export default function HomeVibrantDark() {
 
           <div className="flex flex-wrap items-center gap-x-4 gap-y-3 text-[11.33px] font-bold tracking-wide text-white mb-6">
             <span className="flex items-center gap-1.5">
-              <Users className="w-3.5 h-3.5 text-slate-300" />{" "}
+              <Users className="w-3.5 h-3.5 text-white" />{" "}
               {t("home.hero.stat1", "Μικρες ομαδες")}
             </span>
             <span className="opacity-20">•</span>
             <span className="flex items-center gap-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-slate-300" />{" "}
+              <ShieldCheck className="w-3.5 h-3.5 text-white" />{" "}
               {t("home.hero.stat2", "Επαληθευμενη συμμετοχη")}
             </span>
             <span className="opacity-20">•</span>
             <span className="flex items-center gap-1.5">
-              <MapIcon className="w-3.5 h-3.5 text-slate-300" />{" "}
+              <MapIcon className="w-3.5 h-3.5 text-white" />{" "}
               {t("home.hero.stat3", "Δημοσια σημεια")}
             </span>
             <span className="opacity-20">•</span>
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-slate-300" />{" "}
+              <CheckCircle2 className="w-3.5 h-3.5 text-white" />{" "}
               {t("Ιδιωτικες αναφορες", "Private reports")}
             </span>
           </div>
@@ -362,7 +362,7 @@ export default function HomeVibrantDark() {
           <div className="flex gap-3 mb-6">
             <button
               onClick={() => navigate("/nearby")}
-              className="flex items-center gap-2 px-5 py-2.5 bg-[#18D8DB]/10 text-slate-300 border border-[#18D8DB]/20 hover:bg-[#18D8DB]/20 rounded-xl font-bold text-[13.58px] transition-colors"
+              className="flex items-center gap-2 px-5 py-2.5 bg-[#18D8DB]/10 text-white border border-[#18D8DB]/20 hover:bg-[#18D8DB]/20 rounded-xl font-bold text-[13.58px] transition-colors"
               title={t("Εμφάνιση στον Χάρτη", "View on Map")}
             >
               <MapIcon className="w-4 h-4" />

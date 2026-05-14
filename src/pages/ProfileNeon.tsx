@@ -88,7 +88,7 @@ export default function ProfileNeon() {
         <h1 className="text-xl md:text-2xl font-extrabold tracking-tight text-[#111827]">
           {t("Προφίλ", "Profile")}
         </h1>
-        <p className="mt-1 text-xs text-gray-900 font-medium leading-relaxed">
+        <p className="mt-1 text-xs text-black font-medium leading-relaxed">
           {t(
             "Διαχειριστείτε τις ρυθμίσεις εμπιστοσύνης, τις επαληθεύσεις και το ιστορικό σας.",
             "Manage your trust settings, verifications, and history.",
@@ -167,14 +167,14 @@ export default function ProfileNeon() {
                   </h2>
                   <button
                     onClick={() => setIsEditingName(true)}
-                    className="p-1 text-gray-900 hover:text-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity rounded-md hover:bg-gray-100"
+                    className="p-1 text-black hover:text-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity rounded-md hover:bg-gray-100"
                   >
                     <Edit2 className="w-3.5 h-3.5" />
                   </button>
                 </div>
               )}
             </div>
-            <div className="flex flex-wrap gap-2 text-xs text-gray-900 font-medium">
+            <div className="flex flex-wrap gap-2 text-xs text-black font-medium">
               <span>{currentUser.ageRange}</span>
               <span>•</span>
               <span>{currentUser.city}</span>
@@ -186,7 +186,7 @@ export default function ProfileNeon() {
                   <textarea
                     value={tempBio}
                     onChange={(e) => setTempBio(e.target.value)}
-                    className="w-full text-sm text-gray-900 bg-gray-50 border border-gray-200 rounded-md p-2 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none resize-none"
+                    className="w-full text-sm text-black bg-gray-50 border border-gray-200 rounded-md p-2 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none resize-none"
                     rows={3}
                   />
                   <div className="flex gap-2">
@@ -214,12 +214,12 @@ export default function ProfileNeon() {
                 </div>
               ) : (
                 <div className="group relative">
-                  <p className="text-sm text-gray-900 font-medium pr-8">
+                  <p className="text-sm text-black font-medium pr-8">
                     {bio}
                   </p>
                   <button
                     onClick={() => setIsEditingBio(true)}
-                    className="absolute top-0 right-0 p-1 text-gray-900 hover:text-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity rounded-md hover:bg-gray-100"
+                    className="absolute top-0 right-0 p-1 text-black hover:text-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity rounded-md hover:bg-gray-100"
                   >
                     <Edit2 className="w-3.5 h-3.5" />
                   </button>
@@ -238,7 +238,7 @@ export default function ProfileNeon() {
               </Badge>
               <Badge
                 variant="outline"
-                className={`text-xs py-1 px-2.5 shadow-sm ${currentUser.trustTier === "3_high_trust" ? "text-cyan-700 bg-cyan-50 border-cyan-200" : "text-gray-900 bg-gray-50 border-gray-200"}`}
+                className={`text-xs py-1 px-2.5 shadow-sm ${currentUser.trustTier === "3_high_trust" ? "text-cyan-700 bg-cyan-50 border-cyan-200" : "text-black bg-gray-50 border-gray-200"}`}
               >
                 {currentUser.trustTier === "3_high_trust"
                   ? t("Υψηλό Επίπεδο Εμπιστοσύνης", "High Trust Tier")
@@ -279,7 +279,7 @@ export default function ProfileNeon() {
         </div>
 
         <div className="mt-6 pt-6 border-t border-gray-100">
-          <h3 className="text-xs font-bold text-[#6B7280] capitalize tracking-wide mb-3">
+          <h3 className="text-xs font-bold text-black capitalize tracking-wide mb-3">
             {t(
               "Επίπεδα Ταυτότητας & Δικαιώματα",
               "Identity Tiers & Permissions",
@@ -294,7 +294,7 @@ export default function ProfileNeon() {
                 <p className="text-sm font-bold text-[#111827]">
                   {t("Επίπεδο 1: Εξερευνητής", "Tier 1: Explorer")}
                 </p>
-                <p className="text-[10px] text-gray-900 capitalize font-medium tracking-wide">
+                <p className="text-[10px] text-black capitalize font-medium tracking-wide">
                   {t(
                     "Email/Τηλέφωνο επαληθευμένο. Συμμετοχή σε Δημόσιες Εκδηλώσεις.",
                     "Email/Phone verified. Can view and join Public Free Events.",
@@ -322,13 +322,13 @@ export default function ProfileNeon() {
 
             <div className="flex items-center gap-3">
               <div className="h-6 w-6 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center shrink-0">
-                <Shield className="h-4 w-4 text-gray-900" />
+                <Shield className="h-4 w-4 text-black" />
               </div>
               <div className="flex-1">
-                <p className="text-sm font-bold text-gray-900">
+                <p className="text-sm font-bold text-black">
                   {t("Επίπεδο 3: Υψηλή Εμπιστοσύνη", "Tier 3: High Trust")}
                 </p>
-                <p className="text-[10px] text-gray-900 capitalize font-medium tracking-wide">
+                <p className="text-[10px] text-black capitalize font-medium tracking-wide">
                   {t(
                     "Ταυτότητα/Selfie επαληθευμένα + Υψηλή Αξιοπιστία. Πρόσβαση σε Ιδιωτικές/Εκδρομές.",
                     "Identity/Selfie verified + Positive Reliability Score. Access to Private/Home events and Hiking/Trips.",
@@ -340,7 +340,7 @@ export default function ProfileNeon() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-100">
-          <h3 className="text-xs font-bold text-[#6B7280] capitalize tracking-wide mb-3">
+          <h3 className="text-xs font-bold text-black capitalize tracking-wide mb-3">
             {t("Προτιμήσεις Ομάδας", "Group Preferences")}
           </h3>
           <div className="space-y-4">
@@ -371,18 +371,18 @@ export default function ProfileNeon() {
                 type="radio"
                 name="groupsize"
                 disabled
-                className="mt-0.5 h-4 w-4 text-gray-900 rounded-full border-gray-300"
+                className="mt-0.5 h-4 w-4 text-black rounded-full border-gray-300"
               />
               <div>
                 <div className="flex items-center gap-2">
-                  <span className="text-sm font-bold text-gray-900 block">
+                  <span className="text-sm font-bold text-black block">
                     {t("1-προς-1 Εμπειρίες", "1-on-1 Experiences")}
                   </span>
                   <Badge variant="neutral">
                     {t("Επίπεδο 3", "Tier 3 Req")}
                   </Badge>
                 </div>
-                <span className="text-xs text-gray-900 font-medium leading-relaxed block mt-1">
+                <span className="text-xs text-black font-medium leading-relaxed block mt-1">
                   {t(
                     "Απαιτεί Υψηλό Επίπεδο Εμπιστοσύνης.",
                     "Requires High Trust Tier to unlock.",
@@ -395,7 +395,7 @@ export default function ProfileNeon() {
 
         <div className="mt-8 pt-6 border-t border-gray-100">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-xs font-bold text-[#6B7280] capitalize tracking-wide">
+            <h3 className="text-xs font-bold text-black capitalize tracking-wide">
               {t("Ιστορικό & Αξιολογήσεις", "History & Reviews")}
             </h3>
             <Button
@@ -419,7 +419,7 @@ export default function ProfileNeon() {
                     "Past Events & Private Feedback",
                   )}
                 </p>
-                <p className="text-xs text-gray-900 font-medium">
+                <p className="text-xs text-black font-medium">
                   {t(
                     "Αξιολογήστε τις εμπειρίες σας ιδιωτικά",
                     "Review your experiences privately",
@@ -438,7 +438,7 @@ export default function ProfileNeon() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-100">
-          <h3 className="text-xs font-bold text-[#6B7280] capitalize tracking-wide mb-3">
+          <h3 className="text-xs font-bold text-black capitalize tracking-wide mb-3">
             {t("Ενδιαφέροντα", "Interests")}
           </h3>
           <div className="flex flex-wrap gap-2 items-center">
@@ -446,7 +446,7 @@ export default function ProfileNeon() {
               <Badge
                 key={i}
                 variant="neutral"
-                className="pr-1.5 select-none bg-gray-50 border-gray-200 text-gray-900"
+                className="pr-1.5 select-none bg-gray-50 border-gray-200 text-black"
               >
                 {i}
                 <button
@@ -455,7 +455,7 @@ export default function ProfileNeon() {
                     setInterests(updated);
                     updateUser(currentUser.id, { interests: updated });
                   }}
-                  className="ml-1.5 p-0.5 rounded-full hover:bg-gray-200 text-gray-900 hover:text-gray-900 transition-colors"
+                  className="ml-1.5 p-0.5 rounded-full hover:bg-gray-200 text-black hover:text-black transition-colors"
                 >
                   <X className="w-3 h-3" />
                 </button>
@@ -503,7 +503,7 @@ export default function ProfileNeon() {
               <Button
                 variant="ghost"
                 size="sm"
-                className="bg-gray-50 border border-gray-200 h-6 px-2 text-xs font-medium text-gray-900 hover:bg-gray-100 flex items-center gap-1"
+                className="bg-gray-50 border border-gray-200 h-6 px-2 text-xs font-medium text-black hover:bg-gray-100 flex items-center gap-1"
                 onClick={() => setIsAddingInterest(true)}
               >
                 <Plus className="w-3 h-3" /> {t("Προσθήκη", "Add Interest")}
@@ -513,7 +513,7 @@ export default function ProfileNeon() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-100">
-          <h3 className="text-xs font-bold text-[#6B7280] capitalize tracking-wide mb-3">
+          <h3 className="text-xs font-bold text-black capitalize tracking-wide mb-3">
             {t("Προτιμήσεις Διαθεσιμότητας", "Availability Preferences")}
           </h3>
           <div className="flex flex-wrap gap-2">
@@ -532,14 +532,14 @@ export default function ProfileNeon() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-100">
-          <h3 className="text-xs font-bold text-[#6B7280] capitalize tracking-wide mb-3">
+          <h3 className="text-xs font-bold text-black capitalize tracking-wide mb-3">
             {t("Ορατότητα, Συνδέσεις & Απόρρητο", "Visibility, Connections & Privacy")}
           </h3>
           <div className="space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 p-3 bg-white border border-gray-100 rounded-xl shadow-sm">
               <div>
-                <p className="text-sm font-bold text-gray-900">{t("Ορατότητα Προφίλ", "Profile Visibility")}</p>
-                <p className="text-xs text-gray-900 mt-0.5">{t("Επιλέξτε ποιοι μπορούν να δουν το πλήρες προφίλ σας.", "Choose who can see your full profile.")}</p>
+                <p className="text-sm font-bold text-black">{t("Ορατότητα Προφίλ", "Profile Visibility")}</p>
+                <p className="text-xs text-black mt-0.5">{t("Επιλέξτε ποιοι μπορούν να δουν το πλήρες προφίλ σας.", "Choose who can see your full profile.")}</p>
               </div>
               <select 
                 value={settings.profileVisibility}
@@ -554,8 +554,8 @@ export default function ProfileNeon() {
 
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 p-3 bg-white border border-gray-100 rounded-xl shadow-sm">
               <div>
-                <p className="text-sm font-bold text-gray-900">{t("Ποιοι μπορούν να μου στείλουν μήνυμα", "Who can message me")}</p>
-                <p className="text-xs text-gray-900 mt-0.5">{t("Διαχειριστείτε ποιοι μπορούν να ξεκινήσουν συνομιλία μαζί σας.", "Manage who can initiate a chat with you.")}</p>
+                <p className="text-sm font-bold text-black">{t("Ποιοι μπορούν να μου στείλουν μήνυμα", "Who can message me")}</p>
+                <p className="text-xs text-black mt-0.5">{t("Διαχειριστείτε ποιοι μπορούν να ξεκινήσουν συνομιλία μαζί σας.", "Manage who can initiate a chat with you.")}</p>
               </div>
               <select 
                 value={settings.messagePermission}
@@ -581,10 +581,10 @@ export default function ProfileNeon() {
                 className="mt-0.5 h-4 w-4 text-cyan-600 rounded border-gray-300 focus:ring-cyan-500"
               />
               <div>
-                <span className="text-sm font-bold text-gray-900 block">
+                <span className="text-sm font-bold text-black block">
                   {t("Κοινοποίηση Δεδομένων Τοποθεσίας", "Share Location Data")}
                 </span>
-                <span className="text-xs text-gray-900 font-medium leading-relaxed block mt-0.5">
+                <span className="text-xs text-black font-medium leading-relaxed block mt-0.5">
                   {t("Να επιτρέπεται στην εφαρμογή να χρησιμοποιεί την ακριβή τοποθεσία μου για καλύτερες προτάσεις εκδηλώσεων και ζωντανή παρακολούθηση.", "Allow the app to use my precise location for better event recommendations and live tracking.")}
                 </span>
               </div>
@@ -599,7 +599,7 @@ export default function ProfileNeon() {
                 }
                 className="h-4 w-4 text-cyan-600 rounded border-gray-300 focus:ring-cyan-500"
               />
-              <span className="text-sm text-gray-900 font-medium">
+              <span className="text-sm text-black font-medium">
                 {t(
                   "Αποκάλυψη της φωτογραφίας μου στις επιβεβαιωμένες ομάδες 2 ώρες πριν την εκδήλωση",
                   "Reveal my photo to confirmed groups 2 hours before event",
@@ -618,7 +618,7 @@ export default function ProfileNeon() {
                 }
                 className="h-4 w-4 text-cyan-600 rounded border-gray-300 focus:ring-cyan-500"
               />
-              <span className="text-sm text-gray-900 font-medium">
+              <span className="text-sm text-black font-medium">
                 {t(
                   "Να επιτρέπονται αμοιβαία αιτήματα επικοινωνίας μετά την εκδήλωση",
                   'Allow mutual "Keep in touch" requests post-event',
@@ -637,7 +637,7 @@ export default function ProfileNeon() {
                 }
                 className="h-4 w-4 text-cyan-600 rounded border-gray-300 focus:ring-cyan-500"
               />
-              <span className="text-sm text-gray-900 font-medium">
+              <span className="text-sm text-black font-medium">
                 {t(
                   "Να επιτρέπεται στους διοργανωτές να μου στέλνουν μηνύματα μετά την εκδήλωση",
                   "Allow organizers to message me after event",
@@ -655,7 +655,7 @@ export default function ProfileNeon() {
             navigate("/login");
           }}
           variant="ghost"
-          className="text-gray-900 hover:text-red-600 font-bold capitalize tracking-wide text-[11px]"
+          className="text-black hover:text-red-600 font-bold capitalize tracking-wide text-[11px]"
         >
           {t("Αποσύνδεση", "Sign Out")}
         </Button>

@@ -17,7 +17,7 @@ export default function SavedEventsBento() {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
           <h1 className="text-xl md:text-2xl font-bold text-[#111827]">{t('Αποθηκευμένα', 'Saved Events')}</h1>
-          <p className="text-gray-900 font-medium text-xs md:text-sm mt-1">{t('Εμπειρίες που έχετε προσθέσει στους σελιδοδείκτες σας.', 'Experiences you\'ve bookmarked for later.')}</p>
+          <p className="text-black font-medium text-xs md:text-sm mt-1">{t('Εμπειρίες που έχετε προσθέσει στους σελιδοδείκτες σας.', 'Experiences you\'ve bookmarked for later.')}</p>
         </div>
       </div>
 
@@ -40,11 +40,11 @@ export default function SavedEventsBento() {
                 <h3 className="font-bold text-sm text-[#111827] group-hover:text-cyan-600 transition-colors line-clamp-2 mb-2">{event.title}</h3>
                 
                 <div className="mt-auto space-y-1.5">
-                  <div className="flex items-center text-xs text-gray-900 font-medium">
+                  <div className="flex items-center text-xs text-black font-medium">
                     <Calendar className="w-3.5 h-3.5 mr-1.5 shrink-0" />
                     <span className="truncate">{format(parseISO(event.date), 'MMM d, yyyy')} • {event.time}</span>
                   </div>
-                  <div className="flex items-center text-xs text-gray-900 font-medium">
+                  <div className="flex items-center text-xs text-black font-medium">
                     <MapPin className="w-3.5 h-3.5 mr-1.5 shrink-0" />
                     <span className="truncate">{event.locationArea}</span>
                   </div>
@@ -59,9 +59,9 @@ export default function SavedEventsBento() {
         </div>
       ) : (
         <div className="text-center py-16 bg-gray-50 rounded-2xl border border-dashed border-gray-200">
-          <Bookmark className="mx-auto h-10 w-10 text-gray-900 mb-3" />
+          <Bookmark className="mx-auto h-10 w-10 text-black mb-3" />
           <h3 className="text-base font-bold text-[#111827]">{t('Δεν υπάρχουν αποθηκευμένες εκδηλώσεις', 'No saved events yet')}</h3>
-          <p className="text-sm text-gray-900 mt-1 max-w-sm mx-auto">{t('Όταν δείτε μια εκδήλωση που σας αρέσει, προσθέστε τη στους σελιδοδείκτες σας.', 'When you see an event you like, bookmark it to find it easily later.')}</p>
+          <p className="text-sm text-black mt-1 max-w-sm mx-auto">{t('Όταν δείτε μια εκδήλωση που σας αρέσει, προσθέστε τη στους σελιδοδείκτες σας.', 'When you see an event you like, bookmark it to find it easily later.')}</p>
           <Link to="/" className="inline-flex items-center justify-center px-4 py-2 mt-4 bg-cyan-600 text-white text-xs font-bold rounded-full shadow-sm hover:bg-cyan-700 transition-colors">
             {t('Ανακαλύψτε Εκδηλώσεις', 'Discover Events')}
           </Link>

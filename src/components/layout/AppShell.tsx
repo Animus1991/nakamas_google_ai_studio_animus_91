@@ -83,12 +83,12 @@ function NavItem({ to, icon: Icon, label, disabled = false, compact = false }: N
   if (disabled) {
     return (
       <div
-        className={cn('flex items-center gap-3 text-sm font-medium text-gray-900 rounded-lg cursor-not-allowed', containerClass)}
+        className={cn(`${theme === "bento-dark" ? "text-white" : "text-black"}`, containerClass)}
         title={label}
       >
         <Icon className={iconClass} />
         <span className={textClass}>{label}</span>
-      <span className={cn('text-[9px] tracking-wide font-bold bg-gray-100 px-1.5 py-0.5 rounded text-gray-900', textClass)}>{t('Σύντομα', 'Soon')}</span>
+      <span className={cn(`text-[9px] tracking-wide font-bold bg-gray-100 px-1.5 py-0.5 rounded ${theme === "bento-dark" ? "text-white" : "text-black"}`, textClass)}>{t('Σύντομα', 'Soon')}</span>
       </div>
     );
   }
@@ -101,7 +101,7 @@ function NavItem({ to, icon: Icon, label, disabled = false, compact = false }: N
         cn(
           'flex items-center gap-3 rounded-xl lg:rounded-lg text-sm font-medium transition-colors group',
           containerClass,
-          isActive ? (theme === "bento-dark" ? "bg-gray-800 text-emerald-400 font-bold" : "bg-cyan-50 text-[#0E8B8D] font-bold") : (theme === "bento-dark" ? "text-gray-200 hover:bg-gray-700 hover:text-white" : "text-gray-900 hover:bg-gray-100 hover:text-[#111827]")
+          isActive ? (theme === "bento-dark" ? "bg-gray-800 text-emerald-400 font-bold" : "bg-cyan-50 text-[#0E8B8D] font-bold") : (theme === "bento-dark" ? "text-white hover:bg-gray-700 hover:text-white" : "text-black hover:bg-gray-100 hover:text-[#111827]")
         )
       }
     >
@@ -228,7 +228,7 @@ export function TopNav({ onMenuClick }: { onMenuClick?: () => void }) {
           <NakamasLogo className="text-[22px]" />
         </div>
         <div className="hidden md:block">
-          <span className="text-[14.58px] font-bold text-gray-900 tracking-wide">{t('Πίνακας Ελέγχου', 'Dashboard')}</span>
+          <span className={`text-[14.58px] font-bold ${theme === "bento-dark" ? "text-white" : "text-black"} tracking-wide`}>{t('Πίνακας Ελέγχου', 'Dashboard')}</span>
         </div>
       </div>
       <div className="flex items-center space-x-3">
@@ -241,11 +241,11 @@ export function TopNav({ onMenuClick }: { onMenuClick?: () => void }) {
             placeholder={t('Αναζήτηση εκδηλώσεων...', 'Search events...')}
             className={cn("w-64 py-1.5 pl-8 pr-3 text-[14.42px] border-transparent rounded-md focus:ring-1 focus:ring-cyan-500 outline-none", theme === "bento-dark" ? "bg-gray-800 text-white focus:bg-gray-700" : "bg-gray-100 focus:bg-white text-gray-900")}
           />
-          <Search className="absolute w-4 h-4 text-gray-900 left-2.5 top-2" />
+          <Search className={`absolute w-4 h-4 ${theme === "bento-dark" ? "text-white" : "text-black"} left-2.5 top-2`} />
         </div>
 
         {/* Theme Toggle */}
-        <button onClick={cycleTheme} className={cn("flex items-center gap-1 text-[11.33px] font-bold transition-colors px-2.5 py-1.5 rounded-lg", theme === "bento-dark" ? "bg-gray-800 text-gray-200 hover:text-emerald-400 hover:bg-gray-700" : "bg-gray-100 text-gray-900 hover:text-[#0E8B8D] hover:bg-cyan-50")} title="Toggle Theme">
+        <button onClick={cycleTheme} className={cn("flex items-center gap-1 text-[11.33px] font-bold transition-colors px-2.5 py-1.5 rounded-lg", theme === "bento-dark" ? "bg-gray-800 text-white hover:text-emerald-400 hover:bg-gray-700" : "bg-gray-100 text-black hover:text-[#0E8B8D] hover:bg-cyan-50")} title="Toggle Theme">
           <Palette className="w-4 h-4" />
           <span className="hidden sm:inline capitalize">{theme}</span>
         </button>
@@ -253,14 +253,14 @@ export function TopNav({ onMenuClick }: { onMenuClick?: () => void }) {
         {/* Language Toggle */}
         <button
           onClick={() => setLanguage(language === 'el' ? 'en' : 'el')}
-          className={cn("flex items-center gap-1 text-[11.33px] font-bold transition-colors px-2.5 py-1.5 rounded-lg", theme === "bento-dark" ? "bg-gray-800 text-gray-200 hover:text-emerald-400 hover:bg-gray-700" : "bg-gray-100 text-gray-900 hover:text-[#0E8B8D] hover:bg-cyan-50")}
+          className={cn("flex items-center gap-1 text-[11.33px] font-bold transition-colors px-2.5 py-1.5 rounded-lg", theme === "bento-dark" ? "bg-gray-800 text-white hover:text-emerald-400 hover:bg-gray-700" : "bg-gray-100 text-black hover:text-[#0E8B8D] hover:bg-cyan-50")}
           title={language === 'el' ? 'Switch to English' : 'Αλλαγή σε Ελληνικά'}
         >
           <Globe className="w-3.5 h-3.5" />
           {language === 'el' ? 'EN' : 'EL'}
         </button>
 
-        <NavLink to="/notifications" className="relative text-gray-900 hover:text-[#0E8B8D] transition-colors">
+        <NavLink to="/notifications" className={cn("relative transition-colors hover:text-[#0E8B8D]", theme === "bento-dark" ? "text-white" : "text-black")}>
           <Bell className="h-[18px] w-[18px]" />
           {unreadNotificationCount > 0 && (
             <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-[#18D8DB] text-[9.27px] text-white font-bold border border-white">
@@ -294,7 +294,7 @@ export function TopNav({ onMenuClick }: { onMenuClick?: () => void }) {
           )}
         </div>
 
-        <button onClick={onMenuClick} className="text-gray-900 hover:text-[111827] md:hidden">
+        <button onClick={onMenuClick} className={cn("md:hidden", theme === "bento-dark" ? "text-white hover:text-white" : "text-black hover:text-[#111827]")}>
           <Menu className="h-[22px] w-[22px]" />
         </button>
       </div>
@@ -312,7 +312,7 @@ export function BottomNav() { const theme = useStore(s=>s.theme);
       <NavLink
         to="/"
         className={({ isActive }) =>
-          cn("flex flex-col items-center justify-center gap-1 transition-colors min-w-[60px]", isActive ? (theme === "bento-dark" ? "text-emerald-400" : "text-[#0E8B8D]") : (theme === "bento-dark" ? "text-gray-200 hover:text-emerald-400" : "text-gray-900 hover:text-[#0E8B8D]"))
+          cn("flex flex-col items-center justify-center gap-1 transition-colors min-w-[60px]", isActive ? (theme === "bento-dark" ? "text-emerald-400" : "text-[#0E8B8D]") : (theme === "bento-dark" ? "text-white hover:text-emerald-400" : "text-black hover:text-[#0E8B8D]"))
         }
       >
         <Compass className="h-[18px] w-[18px]" strokeWidth={2.2} />
@@ -321,7 +321,7 @@ export function BottomNav() { const theme = useStore(s=>s.theme);
       <NavLink
         to="/plans"
         className={({ isActive }) =>
-          cn("flex flex-col items-center justify-center gap-1 transition-colors min-w-[60px]", isActive ? (theme === "bento-dark" ? "text-emerald-400" : "text-[#0E8B8D]") : (theme === "bento-dark" ? "text-gray-200 hover:text-emerald-400" : "text-gray-900 hover:text-[#0E8B8D]"))
+          cn("flex flex-col items-center justify-center gap-1 transition-colors min-w-[60px]", isActive ? (theme === "bento-dark" ? "text-emerald-400" : "text-[#0E8B8D]") : (theme === "bento-dark" ? "text-white hover:text-emerald-400" : "text-black hover:text-[#0E8B8D]"))
         }
       >
         <CalendarCheck className="h-[18px] w-[18px]" strokeWidth={2.2} />
@@ -334,12 +334,12 @@ export function BottomNav() { const theme = useStore(s=>s.theme);
         >
           <Plus className="h-[20px] w-[20px]" strokeWidth={2.5} />
         </NavLink>
-        <span className="text-[8px] font-medium mt-1 text-gray-900">{t('Δημιουργία', 'Create')}</span>
+        <span className={`text-[8px] font-medium mt-1 ${theme === "bento-dark" ? "text-white" : "text-black"}`}>{t('Δημιουργία', 'Create')}</span>
       </div>
       <NavLink
         to="/trust"
         className={({ isActive }) =>
-          cn("flex flex-col items-center justify-center gap-1 transition-colors min-w-[60px]", isActive ? (theme === "bento-dark" ? "text-emerald-400" : "text-[#0E8B8D]") : (theme === "bento-dark" ? "text-gray-200 hover:text-emerald-400" : "text-gray-900 hover:text-[#0E8B8D]"))
+          cn("flex flex-col items-center justify-center gap-1 transition-colors min-w-[60px]", isActive ? (theme === "bento-dark" ? "text-emerald-400" : "text-[#0E8B8D]") : (theme === "bento-dark" ? "text-white hover:text-emerald-400" : "text-black hover:text-[#0E8B8D]"))
         }
       >
         <ShieldCheck className="h-[18px] w-[18px]" strokeWidth={2.2} />
@@ -348,7 +348,7 @@ export function BottomNav() { const theme = useStore(s=>s.theme);
       <NavLink
         to="/profile"
         className={({ isActive }) =>
-          cn("flex flex-col items-center justify-center gap-1 transition-colors min-w-[60px]", isActive ? (theme === "bento-dark" ? "text-emerald-400" : "text-[#0E8B8D]") : (theme === "bento-dark" ? "text-gray-200 hover:text-emerald-400" : "text-gray-900 hover:text-[#0E8B8D]"))
+          cn("flex flex-col items-center justify-center gap-1 transition-colors min-w-[60px]", isActive ? (theme === "bento-dark" ? "text-emerald-400" : "text-[#0E8B8D]") : (theme === "bento-dark" ? "text-white hover:text-emerald-400" : "text-black hover:text-[#0E8B8D]"))
         }
       >
         <User className="h-[18px] w-[18px]" strokeWidth={2.2} />
@@ -375,7 +375,7 @@ export function AppShell({ children }: { children: ReactNode }) {
           <div className={cn("relative w-64 max-w-sm h-full shadow-xl flex flex-col z-50", theme === "bento-dark" ? "bg-gray-900 border-r border-gray-800" : "bg-white")}>
             <div className="h-14 flex items-center justify-between px-6 border-b border-[#E5E7EB] shrink-0">
               <NakamasLogo className="text-[22px]" />
-              <button onClick={() => setIsMobileMenuOpen(false)} className="text-gray-900 hover:text-[111827]">
+              <button onClick={() => setIsMobileMenuOpen(false)} className={cn(theme === "bento-dark" ? "text-white hover:text-white" : "text-black hover:text-[#111827]")}>
                 <X className="h-6 w-6" />
               </button>
             </div>
@@ -392,7 +392,7 @@ export function AppShell({ children }: { children: ReactNode }) {
             {children}
           </div>
         </main>
-        <footer className="hidden md:flex h-8 px-6 bg-[#111827] text-[10px] text-gray-900 items-center justify-between shrink-0">
+        <footer className="hidden md:flex h-8 px-6 bg-[#111827] text-[10px] text-gray-400 items-center justify-between shrink-0">
           <div className="flex space-x-4">
             <span>Nakamas v1.0.5-beta</span>
             <span className="flex items-center">

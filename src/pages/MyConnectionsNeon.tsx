@@ -35,19 +35,19 @@ export default function MyConnectionsNeon() {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
           <h1 className="text-xl md:text-2xl font-bold text-[#111827]">{t('Οι Συνδέσεις μου', 'My Nakamas')}</h1>
-          <p className="text-gray-900 font-medium text-xs md:text-sm mt-1">{t('Άτομα με τα οποία συνδεθήκατε μέσα από εκδηλώσεις.', 'People you\'ve connected with through events.')}</p>
+          <p className="text-black font-medium text-xs md:text-sm mt-1">{t('Άτομα με τα οποία συνδεθήκατε μέσα από εκδηλώσεις.', 'People you\'ve connected with through events.')}</p>
         </div>
       </div>
 
       <div className="flex gap-4 border-b border-gray-200">
         <button 
-          className={`pb-3 text-sm font-bold border-b-2 transition-colors ${activeTab === 'all' ? 'border-cyan-600 text-cyan-600' : 'border-transparent text-gray-900 hover:text-gray-900'}`}
+          className={`pb-3 text-sm font-bold border-b-2 transition-colors ${activeTab === 'all' ? 'border-cyan-600 text-cyan-600' : 'border-transparent text-black hover:text-black'}`}
           onClick={() => setActiveTab('all')}
         >
           {t('Συνδέσεις', 'Connections')} ({connections.length})
         </button>
         <button 
-          className={`pb-3 text-sm font-bold border-b-2 transition-colors flex items-center gap-2 ${activeTab === 'requests' ? 'border-cyan-600 text-cyan-600' : 'border-transparent text-gray-900 hover:text-gray-900'}`}
+          className={`pb-3 text-sm font-bold border-b-2 transition-colors flex items-center gap-2 ${activeTab === 'requests' ? 'border-cyan-600 text-cyan-600' : 'border-transparent text-black hover:text-black'}`}
           onClick={() => setActiveTab('requests')}
         >
           {t('Αιτήματα', 'Requests')}
@@ -57,7 +57,7 @@ export default function MyConnectionsNeon() {
 
       <div className="flex flex-col sm:flex-row justify-between gap-4">
         <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-900" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-black" />
           <input 
             type="text" 
             placeholder={t('Αναζήτηση συνδέσεων...', 'Search connections...')} 
@@ -76,12 +76,12 @@ export default function MyConnectionsNeon() {
               <img referrerPolicy="no-referrer" src={conn.image} alt={conn.name} className="w-12 h-12 rounded-full object-cover bg-gray-100" />
               <div>
                 <h3 className="font-bold text-[#111827] text-sm group-hover:text-cyan-600 transition-colors">{conn.name}</h3>
-                <p className="text-xs text-gray-900 flex items-center gap-1 mt-0.5">
+                <p className="text-xs text-black flex items-center gap-1 mt-0.5">
                   <MapPin className="w-3 h-3" /> {conn.location}
                 </p>
                 <div className="flex items-center gap-2 mt-1.5">
                   <Badge variant="neutral" className="text-[9px] px-1.5 py-0">{conn.role}</Badge>
-                  <span className="text-[10px] text-gray-900 font-medium">{conn.mutual} {t('Κοινοί', 'mutuals')}</span>
+                  <span className="text-[10px] text-black font-medium">{conn.mutual} {t('Κοινοί', 'mutuals')}</span>
                 </div>
               </div>
             </div>
@@ -90,7 +90,7 @@ export default function MyConnectionsNeon() {
               <button className="p-2 text-cyan-600 hover:bg-cyan-50 rounded-full transition-colors" title={t('Μήνυμα', 'Message')}>
                 <MessageCircle className="w-5 h-5" />
               </button>
-              <button className="p-2 text-gray-900 hover:bg-gray-100 rounded-full transition-colors">
+              <button className="p-2 text-black hover:bg-gray-100 rounded-full transition-colors">
                 <MoreVertical className="w-5 h-5" />
               </button>
             </div>

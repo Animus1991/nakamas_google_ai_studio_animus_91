@@ -22,7 +22,7 @@ export default function PlansBento() {
     <div className="mx-auto max-w-full space-y-6 md:space-y-8 pb-20 md:pb-0">
       <div>
         <h1 className="text-[21.2211685261125px] md:text-[25.450724769334997px] font-bold text-[#111827]">{t(`Τα Σχέδιά μου`, `My Plans`)}</h1>
-        <p className="mt-1 text-[12.87402780052125px] text-gray-900 font-medium">{t(`Διαχείριση επερχόμενων, εκκρεμών και παρελθόντων εκδηλώσεων.`, `Manage your upcoming experiences, pending groups, and past events.`)}</p>
+        <p className="mt-1 text-[12.87402780052125px] text-black font-medium">{t(`Διαχείριση επερχόμενων, εκκρεμών και παρελθόντων εκδηλώσεων.`, `Manage your upcoming experiences, pending groups, and past events.`)}</p>
       </div>
 
       {/* Action required prompt */}
@@ -45,7 +45,7 @@ export default function PlansBento() {
           className={`pb-3 text-[11.506875px] font-bold tracking-wide transition-colors whitespace-nowrap ${
             activeTab === 'upcoming' 
               ? 'border-b-2 border-cyan-600 text-cyan-900' 
-              : 'text-gray-900 hover:text-[#111827]'
+              : 'text-black hover:text-[#111827]'
           }`}
         >
           {t(`Επερχόμενα`, `Upcoming Confirmed`)}
@@ -55,7 +55,7 @@ export default function PlansBento() {
           className={`pb-3 text-[11.506875px] font-bold tracking-wide transition-colors whitespace-nowrap ${
             activeTab === 'pending' 
               ? 'border-b-2 border-cyan-600 text-cyan-900' 
-              : 'text-gray-900 hover:text-[#111827]'
+              : 'text-black hover:text-[#111827]'
           }`}
         >
           {t(`Εκκρεμή`, `Pending & Waitlists`)}
@@ -65,7 +65,7 @@ export default function PlansBento() {
           className={`pb-3 text-[11.506875px] font-bold tracking-wide transition-colors whitespace-nowrap ${
             activeTab === 'past' 
               ? 'border-b-2 border-cyan-600 text-cyan-900' 
-              : 'text-gray-900 hover:text-[#111827]'
+              : 'text-black hover:text-[#111827]'
           }`}
         >
           {t(`Ιστορικό`, `Past & Feedback`)}
@@ -87,8 +87,8 @@ export default function PlansBento() {
               <div className="flex justify-between items-start gap-2 mb-2">
                 <h3 className="font-bold text-[19px] text-[#111827]">{event.title}</h3>
                 <div className="text-right shrink-0">
-                  <div className="text-[17.099999999999998px] font-bold text-gray-900">{format(parseISO(event.date), 'MMM d')}</div>
-                  <div className="text-[14.107499999999998px] font-medium text-gray-900">{event.time}</div>
+                  <div className="text-[17.099999999999998px] font-bold text-black">{format(parseISO(event.date), 'MMM d')}</div>
+                  <div className="text-[14.107499999999998px] font-medium text-black">{event.time}</div>
                   {(() => {
                     const days = differenceInDays(parseISO(event.date), new Date());
                     const hours = differenceInHours(parseISO(event.date), new Date());
@@ -100,10 +100,10 @@ export default function PlansBento() {
               </div>
               
               <div className="flex flex-wrap gap-x-4 gap-y-2 mb-4">
-                <div className="flex items-center text-[12.825px] text-gray-900 font-medium">
+                <div className="flex items-center text-[12.825px] text-black font-medium">
                   <MapPin className="w-3.5 h-3.5 mr-1" /> {t(`Σημείο συνάντησης ενεργό`, `Meeting point active`)}
                 </div>
-                <div className="flex items-center text-[12.825px] text-gray-900 font-medium">
+                <div className="flex items-center text-[12.825px] text-black font-medium">
                   <Clock className="w-3.5 h-3.5 mr-1" /> {event.duration}
                 </div>
               </div>
@@ -115,7 +115,7 @@ export default function PlansBento() {
                     <img key={i} src={url} alt="" className="w-6 h-6 rounded-full border-2 border-white object-cover" />
                   ))}
                 </div>
-                <span className="text-[10.6875px] font-medium text-gray-900 flex items-center gap-0.5">
+                <span className="text-[10.6875px] font-medium text-black flex items-center gap-0.5">
                   <Users className="w-3 h-3" /> 4/5 {t(`μέλη`, `members`)}
                 </span>
               </div>
@@ -124,7 +124,7 @@ export default function PlansBento() {
                 <button onClick={() => navigate(`/chat/${event.id}`)} className="flex-1 bg-cyan-50 hover:bg-cyan-100 text-cyan-700 py-2 rounded-lg text-[12.825px] font-bold transition-colors flex items-center justify-center gap-1.5">
                   <MessageCircle className="h-4 w-4" /> {t(`Ομαδική Συνομιλία`, `Group Chat`)}
                 </button>
-                <button onClick={() => navigate(`/events/${event.id}`)} className="bg-white border border-gray-200 hover:bg-gray-50 text-gray-900 px-4 py-2 rounded-lg text-[12.825px] font-bold transition-colors">
+                <button onClick={() => navigate(`/events/${event.id}`)} className="bg-white border border-gray-200 hover:bg-gray-50 text-black px-4 py-2 rounded-lg text-[12.825px] font-bold transition-colors">
                   {t(`Λεπτομέρειες`, `Details`)}
                 </button>
                 <button className="bg-white border border-red-200 hover:bg-red-50 text-red-500 px-3 py-2 rounded-lg text-[12.825px] font-bold transition-colors flex items-center gap-1">
@@ -137,8 +137,8 @@ export default function PlansBento() {
         
         {upcomingEvents.length === 0 && (
           <div className="text-center py-12 bg-gray-50 rounded-xl border border-dashed border-gray-200">
-            <p className="text-gray-900 font-medium text-[17.099999999999998px] mb-4">{t(`Δεν υπάρχουν επερχόμενα σχέδια.`, `No upcoming confirmed plans.`)}</p>
-            <button className="bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 text-gray-900 px-5 py-2 rounded-full text-[13.5375px] font-bold" onClick={() => navigate('/')}>{t(`Εξερεύνηση`, `Explore Experiences`)}</button>
+            <p className="text-black font-medium text-[17.099999999999998px] mb-4">{t(`Δεν υπάρχουν επερχόμενα σχέδια.`, `No upcoming confirmed plans.`)}</p>
+            <button className="bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 text-black px-5 py-2 rounded-full text-[13.5375px] font-bold" onClick={() => navigate('/')}>{t(`Εξερεύνηση`, `Explore Experiences`)}</button>
           </div>
         )}
       </div>
@@ -159,16 +159,16 @@ export default function PlansBento() {
               <div className="flex justify-between items-start gap-2 mb-2">
                 <h3 className="font-bold text-[19px] text-[#111827] opacity-80">{event.title}</h3>
                 <div className="text-right shrink-0">
-                  <div className="text-[17.099999999999998px] font-bold text-gray-900">{format(parseISO(event.date), 'MMM d')}</div>
+                  <div className="text-[17.099999999999998px] font-bold text-black">{format(parseISO(event.date), 'MMM d')}</div>
                 </div>
               </div>
               
-              <p className="text-[12.825px] text-gray-900 font-medium mb-4">
+              <p className="text-[12.825px] text-black font-medium mb-4">
                 {t(`Εκδηλώσατε ενδιαφέρον. Αναμονή για 2 ακόμα άτομα για να επιβεβαιωθεί η ομάδα.`, `You expressed interest. Waiting for 2 more people to confirm the group and unlock the meeting point.`)}
               </p>
 
               <div className="mt-auto pt-4 border-t border-gray-100 flex gap-2">
-                <button onClick={() => navigate(`/events/${event.id}`)} className="bg-white border border-gray-200 hover:bg-gray-50 text-gray-900 px-4 py-2 rounded-lg text-[12.825px] font-bold transition-colors">
+                <button onClick={() => navigate(`/events/${event.id}`)} className="bg-white border border-gray-200 hover:bg-gray-50 text-black px-4 py-2 rounded-lg text-[12.825px] font-bold transition-colors">
                   {t(`Κατάσταση`, `View Status`)}
                 </button>
               </div>
@@ -183,7 +183,7 @@ export default function PlansBento() {
         {pastEvents.map((event, index) => (
           <Card key={event.id} className="rounded-xl p-4 sm:p-5 border border-gray-200 flex flex-col sm:flex-row gap-4">
             <div className="flex-1 flex flex-col">
-              <div className="flex items-center gap-2 mb-1.5 text-[12.825px] font-bold text-gray-900">
+              <div className="flex items-center gap-2 mb-1.5 text-[12.825px] font-bold text-black">
                 <Calendar className="w-3.5 h-3.5" />
                 {format(parseISO(event.date), 'MMMM d, yyyy')}
               </div>

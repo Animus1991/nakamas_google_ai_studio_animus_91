@@ -11,7 +11,7 @@ export default function VerificationCenterBento() {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
           <h1 className="text-[20.104264919475px] md:text-[26.7902365993px] font-bold text-[#111827]">{t(`Κέντρο Επαλήθευσης`, `Verification Center`)}</h1>
-          <p className="text-gray-900 font-medium text-[13.551608211075px] md:text-[14.626916949961px] mt-1">{t(`Επαληθεύστε την ταυτότητά σας για μεγαλύτερη ασφάλεια`, `Verify your identity for greater safety`)}</p>
+          <p className="text-black font-medium text-[13.551608211075px] md:text-[14.626916949961px] mt-1">{t(`Επαληθεύστε την ταυτότητά σας για μεγαλύτερη ασφάλεια`, `Verify your identity for greater safety`)}</p>
         </div>
       </div>
 
@@ -37,7 +37,7 @@ export default function VerificationCenterBento() {
                  </div>
                  <div>
                     <h3 className="font-bold text-[15.083739px] text-[#111827]">{t(`Email Επαλήθευση`, `Email Verification`)}</h3>
-                    <p className="text-[10.90125px] text-gray-900 font-bold tracking-wider mt-0.5">{t(`Ολοκληρώθηκε`, `Completed`)}</p>
+                    <p className="text-[10.90125px] text-black font-bold tracking-wider mt-0.5">{t(`Ολοκληρώθηκε`, `Completed`)}</p>
                  </div>
               </div>
               <CheckCircle2 className="w-5 h-5 text-emerald-500" />
@@ -47,35 +47,35 @@ export default function VerificationCenterBento() {
         <Card className="p-5">
            <div className="flex items-start justify-between border-b border-gray-100 pb-4 mb-4">
               <div className="flex items-center gap-3">
-                 <div className="w-10 h-10 bg-gray-50 text-gray-900 border border-gray-200 rounded-lg flex items-center justify-center">
+                 <div className="w-10 h-10 bg-gray-50 text-black border border-gray-200 rounded-lg flex items-center justify-center">
                     <Smartphone className="w-5 h-5" />
                  </div>
                  <div>
                     <h3 className="font-bold text-[15.083739px] text-[#111827]">{t(`Τηλέφωνο`, `Phone Number`)}</h3>
-                    <p className="text-[10.90125px] text-gray-900 font-bold tracking-wider mt-0.5">{t(`Σε εκκρεμότητα`, `Pending`)}</p>
+                    <p className="text-[10.90125px] text-black font-bold tracking-wider mt-0.5">{t(`Σε εκκρεμότητα`, `Pending`)}</p>
                  </div>
               </div>
            </div>
-           <p className="text-[13.0815px] text-gray-900 mb-3">{t(`Θα σας στείλουμε ένα SMS με κωδικό επαλήθευσης.`, `We'll send you an SMS with a verification code.`)}</p>
+           <p className="text-[13.0815px] text-black mb-3">{t(`Θα σας στείλουμε ένα SMS με κωδικό επαλήθευσης.`, `We'll send you an SMS with a verification code.`)}</p>
            <Button variant="outline" size="sm" className="w-full text-[12.82117815px]">{t(`Επαλήθευση Τώρα`, `Verify Now`)}</Button>
         </Card>
 
         <Card className="p-5 md:col-span-2">
            <div className="flex items-start justify-between border-b border-gray-100 pb-4 mb-4">
               <div className="flex items-center gap-3">
-                 <div className="w-10 h-10 bg-gray-50 text-gray-900 border border-gray-200 rounded-lg flex items-center justify-center">
+                 <div className="w-10 h-10 bg-gray-50 text-black border border-gray-200 rounded-lg flex items-center justify-center">
                     <FileText className="w-5 h-5" />
                  </div>
                  <div>
                     <h3 className="font-bold text-[15.083739px] text-[#111827]">{t(`Ταυτότητα / Διαβατήριο`, `Government ID`)}</h3>
-                    <p className="text-[10.90125px] text-gray-900 font-bold tracking-wider mt-0.5">{t(`Προαιρετικό`, `Optional`)}</p>
+                    <p className="text-[10.90125px] text-black font-bold tracking-wider mt-0.5">{t(`Προαιρετικό`, `Optional`)}</p>
                  </div>
               </div>
-              <span className="bg-gray-100 text-gray-900 text-[10.90125px] font-bold px-2 py-0.5 rounded-full tracking-wide">{t(`Προχωρημένο`, `Advanced`)}</span>
+              <span className="bg-gray-100 text-black text-[10.90125px] font-bold px-2 py-0.5 rounded-full tracking-wide">{t(`Προχωρημένο`, `Advanced`)}</span>
            </div>
-           <p className="text-[14.908928449356px] text-gray-900 mb-4 max-w-xl">{t(`Ανεβάστε φωτογραφία της ταυτότητάς σας για πρόσβαση σε εκδηλώσεις υψηλής ασφάλειας.`, `Upload a photo of your ID to access high-safety events.`)}</p>
+           <p className="text-[14.908928449356px] text-black mb-4 max-w-xl">{t(`Ανεβάστε φωτογραφία της ταυτότητάς σας για πρόσβαση σε εκδηλώσεις υψηλής ασφάλειας.`, `Upload a photo of your ID to access high-safety events.`)}</p>
            <div className="bg-gray-50 p-4 rounded-lg flex flex-col sm:flex-row items-center justify-between gap-4 border border-dashed border-gray-200">
-             <div className="flex gap-3 text-[14.535px] text-gray-900 font-medium">
+             <div className="flex gap-3 text-[14.535px] text-black font-medium">
                 <span className="flex items-center gap-1"><ShieldCheck className="w-4 h-4"/>{t(`Ασφαλές`, `Secure`)}</span>
                 <span className="flex items-center gap-1"><UserCheck className="w-4 h-4"/>{t(`Ιδιωτικό`, `Private`)}</span>
              </div>
@@ -93,7 +93,7 @@ export default function VerificationCenterBento() {
               <Mail className="w-4 h-4 text-cyan-600" />
               <span className="text-[13.8px] font-bold text-cyan-900">Email</span>
             </div>
-            <ul className="space-y-1 text-[12.5px] text-gray-900 font-medium">
+            <ul className="space-y-1 text-[12.5px] text-black font-medium">
               <li>• {t(`Βασική πρόσβαση`, `Basic access`)}</li>
               <li>• {t(`Εγγραφή σε ομάδες`, `Join groups`)}</li>
               <li>• {t(`Ομαδικές συνομιλίες`, `Group chats`)}</li>
@@ -105,7 +105,7 @@ export default function VerificationCenterBento() {
               <Smartphone className="w-4 h-4 text-purple-600" />
               <span className="text-[13.8px] font-bold text-purple-900">{t(`Τηλέφωνο`, `Phone`)}</span>
             </div>
-            <ul className="space-y-1 text-[12.5px] text-gray-900 font-medium">
+            <ul className="space-y-1 text-[12.5px] text-black font-medium">
               <li>• {t(`Δημιουργία εκδηλώσεων`, `Create events`)}</li>
               <li>• {t(`Trust Score +15%`, `Trust Score +15%`)}</li>
               <li>• {t(`Πρόσβαση σε ιδιωτικά events`, `Access private events`)}</li>
@@ -117,7 +117,7 @@ export default function VerificationCenterBento() {
               <FileText className="w-4 h-4 text-amber-600" />
               <span className="text-[13.8px] font-bold text-amber-900">{t(`Ταυτότητα`, `ID`)}</span>
             </div>
-            <ul className="space-y-1 text-[12.5px] text-gray-900 font-medium">
+            <ul className="space-y-1 text-[12.5px] text-black font-medium">
               <li>• {t(`Πλήρης πρόσβαση`, `Full access`)}</li>
               <li>• {t(`Trust Score +25%`, `Trust Score +25%`)}</li>
               <li>• {t(`Organizer badge`, `Organizer badge`)}</li>
@@ -132,11 +132,11 @@ export default function VerificationCenterBento() {
         <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-emerald-500 flex items-center justify-center text-white font-black text-[18px] shrink-0">72%</div>
         <div className="flex-1">
           <p className="text-[13.8px] font-bold text-[#111827]">{t(`Τρέχον Trust Score`, `Current Trust Score`)}</p>
-          <p className="text-[11.2px] text-gray-900 font-medium mt-0.5">{t(`Ολοκληρώστε την επαλήθευση τηλεφώνου για +15%`, `Complete phone verification for +15%`)}</p>
+          <p className="text-[11.2px] text-black font-medium mt-0.5">{t(`Ολοκληρώστε την επαλήθευση τηλεφώνου για +15%`, `Complete phone verification for +15%`)}</p>
         </div>
         <div className="text-right">
           <span className="text-[12.5px] font-bold text-emerald-600">→ 87%</span>
-          <p className="text-[11.2px] text-gray-900 font-medium">{t(`μετά`, `after`)}</p>
+          <p className="text-[11.2px] text-black font-medium">{t(`μετά`, `after`)}</p>
         </div>
       </Card>
     </div>

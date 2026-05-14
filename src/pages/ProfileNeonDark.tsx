@@ -279,7 +279,7 @@ export default function ProfileNeonDark() {
         </div>
 
         <div className="mt-6 pt-6 border-t border-gray-800">
-          <h3 className="text-xs font-bold text-[#6B7280] capitalize tracking-wide mb-3">
+          <h3 className="text-xs font-bold text-white capitalize tracking-wide mb-3">
             {t(
               "Επίπεδα Ταυτότητας & Δικαιώματα",
               "Identity Tiers & Permissions",
@@ -340,7 +340,7 @@ export default function ProfileNeonDark() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-800">
-          <h3 className="text-xs font-bold text-[#6B7280] capitalize tracking-wide mb-3">
+          <h3 className="text-xs font-bold text-white capitalize tracking-wide mb-3">
             {t("Προτιμήσεις Ομάδας", "Group Preferences")}
           </h3>
           <div className="space-y-4">
@@ -395,7 +395,7 @@ export default function ProfileNeonDark() {
 
         <div className="mt-8 pt-6 border-t border-gray-800">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-xs font-bold text-[#6B7280] capitalize tracking-wide">
+            <h3 className="text-xs font-bold text-white capitalize tracking-wide">
               {t("Ιστορικό & Αξιολογήσεις", "History & Reviews")}
             </h3>
             <Button
@@ -438,7 +438,7 @@ export default function ProfileNeonDark() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-800">
-          <h3 className="text-xs font-bold text-[#6B7280] capitalize tracking-wide mb-3">
+          <h3 className="text-xs font-bold text-white capitalize tracking-wide mb-3">
             {t("Ενδιαφέροντα", "Interests")}
           </h3>
           <div className="flex flex-wrap gap-2 items-center">
@@ -513,7 +513,7 @@ export default function ProfileNeonDark() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-800">
-          <h3 className="text-xs font-bold text-[#6B7280] capitalize tracking-wide mb-3">
+          <h3 className="text-xs font-bold text-white capitalize tracking-wide mb-3">
             {t("Προτιμήσεις Διαθεσιμότητας", "Availability Preferences")}
           </h3>
           <div className="flex flex-wrap gap-2">
@@ -532,13 +532,13 @@ export default function ProfileNeonDark() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-800">
-          <h3 className="text-xs font-bold text-[#6B7280] capitalize tracking-wide mb-3">
+          <h3 className="text-xs font-bold text-white capitalize tracking-wide mb-3">
             {t("Ορατότητα, Συνδέσεις & Απόρρητο", "Visibility, Connections & Privacy")}
           </h3>
           <div className="space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 p-3 bg-gray-800 border border-gray-800 rounded-xl shadow-sm">
               <div>
-                <p className="text-sm font-bold text-gray-100">{t("Ορατότητα Προφίλ", "Profile Visibility")}</p>
+                <p className="text-sm font-bold text-white">{t("Ορατότητα Προφίλ", "Profile Visibility")}</p>
                 <p className="text-xs text-white mt-0.5">{t("Επιλέξτε ποιοι μπορούν να δουν το πλήρες προφίλ σας.", "Choose who can see your full profile.")}</p>
               </div>
               <select 
@@ -554,7 +554,7 @@ export default function ProfileNeonDark() {
 
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 p-3 bg-gray-800 border border-gray-800 rounded-xl shadow-sm">
               <div>
-                <p className="text-sm font-bold text-gray-100">{t("Ποιοι μπορούν να μου στείλουν μήνυμα", "Who can message me")}</p>
+                <p className="text-sm font-bold text-white">{t("Ποιοι μπορούν να μου στείλουν μήνυμα", "Who can message me")}</p>
                 <p className="text-xs text-white mt-0.5">{t("Διαχειριστείτε ποιοι μπορούν να ξεκινήσουν συνομιλία μαζί σας.", "Manage who can initiate a chat with you.")}</p>
               </div>
               <select 
@@ -581,7 +581,7 @@ export default function ProfileNeonDark() {
                 className="mt-0.5 h-4 w-4 text-cyan-400 rounded border-gray-300 focus:ring-cyan-500"
               />
               <div>
-                <span className="text-sm font-bold text-gray-100 block">
+                <span className="text-sm font-bold text-white block">
                   {t("Κοινοποίηση Δεδομένων Τοποθεσίας", "Share Location Data")}
                 </span>
                 <span className="text-xs text-white font-medium leading-relaxed block mt-0.5">

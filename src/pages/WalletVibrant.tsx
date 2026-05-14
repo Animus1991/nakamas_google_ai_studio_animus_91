@@ -17,7 +17,7 @@ export default function WalletVibrant() {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
           <h1 className="text-xl md:text-2xl font-bold text-[#111827]">{t('Πορτοφόλι & Έσοδα', 'Wallet & Earnings')}</h1>
-          <p className="text-gray-900 font-medium text-xs md:text-sm mt-1">{t('Διαχειριστείτε τα έσοδα και τις πληρωμές σας.', 'Manage your event revenue and payouts.')}</p>
+          <p className="text-black font-medium text-xs md:text-sm mt-1">{t('Διαχειριστείτε τα έσοδα και τις πληρωμές σας.', 'Manage your event revenue and payouts.')}</p>
         </div>
       </div>
 
@@ -34,24 +34,24 @@ export default function WalletVibrant() {
         </Card>
 
         <Card className="p-6">
-          <div className="flex items-center gap-2 text-gray-900 mb-2">
+          <div className="flex items-center gap-2 text-black mb-2">
             <Clock className="w-4 h-4" />
             <h3 className="text-xs font-bold tracking-wide">{t('Εκκρεμεί εξόφληση', 'Pending Clearing')}</h3>
           </div>
-          <p className="text-3xl font-bold text-gray-800 mb-2">€85.00</p>
-          <p className="text-[10px] text-gray-900 font-medium leading-tight">
+          <p className="text-3xl font-bold text-black mb-2">€85.00</p>
+          <p className="text-[10px] text-black font-medium leading-tight">
             {t('Έσοδα από πρόσφατες εκδηλώσεις. Εξοφλούνται 3-5 ημέρες μετά την ολοκλήρωση.', 'Revenue from recently completed events. Clears 3-5 days after event completion.')}
           </p>
         </Card>
 
         <Card className="p-6 border border-gray-200 bg-gray-50 flex flex-col justify-center">
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 bg-white shadow-sm border border-gray-200 rounded-full flex items-center justify-center text-gray-900">
+            <div className="w-10 h-10 bg-white shadow-sm border border-gray-200 rounded-full flex items-center justify-center text-black">
               <Building2 className="w-5 h-5" />
             </div>
             <div>
               <h3 className="font-bold text-sm text-[#111827]">{t('Τραπεζικός λογαριασμός', 'Bank Account')}</h3>
-              <p className="text-xs text-gray-900 font-medium">Chase ****4092</p>
+              <p className="text-xs text-black font-medium">Chase ****4092</p>
             </div>
           </div>
           <Button variant="outline" size="sm" className="w-full text-xs">{t('Διαχείριση μεθόδων πληρωμής', 'Manage Payout Methods')}</Button>
@@ -77,9 +77,9 @@ export default function WalletVibrant() {
                 <div>
                   <h4 className="font-bold text-[#111827] text-sm">{tx.desc}</h4>
                   <div className="flex items-center gap-2 mt-1">
-                    <span className="text-[10px] text-gray-900 font-bold tracking-wide">{tx.date}</span>
-                    <span className="text-[10px] text-gray-900">•</span>
-                    <span className="text-[10px] text-gray-900 font-medium flex items-center justify-center gap-1">
+                    <span className="text-[10px] text-black font-bold tracking-wide">{tx.date}</span>
+                    <span className="text-[10px] text-black">•</span>
+                    <span className="text-[10px] text-black font-medium flex items-center justify-center gap-1">
                       {tx.status === t('Ολοκληρώθηκε', 'Completed') || tx.status === t('Διαθέσιμο', 'Available')
                         ? <CheckCircle2 className="w-3 h-3 text-emerald-500"/>
                         : <Clock className="w-3 h-3 text-amber-500"/>}

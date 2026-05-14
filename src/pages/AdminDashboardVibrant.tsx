@@ -10,29 +10,29 @@ export default function AdminDashboardVibrant() {
     <div className="mx-auto max-w-full space-y-8 pb-12">
       <div>
         <h1 className="text-[26.7902365993px] font-bold text-red-700">{t(`Πίνακας Διαχείρισης`, `Admin Dashboard`)}</h1>
-        <p className="mt-1 text-[13.551608211075px] text-gray-900 font-medium">{t(`Εποπτεία πλατφόρμας & μετριασμός`, `Platform oversight & moderation`)}</p>
+        <p className="mt-1 text-[13.551608211075px] text-black font-medium">{t(`Εποπτεία πλατφόρμας & μετριασμός`, `Platform oversight & moderation`)}</p>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         <Card className="p-4 border-t-4 border-t-blue-500">
-          <h3 className="text-[12.1125px] font-bold text-[#6B7280] tracking-wider">{t(`Ενεργοί`, `Active`)}</h3>
+          <h3 className="text-[12.1125px] font-bold text-black tracking-wider">{t(`Ενεργοί`, `Active`)}</h3>
           <p className="text-[25px] font-black text-[#111827] mt-1">127</p>
           <p className="text-[11.2px] text-green-500 font-bold flex items-center gap-0.5"><TrendingUp className="w-2.5 h-2.5" />+8%</p>
         </Card>
         <Card className="p-4 border-t-4 border-t-cyan-500">
-          <h3 className="text-[12.1125px] font-bold text-[#6B7280] tracking-wider">{t(`Αναφορές`, `Reports`)}</h3>
+          <h3 className="text-[12.1125px] font-bold text-black tracking-wider">{t(`Αναφορές`, `Reports`)}</h3>
           <p className="text-[25px] font-black text-[#111827] mt-1">4</p>
           <p className="text-[11.2px] text-amber-500 font-bold">{t(`εκκρεμείς`, `pending`)}</p>
         </Card>
         <Card className="p-4 border-t-4 border-t-red-500">
-          <h3 className="text-[12.1125px] font-bold text-[#6B7280] tracking-wider">{t(`Αποκλεισμένοι`, `Banned`)}</h3>
+          <h3 className="text-[12.1125px] font-bold text-black tracking-wider">{t(`Αποκλεισμένοι`, `Banned`)}</h3>
           <p className="text-[25px] font-black text-[#111827] mt-1">1</p>
-          <p className="text-[11.2px] text-gray-900 font-medium">{t(`συνολικά`, `total`)}</p>
+          <p className="text-[11.2px] text-black font-medium">{t(`συνολικά`, `total`)}</p>
         </Card>
         <Card className="p-4 border-t-4 border-t-emerald-500">
-          <h3 className="text-[12.1125px] font-bold text-[#6B7280] tracking-wider">{t(`Εκδηλώσεις`, `Events`)}</h3>
+          <h3 className="text-[12.1125px] font-bold text-black tracking-wider">{t(`Εκδηλώσεις`, `Events`)}</h3>
           <p className="text-[25px] font-black text-[#111827] mt-1">48</p>
-          <p className="text-[11.2px] text-gray-900 font-medium">{t(`αυτή τη βδομάδα`, `this week`)}</p>
+          <p className="text-[11.2px] text-black font-medium">{t(`αυτή τη βδομάδα`, `this week`)}</p>
         </Card>
       </div>
 
@@ -42,21 +42,21 @@ export default function AdminDashboardVibrant() {
         <div className="grid grid-cols-3 gap-4">
           <div>
             <div className="flex items-center justify-between mb-1">
-              <span className="text-[11.2px] text-gray-900 font-medium">{t(`Μ.Ο. Αξιοπιστία`, `Avg Reliability`)}</span>
+              <span className="text-[11.2px] text-black font-medium">{t(`Μ.Ο. Αξιοπιστία`, `Avg Reliability`)}</span>
               <span className="text-[12.5px] font-bold text-emerald-600">87%</span>
             </div>
             <div className="w-full bg-gray-100 h-1.5 rounded-full"><div className="bg-emerald-500 h-full rounded-full" style={{ width: '87%' }} /></div>
           </div>
           <div>
             <div className="flex items-center justify-between mb-1">
-              <span className="text-[11.2px] text-gray-900 font-medium">No-show rate</span>
+              <span className="text-[11.2px] text-black font-medium">No-show rate</span>
               <span className="text-[12.5px] font-bold text-amber-600">4.2%</span>
             </div>
             <div className="w-full bg-gray-100 h-1.5 rounded-full"><div className="bg-amber-400 h-full rounded-full" style={{ width: '4.2%' }} /></div>
           </div>
           <div>
             <div className="flex items-center justify-between mb-1">
-              <span className="text-[11.2px] text-gray-900 font-medium">{t(`Επαληθευμένοι`, `Verified`)}</span>
+              <span className="text-[11.2px] text-black font-medium">{t(`Επαληθευμένοι`, `Verified`)}</span>
               <span className="text-[12.5px] font-bold text-cyan-600">72%</span>
             </div>
             <div className="w-full bg-gray-100 h-1.5 rounded-full"><div className="bg-cyan-500 h-full rounded-full" style={{ width: '72%' }} /></div>
@@ -74,11 +74,11 @@ export default function AdminDashboardVibrant() {
                  <div className="mt-1"><AlertCircle className="h-4 w-4 text-yellow-500" /></div>
                  <div>
                    <p className="font-bold text-[#111827] text-[16.75971px]">{t(`Ακατάλληλη συμπεριφορά σε εκδήλωση`, `Inappropriate behavior at event`)}</p>
-                   <p className="text-[14.535px] text-gray-900 mt-0.5 leading-relaxed">{t(`Αναφέρθηκε από 2 συμμετέχοντες`, `Reported by 2 participants`)}</p>
+                   <p className="text-[14.535px] text-black mt-0.5 leading-relaxed">{t(`Αναφέρθηκε από 2 συμμετέχοντες`, `Reported by 2 participants`)}</p>
                  </div>
               </div>
               <div className="flex gap-2">
-                <button className="text-[18px]  tracking-wider bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 py-1.5 rounded font-bold transition-colors shadow-sm border border-gray-200">{t(`Εξέταση`, `Review`)}</button>
+                <button className="text-[18px]  tracking-wider bg-gray-100 hover:bg-gray-200 text-black px-3 py-1.5 rounded font-bold transition-colors shadow-sm border border-gray-200">{t(`Εξέταση`, `Review`)}</button>
                 <button className="text-[18px]  tracking-wider bg-red-50 hover:bg-red-100 text-red-700 px-3 py-1.5 rounded font-bold transition-colors border border-red-200">{t(`Αποκλεισμός`, `Ban`)}</button>
               </div>
             </Card>
@@ -88,7 +88,7 @@ export default function AdminDashboardVibrant() {
                  <div className="mt-1"><ShieldAlert className="h-4 w-4 text-red-500" /></div>
                  <div>
                    <p className="font-bold text-[#111827] text-[18px]">{t(`Ύποπτος λογαριασμός — πολλαπλές no-shows`, `Suspicious account — multiple no-shows`)}</p>
-                   <p className="text-[15px] text-gray-900 mt-0.5 leading-relaxed">{t(`3 no-shows τον τελευταίο μήνα`, `3 no-shows in the last month`)}</p>
+                   <p className="text-[15px] text-black mt-0.5 leading-relaxed">{t(`3 no-shows τον τελευταίο μήνα`, `3 no-shows in the last month`)}</p>
                  </div>
               </div>
               <div className="flex gap-2 shrink-0">
@@ -101,15 +101,15 @@ export default function AdminDashboardVibrant() {
         <div className="md:col-span-5 relative">
           <div className="sticky top-24">
             <h2 className="text-[18px] font-bold text-[#111827] tracking-wide mb-6 flex items-center gap-2">
-              <Flag className="h-4 w-4 text-gray-900" />{t(`Γρήγορη Ενέργεια`, `Quick Action`)}</h2>
+              <Flag className="h-4 w-4 text-black" />{t(`Γρήγορη Ενέργεια`, `Quick Action`)}</h2>
             <Card className="p-5 bg-gray-50 border-gray-200">
-              <p className="text-[18px] text-gray-900 font-bold tracking-wide mb-4">{t(`Αναζήτηση Χρήστη`, `Search User`)}</p>
+              <p className="text-[18px] text-black font-bold tracking-wide mb-4">{t(`Αναζήτηση Χρήστη`, `Search User`)}</p>
               
               <div className="space-y-4">
                 <div>
                   <label className="text-[15px] font-bold text-[#111827] mb-1.5 block">{t(`Email ή ID`, `Email or ID`)}</label>
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-900" />
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-black" />
                     <input type="text" placeholder={t(`Αναζήτηση...`, `Search...`)} className="w-full pl-9 pr-3 py-2 text-[18px] border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:outline-none" />
                   </div>
                 </div>

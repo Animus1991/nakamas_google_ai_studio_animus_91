@@ -158,7 +158,7 @@ export function LiveEventTracker({ groupId }: { groupId: string }) {
             <ShieldCheck className="w-4 h-4 text-emerald-600" />
             {t("Nakama Safety Shield", "Nakama Safety Shield")}
           </h3>
-          <p className="text-xs text-gray-900 mt-1 flex items-center gap-1.5">
+          <p className="text-xs text-black mt-1 flex items-center gap-1.5">
             <Navigation className="w-3.5 h-3.5 text-emerald-600" />
             {t(
               "Οπτική επαφή με την ομάδα για ασφάλεια.",
@@ -184,7 +184,7 @@ export function LiveEventTracker({ groupId }: { groupId: string }) {
           </Button>
         ) : (
           <div
-            className={`px-2.5 py-1 text-xs font-bold rounded-full tracking-wider ${isTrackingActive ? "bg-emerald-50 text-emerald-700" : "bg-gray-100 text-gray-900"}`}
+            className={`px-2.5 py-1 text-xs font-bold rounded-full tracking-wider ${isTrackingActive ? "bg-emerald-50 text-emerald-700" : "bg-gray-100 text-black"}`}
           >
             {isTrackingActive
               ? t("Ενεργό", "Active")
@@ -212,8 +212,8 @@ export function LiveEventTracker({ groupId }: { groupId: string }) {
         )}
         {!isTrackingActive ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gray-50/90 z-10">
-            <WifiOff className="w-12 h-12 text-gray-900 mb-3" />
-            <p className="text-gray-900 font-medium">
+            <WifiOff className="w-12 h-12 text-black mb-3" />
+            <p className="text-black font-medium">
               {t(
                 "Η λειτουργία συντονισμού δεν είναι ενεργή. Ο διοργανωτής μπορεί να την ξεκινήσει.",
                 "Coordination mode is inactive. The organizer can start it.",
@@ -226,7 +226,7 @@ export function LiveEventTracker({ groupId }: { groupId: string }) {
             <h4 className="font-bold text-[#111827] mb-2">
               {t("Συνδεθείτε στον Χάρτη", "Join the Map")}
             </h4>
-            <p className="text-xs text-gray-900 mb-4 max-w-[250px]">
+            <p className="text-xs text-black mb-4 max-w-[250px]">
               {t(
                 "Κοινοποιήστε την τοποθεσία σας προσωρινά σε αυτήν την ομάδα με δική σας επιλογή, για εύκολη συνάντηση.",
                 "Temporarily share your location with this group, at your choice, to easily meet up.",
@@ -330,7 +330,7 @@ export function LiveEventTracker({ groupId }: { groupId: string }) {
                 <Button
                   size="sm"
                   variant="outline"
-                  className="bg-white text-gray-900 hover:bg-gray-50 border-gray-200"
+                  className="bg-white text-black hover:bg-gray-50 border-gray-200"
                   onClick={() => setIsSharing(false)}
                 >
                   {t("Διακοπή Radar", "Stop Radar")}

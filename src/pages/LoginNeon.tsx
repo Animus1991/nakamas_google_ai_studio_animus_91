@@ -24,11 +24,11 @@ export default function LoginNeon() {
              NAKAMAS
           </div>
           <h1 className="text-2xl font-bold text-[#111827]">{t('Καλώς ήρθατε', 'Welcome back')}</h1>
-          <p className="text-xs text-gray-900 font-medium">{t('Συνδεθείτε για να ανακαλύψετε αξιόπιστες ομάδες και εμπειρίες.', 'Log in to discover trusted groups and experiences.')}</p>
+          <p className="text-xs text-black font-medium">{t('Συνδεθείτε για να ανακαλύψετε αξιόπιστες ομάδες και εμπειρίες.', 'Log in to discover trusted groups and experiences.')}</p>
         </div>
 
         <div className="space-y-4 pt-4">
-          <div className="text-center text-xs font-bold text-gray-900 tracking-wide mb-4">
+          <div className="text-center text-xs font-bold text-black tracking-wide mb-4">
             {t('Επιλέξτε Λογαριασμό (Demo)', 'Select Account (Demo)')}
           </div>
           <div className="grid grid-cols-1 gap-3">
@@ -46,8 +46,8 @@ export default function LoginNeon() {
                   )}
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-gray-900 group-hover:text-cyan-700">{user.name}</div>
-                  <div className="text-[10px] text-gray-900">{user.isOrganizer ? t('Διοργανωτής', 'Organizer') : t('Χρήστης', 'User')} • {user.city}</div>
+                  <div className="text-sm font-bold text-black group-hover:text-cyan-700">{user.name}</div>
+                  <div className="text-[10px] text-black">{user.isOrganizer ? t('Διοργανωτής', 'Organizer') : t('Χρήστης', 'User')} • {user.city}</div>
                 </div>
               </button>
             ))}
@@ -58,13 +58,13 @@ export default function LoginNeon() {
               <div className="w-full border-t border-gray-200"></div>
             </div>
             <div className="relative flex justify-center">
-              <span className="bg-white px-2 text-[10px] text-gray-900 tracking-wide">{t('Ή συνεχίστε με', 'Or continue with')}</span>
+              <span className="bg-white px-2 text-[10px] text-black tracking-wide">{t('Ή συνεχίστε με', 'Or continue with')}</span>
             </div>
           </div>
 
           <button 
             onClick={() => handleLogin(users[0].id)}
-            className="w-full flex items-center justify-center gap-3 px-4 py-3 rounded-full border border-gray-200 bg-white text-sm font-bold text-gray-900 hover:bg-gray-50 transition-colors shadow-sm"
+            className="w-full flex items-center justify-center gap-3 px-4 py-3 rounded-full border border-gray-200 bg-white text-sm font-bold text-black hover:bg-gray-50 transition-colors shadow-sm"
           >
             <img referrerPolicy="no-referrer" src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" className="w-5 h-5" />
             {t('Συνέχεια με Google', 'Continue with Google')}
@@ -72,7 +72,7 @@ export default function LoginNeon() {
         </div>
 
         <div className="text-center mt-6">
-          <p className="text-[10px] text-gray-900 font-medium leading-relaxed">
+          <p className="text-[10px] text-black font-medium leading-relaxed">
             {t('Συνεχίζοντας, συμφωνείτε με τους Όρους Χρήσης και την Πολιτική Απορρήτου του Nakamas.', 'By continuing, you agree to Nakamas\'s Terms of Service and Privacy Policy.')}<br/>
             {t('Ίσως απαιτείται επαλήθευση για ορισμένες εκδηλώσεις υψηλής εμπιστοσύνης.', 'Verification may be required for certain high-trust events.')}
           </p>

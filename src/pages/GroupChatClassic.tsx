@@ -165,7 +165,7 @@ export default function GroupChatClassic() {
 
   if (!group || !event) {
     return (
-      <div className="p-8 text-center text-gray-900">
+      <div className="p-8 text-center text-black">
         {t(
           "Το Chat δεν βρέθηκε ή η ομάδα δεν επιβεβαιώθηκε.",
           "Chat not found or group not confirmed.",
@@ -228,14 +228,14 @@ export default function GroupChatClassic() {
         key={msg.id}
         className={`flex flex-col group py-2.5 w-full px-4 md:px-6 ${isMe ? "items-end" : "items-start"} animate-in fade-in slide-in-from-bottom-2 duration-300`}
       >
-        <span className="text-[11px] font-semibold tracking-tight capitalize text-gray-900 ml-1 mb-1">
+        <span className="text-[11px] font-semibold tracking-tight capitalize text-black ml-1 mb-1">
           {isMe ? t("Εσείς", "You") : msg.senderName}
         </span>
         <div className="flex items-center gap-2">
           {isMe && (
             <button
               onClick={() => handleDeleteMessage(msg.id)}
-              className="opacity-0 group-hover:opacity-100 p-1.5 text-gray-900 hover:text-red-500 hover:bg-red-50 transition-all rounded-full"
+              className="opacity-0 group-hover:opacity-100 p-1.5 text-black hover:text-red-500 hover:bg-red-50 transition-all rounded-full"
               title={t("Διαγραφή μηνύματος", "Delete message")}
             >
               <X className="h-3.5 w-3.5" />
@@ -251,7 +251,7 @@ export default function GroupChatClassic() {
             {msg.text}
           </div>
         </div>
-        <span className="text-[10px] text-gray-900 mt-1 mr-1 font-medium tracking-wide">
+        <span className="text-[10px] text-black mt-1 mr-1 font-medium tracking-wide">
           {new Date(msg.timestamp).toLocaleTimeString([], {
             hour: "2-digit",
             minute: "2-digit",
@@ -276,7 +276,7 @@ export default function GroupChatClassic() {
                     setShowSearchMobile(false);
                     setSearchQuery("");
                   }}
-                  className="p-2 text-gray-900 hover:text-[#111827]"
+                  className="p-2 text-black hover:text-[#111827]"
                 >
                   <ArrowLeft className="h-5 w-5" />
                 </button>
@@ -291,7 +291,7 @@ export default function GroupChatClassic() {
                 {searchQuery && (
                   <button
                     onClick={() => setSearchQuery("")}
-                    className="p-2 text-gray-900 hover:text-gray-900"
+                    className="p-2 text-black hover:text-black"
                   >
                     <X className="h-4 w-4" />
                   </button>
@@ -302,7 +302,7 @@ export default function GroupChatClassic() {
                 <div className="flex items-center gap-3 overflow-hidden">
                   <button
                     onClick={() => navigate(-1)}
-                    className="text-gray-900 hover:text-[#111827] transition-colors p-1 shrink-0"
+                    className="text-black hover:text-[#111827] transition-colors p-1 shrink-0"
                   >
                     <ArrowLeft className="h-5 w-5" />
                   </button>
@@ -310,7 +310,7 @@ export default function GroupChatClassic() {
                     <h2 className="text-sm md:text-base font-bold text-[#111827] truncate">
                       {event.title}
                     </h2>
-                    <p className="text-[10px] md:text-[11px] text-gray-900 tracking-wide font-bold truncate flex items-center gap-1.5 mt-0.5">
+                    <p className="text-[10px] md:text-[11px] text-black tracking-wide font-bold truncate flex items-center gap-1.5 mt-0.5">
                       <Users className="h-3 w-3 shrink-0" />{" "}
                       {group.members.length} {t("Μέλη", "Members")}
                     </p>
@@ -323,7 +323,7 @@ export default function GroupChatClassic() {
                     <select
                       value={senderFilter}
                       onChange={(e) => setSenderFilter(e.target.value)}
-                      className="text-[11px] font-bold border border-gray-200 rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-cyan-500 bg-gray-50 text-gray-900 hover:bg-gray-100 cursor-pointer transition-colors max-w-[120px] truncate"
+                      className="text-[11px] font-bold border border-gray-200 rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-cyan-500 bg-gray-50 text-black hover:bg-gray-100 cursor-pointer transition-colors max-w-[120px] truncate"
                     >
                       <option value="all">
                         {t("Όλοι οι Αποστολείς", "All Senders")}
@@ -335,7 +335,7 @@ export default function GroupChatClassic() {
                       ))}
                     </select>
                     <div className="relative group">
-                      <Search className="h-3.5 w-3.5 text-gray-900 absolute left-2.5 top-1/2 -translate-y-1/2 group-focus-within:text-cyan-500 transition-colors" />
+                      <Search className="h-3.5 w-3.5 text-black absolute left-2.5 top-1/2 -translate-y-1/2 group-focus-within:text-cyan-500 transition-colors" />
                       <input
                         type="text"
                         placeholder={t("Αναζήτηση...", "Search...")}
@@ -349,7 +349,7 @@ export default function GroupChatClassic() {
                   {/* Mobile Search Toggle */}
                   <button
                     onClick={() => setShowSearchMobile(true)}
-                    className="text-gray-900 hover:text-[#111827] hover:bg-gray-100 rounded-full transition-colors p-2 md:hidden"
+                    className="text-black hover:text-[#111827] hover:bg-gray-100 rounded-full transition-colors p-2 md:hidden"
                   >
                     <Search className="h-5 w-5" />
                   </button>
@@ -357,7 +357,7 @@ export default function GroupChatClassic() {
                   {/* Info Toggle */}
                   <button
                     onClick={() => setShowInfo(!showInfo)}
-                    className={`transition-colors p-2 rounded-full ${showInfo ? "text-cyan-600 bg-cyan-50" : "text-gray-900 hover:text-[#111827] hover:bg-gray-100"}`}
+                    className={`transition-colors p-2 rounded-full ${showInfo ? "text-cyan-600 bg-cyan-50" : "text-black hover:text-[#111827] hover:bg-gray-100"}`}
                   >
                     <Info className="h-5 w-5" />
                   </button>
@@ -432,7 +432,7 @@ export default function GroupChatClassic() {
                 className={`p-2.5 rounded-full transition-all flex items-center justify-center shrink-0 border hidden sm:flex ${
                   isSharingLocation
                     ? "bg-emerald-50 text-emerald-600 border-emerald-200 ring-2 ring-emerald-500/20"
-                    : "bg-gray-50 text-gray-900 border-gray-200 hover:bg-gray-100 hover:text-gray-900"
+                    : "bg-gray-50 text-black border-gray-200 hover:bg-gray-100 hover:text-black"
                 }`}
                 title={t("Τοποθεσία & Ασφάλεια", "Location & Safety")}
               >
@@ -504,7 +504,7 @@ export default function GroupChatClassic() {
               </h3>
               <button
                 onClick={() => setShowInfo(false)}
-                className="text-gray-900 hover:text-[#111827] p-1 rounded-full hover:bg-gray-100 transition-colors"
+                className="text-black hover:text-[#111827] p-1 rounded-full hover:bg-gray-100 transition-colors"
               >
                 <X className="h-5 w-5" />
               </button>
@@ -542,9 +542,9 @@ export default function GroupChatClassic() {
                     </div>
                   )}
 
-                  <div className="space-y-2.5 text-[13px] font-medium text-gray-900">
+                  <div className="space-y-2.5 text-[13px] font-medium text-black">
                     <div className="flex items-start gap-3">
-                      <div className="p-1.5 bg-gray-100 rounded-md text-gray-900 shrink-0">
+                      <div className="p-1.5 bg-gray-100 rounded-md text-black shrink-0">
                         <Calendar className="h-3.5 w-3.5" />
                       </div>
                       <span className="pt-0.5">
@@ -553,7 +553,7 @@ export default function GroupChatClassic() {
                       </span>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="p-1.5 bg-gray-100 rounded-md text-gray-900 shrink-0">
+                      <div className="p-1.5 bg-gray-100 rounded-md text-black shrink-0">
                         <MapPin className="h-3.5 w-3.5" />
                       </div>
                       <span className="pt-0.5 text-[#111827] font-semibold">
@@ -580,7 +580,7 @@ export default function GroupChatClassic() {
                 >
                   <div className="flex items-center gap-2.5 mb-2">
                     <div
-                      className={`p-1.5 rounded-full ${group.discountUnlocked ? "bg-emerald-100 text-emerald-600" : "bg-gray-100 text-gray-900"}`}
+                      className={`p-1.5 rounded-full ${group.discountUnlocked ? "bg-emerald-100 text-emerald-600" : "bg-gray-100 text-black"}`}
                     >
                       <Tag className="h-4 w-4" />
                     </div>
@@ -591,7 +591,7 @@ export default function GroupChatClassic() {
                     </span>
                   </div>
                   <p
-                    className={`text-xs font-medium leading-relaxed ${group.discountUnlocked ? "text-emerald-700" : "text-gray-900"}`}
+                    className={`text-xs font-medium leading-relaxed ${group.discountUnlocked ? "text-emerald-700" : "text-black"}`}
                   >
                     {group.discountUnlocked
                       ? t(
@@ -621,13 +621,13 @@ export default function GroupChatClassic() {
                         {t("Προσθήκη Μελών", "Add Members")}
                       </button>
                     )}
-                    <span className="text-[11px] font-bold text-gray-900 bg-gray-100 px-2 py-0.5 rounded-full">
+                    <span className="text-[11px] font-bold text-black bg-gray-100 px-2 py-0.5 rounded-full">
                       {group.members.length}/{group.targetSize}
                     </span>
                   </div>
                 </div>
                 <div className="relative mb-4">
-                  <Search className="h-3.5 w-3.5 text-gray-900 absolute left-3 top-1/2 -translate-y-1/2" />
+                  <Search className="h-3.5 w-3.5 text-black absolute left-3 top-1/2 -translate-y-1/2" />
                   <input
                     type="text"
                     placeholder={t("Αναζήτηση μελών...", "Search members...")}
@@ -659,7 +659,7 @@ export default function GroupChatClassic() {
                                 className={`w-full h-full object-cover transition-all ${!isCloseToEvent && member.id !== currentUser.id ? "blur-sm grayscale opacity-80" : ""}`}
                               />
                             ) : (
-                              <div className="w-full h-full flex items-center justify-center text-gray-900 font-bold text-xs bg-cyan-50 text-cyan-700">
+                              <div className="w-full h-full flex items-center justify-center text-black font-bold text-xs bg-cyan-50 text-cyan-700">
                                 {member.name.substring(0, 2)}
                               </div>
                             )}
@@ -678,7 +678,7 @@ export default function GroupChatClassic() {
                               <p className="text-[13px] font-bold text-[#111827] truncate">
                                 {member.name}{" "}
                                 {member.id === currentUser.id && (
-                                  <span className="text-gray-900 font-medium ml-1">
+                                  <span className="text-black font-medium ml-1">
                                     ({t("Εσείς", "You")})
                                   </span>
                                 )}
@@ -712,7 +712,7 @@ export default function GroupChatClassic() {
               <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 space-y-5">
                 <div>
                   <h4 className="font-bold text-[13px] capitalize tracking-tight text-[#111827] mb-3 flex items-center gap-1.5">
-                    <ShieldCheck className="h-3.5 w-3.5 text-gray-900" />{" "}
+                    <ShieldCheck className="h-3.5 w-3.5 text-black" />{" "}
                     {t("Ιδιωτικότητα Συνομιλίας", "Chat Privacy")}
                   </h4>
                   <div className="flex items-center justify-between gap-4">
@@ -720,7 +720,7 @@ export default function GroupChatClassic() {
                       <p className="text-[13px] font-bold text-[#111827]">
                         {t("Εφήμερη Λειτουργία", "Ephemeral Mode")}
                       </p>
-                      <p className="text-[11px] text-gray-900 mt-1 leading-relaxed">
+                      <p className="text-[11px] text-black mt-1 leading-relaxed">
                         {t(
                           "Το ιστορικό διαγράφεται 24 ώρες μετά. Πρέπει να συμφωνήσουν όλοι για διατήρηση.",
                           "Chat history deletes automatically 24h after the event. All members must agree to keep it permanently.",
@@ -750,7 +750,7 @@ export default function GroupChatClassic() {
 
                 <div className="pt-4 border-t border-gray-100">
                   <h4 className="font-bold text-[13px] capitalize tracking-tight text-[#111827] mb-3 flex items-center gap-1.5">
-                    <Navigation className="h-3.5 w-3.5 text-gray-900" />{" "}
+                    <Navigation className="h-3.5 w-3.5 text-black" />{" "}
                     {t("Άφιξη & Ασφάλεια", "Arrival & Safety")}
                   </h4>
                   <div className="space-y-2">
@@ -762,14 +762,14 @@ export default function GroupChatClassic() {
                         <p className="text-[12px] font-bold text-[#111827]">
                           {t("Κατάσταση Άφιξης", "Share Arrival Status")}
                         </p>
-                        <p className="text-[10px] text-gray-900 mt-0.5">
+                        <p className="text-[10px] text-black mt-0.5">
                           {t(
                             "Γρήγορη ενημέρωση χωρίς χάρτη",
                             "Quickly update the group without map",
                           )}
                         </p>
                       </div>
-                      <Clock className="w-4 h-4 text-gray-900" />
+                      <Clock className="w-4 h-4 text-black" />
                     </button>
 
                     <button
@@ -788,7 +788,7 @@ export default function GroupChatClassic() {
                               )}
                         </p>
                         <p
-                          className={`text-[10px] mt-0.5 ${isSharingLocation ? "text-cyan-600/80" : "text-gray-900"}`}
+                          className={`text-[10px] mt-0.5 ${isSharingLocation ? "text-cyan-600/80" : "text-black"}`}
                         >
                           {isSharingLocation
                             ? t("Διαχείριση ή Διακοπή", "Tap to manage or stop")
@@ -799,7 +799,7 @@ export default function GroupChatClassic() {
                         </p>
                       </div>
                       <MapPin
-                        className={`w-4 h-4 ${isSharingLocation ? "text-cyan-600" : "text-gray-900"}`}
+                        className={`w-4 h-4 ${isSharingLocation ? "text-cyan-600" : "text-black"}`}
                       />
                     </button>
 
@@ -811,7 +811,7 @@ export default function GroupChatClassic() {
                         <p className="text-[12px] font-bold text-[#111827]">
                           {t("Nakama Safety Shield", "Nakama Safety Shield")}
                         </p>
-                        <p className="text-[10px] text-gray-900 mt-0.5">
+                        <p className="text-[10px] text-black mt-0.5">
                           {t(
                             "Χάρτης ασφαλείας & SOS Flare",
                             "Safety map & SOS Flare",
@@ -854,7 +854,7 @@ export default function GroupChatClassic() {
                 </button>
                 <button
                   onClick={() => setShowLeaveModal(true)}
-                  className="w-full py-2.5 px-4 text-[11px] font-bold tracking-wide text-gray-900 bg-white hover:bg-gray-50 border border-gray-200 rounded-lg transition-colors"
+                  className="w-full py-2.5 px-4 text-[11px] font-bold tracking-wide text-black bg-white hover:bg-gray-50 border border-gray-200 rounded-lg transition-colors"
                 >
                   {t("Αποχώρηση", "Leave Group")}
                 </button>
@@ -872,7 +872,7 @@ export default function GroupChatClassic() {
               <h3 className="text-lg font-bold text-[#111827] mb-2">
                 {t("Κοινοποίηση Κατάστασης", "Share Arrival Status")}
               </h3>
-              <p className="text-xs font-medium leading-relaxed text-gray-900 mb-6">
+              <p className="text-xs font-medium leading-relaxed text-black mb-6">
                 {t(
                   "Γρήγορη ενημέρωση ομάδας χωρίς κοινοποίηση της ακριβούς τοποθεσίας σας.",
                   "Quickly update the group on your status without sharing your exact location.",
@@ -923,16 +923,16 @@ export default function GroupChatClassic() {
                       ]);
                       setShowStatusModal(false);
                     }}
-                    className="w-full flex items-center gap-3 px-4 py-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl transition-colors text-sm font-bold text-gray-900"
+                    className="w-full flex items-center gap-3 px-4 py-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl transition-colors text-sm font-bold text-black"
                   >
-                    <span className="text-gray-900">{status.icon}</span>
+                    <span className="text-black">{status.icon}</span>
                     {status.label}
                   </button>
                 ))}
               </div>
               <button
                 onClick={() => setShowStatusModal(false)}
-                className="w-full px-4 py-3 text-sm font-bold text-gray-900 hover:bg-gray-50 rounded-xl transition-all border border-transparent active:scale-[0.98]"
+                className="w-full px-4 py-3 text-sm font-bold text-black hover:bg-gray-50 rounded-xl transition-all border border-transparent active:scale-[0.98]"
               >
                 {t("Ακύρωση", "Cancel")}
               </button>
@@ -952,14 +952,14 @@ export default function GroupChatClassic() {
                     <h3 className="text-base font-bold text-[#111827]">
                       {t("Live Τοποθεσία", "Live Location Sharing")}
                     </h3>
-                    <p className="text-[11px] font-medium text-gray-900">
+                    <p className="text-[11px] font-medium text-black">
                       {t("Προαιρετικό & προσωρινό", "Optional & temporary")}
                     </p>
                   </div>
                 </div>
                 <button
                   onClick={() => setShowLocationConfigModal(false)}
-                  className="text-gray-900 hover:text-gray-900 p-1.5 rounded-full hover:bg-gray-100"
+                  className="text-black hover:text-black p-1.5 rounded-full hover:bg-gray-100"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -1004,7 +1004,7 @@ export default function GroupChatClassic() {
                 )}
 
                 <div className="space-y-3">
-                  <h4 className="text-[11px] font-bold tracking-wide text-gray-900">
+                  <h4 className="text-[11px] font-bold tracking-wide text-black">
                     1. {t("Ακρίβεια", "Precision")}
                   </h4>
                   <div className="grid grid-cols-2 gap-3">
@@ -1018,11 +1018,11 @@ export default function GroupChatClassic() {
                       className={`p-3 rounded-xl border text-left flex flex-col h-full transition-all ${locationConfig.precision === "approximate" ? "border-[#111827] bg-gray-50 ring-1 ring-[#111827]" : "border-gray-200 hover:border-gray-300"}`}
                     >
                       <span
-                        className={`text-[13px] font-bold ${locationConfig.precision === "approximate" ? "text-[#111827]" : "text-gray-900"}`}
+                        className={`text-[13px] font-bold ${locationConfig.precision === "approximate" ? "text-[#111827]" : "text-black"}`}
                       >
                         {t("Κατά προσέγγιση", "Approximate")}
                       </span>
-                      <span className="text-[10px] text-gray-900 mt-1 leading-relaxed">
+                      <span className="text-[10px] text-black mt-1 leading-relaxed">
                         {t(
                           "Μόνο απόσταση & ETA, όχι live τοποθεσία",
                           "Distance & ETA only, no map pin",
@@ -1039,11 +1039,11 @@ export default function GroupChatClassic() {
                       className={`p-3 rounded-xl border text-left flex flex-col h-full transition-all ${locationConfig.precision === "exact" ? "border-[#111827] bg-gray-50 ring-1 ring-[#111827]" : "border-gray-200 hover:border-gray-300"}`}
                     >
                       <span
-                        className={`text-[13px] font-bold ${locationConfig.precision === "exact" ? "text-[#111827]" : "text-gray-900"}`}
+                        className={`text-[13px] font-bold ${locationConfig.precision === "exact" ? "text-[#111827]" : "text-black"}`}
                       >
                         {t("Ακριβής", "Exact")}
                       </span>
-                      <span className="text-[10px] text-gray-900 mt-1 leading-relaxed">
+                      <span className="text-[10px] text-black mt-1 leading-relaxed">
                         {t(
                           "Ακριβές GPS live tracking",
                           "Precise GPS live tracking",
@@ -1054,7 +1054,7 @@ export default function GroupChatClassic() {
                 </div>
 
                 <div className="space-y-3">
-                  <h4 className="text-[11px] font-bold tracking-wide text-gray-900">
+                  <h4 className="text-[11px] font-bold tracking-wide text-black">
                     2. {t("Ορατότητα", "Share With")}
                   </h4>
                   <div className="flex flex-col gap-2">
@@ -1094,7 +1094,7 @@ export default function GroupChatClassic() {
                               t("Ολόκληρη η Ομάδα", "Entire Confirmed Group")}
                           </span>
                           {option === "organizer" && (
-                            <span className="text-[10px] text-gray-900 leading-relaxed">
+                            <span className="text-[10px] text-black leading-relaxed">
                               {t(
                                 "Ιδανικό για ξεναγήσεις ή πεζοπορίες",
                                 "Best for guided hikes or escapes",
@@ -1116,7 +1116,7 @@ export default function GroupChatClassic() {
                 </div>
 
                 <div className="space-y-3">
-                  <h4 className="text-[11px] font-bold tracking-wide text-gray-900">
+                  <h4 className="text-[11px] font-bold tracking-wide text-black">
                     3. {t("Αυτόματη Λήξη", "Auto-Expiry")}
                   </h4>
                   <select
@@ -1203,14 +1203,14 @@ export default function GroupChatClassic() {
               <h3 className="text-lg font-bold text-[#111827] mb-2">
                 {t("Σύνδεσμος Έμπιστης Επαφής", "Trusted Contact Link")}
               </h3>
-              <p className="text-xs font-medium leading-relaxed text-gray-900 mb-6">
+              <p className="text-xs font-medium leading-relaxed text-black mb-6">
                 {t(
                   "Αυτό δημιουργεί έναν προσωρινό σύνδεσμο ασφαλείας. Μοιραστείτε τον με ασφάλεια εκτός Nakamas. Θα βλέπουν την τοποθεσία σας μέχρι το τέλος. Ανακαλέστε τον όποτε θέλετε.",
                   "This creates a temporary safety link. Share this securely with a trusted friend or family member outside of Nakamas. They will be able to see your live location until the event ends. You can revoke it anytime.",
                 )}
               </p>
               <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 flex items-center justify-between mb-6">
-                <span className="text-xs font-medium text-gray-900 truncate mr-2">
+                <span className="text-xs font-medium text-black truncate mr-2">
                   https://nakamas.app/safe/r9x2p
                 </span>
                 <button
@@ -1246,12 +1246,12 @@ export default function GroupChatClassic() {
               <h3 className="text-lg font-bold text-[#111827] mb-2">
                 {t("Αποχώρηση από την ομάδα;", "Leave Group?")}
               </h3>
-              <p className="text-xs font-medium leading-relaxed text-gray-900 mb-6">
+              <p className="text-xs font-medium leading-relaxed text-black mb-6">
                 {t(
                   "Είστε σίγουροι ότι θέλετε να αποχωρήσετε από",
                   "Are you sure you want to leave",
                 )}{" "}
-                <span className="font-bold text-gray-900">{event.title}</span>?{" "}
+                <span className="font-bold text-black">{event.title}</span>?{" "}
                 {t(
                   "Μπορεί να μην μπορέσετε να ξαναμπείτε εάν η ομάδα γεμίσει.",
                   "You might not be able to rejoin if the group is full.",
@@ -1275,7 +1275,7 @@ export default function GroupChatClassic() {
                 </button>
                 <button
                   onClick={() => setShowLeaveModal(false)}
-                  className="w-full px-4 py-3 text-sm font-bold text-gray-900 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all border border-gray-200 active:scale-[0.98]"
+                  className="w-full px-4 py-3 text-sm font-bold text-black bg-gray-50 hover:bg-gray-100 rounded-xl transition-all border border-gray-200 active:scale-[0.98]"
                 >
                   {t("Ακύρωση", "Cancel")}
                 </button>
@@ -1293,7 +1293,7 @@ export default function GroupChatClassic() {
               <h3 className="text-lg font-bold text-[#111827] mb-2">
                 {t("Διατήρηση Ιστορικού;", "Keep Chat History?")}
               </h3>
-              <p className="text-xs font-medium leading-relaxed text-gray-900 mb-6">
+              <p className="text-xs font-medium leading-relaxed text-black mb-6">
                 {t(
                   "Προτείνετε να απενεργοποιηθεί η Εφήμερη Λειτουργία. Αν όλα τα μέλη συμφωνήσουν, η συνομιλία θα διατηρηθεί μόνιμα.",
                   "You are proposing to turn off Ephemeral Mode. If all group members agree, this chat will be kept permanently instead of being deleted automatically.",
@@ -1322,7 +1322,7 @@ export default function GroupChatClassic() {
                 </button>
                 <button
                   onClick={() => setShowDisableEphemeralModal(false)}
-                  className="w-full px-4 py-3 text-sm font-bold text-gray-900 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all border border-gray-200 active:scale-[0.98]"
+                  className="w-full px-4 py-3 text-sm font-bold text-black bg-gray-50 hover:bg-gray-100 rounded-xl transition-all border border-gray-200 active:scale-[0.98]"
                 >
                   {t("Ακύρωση", "Cancel")}
                 </button>
@@ -1342,17 +1342,17 @@ export default function GroupChatClassic() {
                   <h3 className="text-base font-bold text-[#111827]">
                     {t("Ιδιωτική Αναφορά Ασφαλείας", "Private Safety Report")}
                   </h3>
-                  <p className="text-xs font-semibold text-gray-900 tracking-tight capitalize mt-0.5">
+                  <p className="text-xs font-semibold text-black tracking-tight capitalize mt-0.5">
                     {t("Απολύτως Εμπιστευτικό", "Strictly Confidential")}
                   </p>
                 </div>
               </div>
-              <p className="text-xs font-medium leading-relaxed text-gray-900 mb-4 bg-gray-50 p-3 rounded-lg border border-gray-100">
+              <p className="text-xs font-medium leading-relaxed text-black mb-4 bg-gray-50 p-3 rounded-lg border border-gray-100">
                 {t(
                   "Αυτή η αναφορά πηγαίνει απευθείας στην ομάδα ελέγχου. ",
                   "This report goes directly to the Nakamas moderation team. It will ",
                 )}
-                <span className="font-bold text-gray-800">
+                <span className="font-bold text-black">
                   {t("Δεν", "not")}
                 </span>
                 {t(
@@ -1371,7 +1371,7 @@ export default function GroupChatClassic() {
               <div className="flex justify-end gap-3">
                 <button
                   onClick={() => setShowReportModal(false)}
-                  className="px-5 py-2.5 text-sm font-bold text-gray-900 bg-gray-50 hover:bg-gray-100 rounded-xl transition-colors border border-gray-200"
+                  className="px-5 py-2.5 text-sm font-bold text-black bg-gray-50 hover:bg-gray-100 rounded-xl transition-colors border border-gray-200"
                 >
                   {t("Ακύρωση", "Cancel")}
                 </button>
@@ -1403,7 +1403,7 @@ export default function GroupChatClassic() {
               <h3 className="text-lg font-bold text-[#111827] mb-2">
                 {t("Κατάσταση Άφιξης", "Share Arrival Status")}
               </h3>
-              <p className="text-xs font-medium leading-relaxed text-gray-900 mb-6">
+              <p className="text-xs font-medium leading-relaxed text-black mb-6">
                 {t(
                   "Ενημερώστε γρήγορα την ομάδα για την κατάστασή σας χωρίς να μοιραστείτε την ακριβή τοποθεσία σας.",
                   "Quickly update the group on your status without sharing your exact location.",
@@ -1435,7 +1435,7 @@ export default function GroupChatClassic() {
                     name="eta"
                     type="number"
                     placeholder={t("ETA (λεπτά)", "ETA (mins)")}
-                    className="flex-1 w-full bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-xl px-4 py-3 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none"
+                    className="flex-1 w-full bg-gray-50 border border-gray-200 text-black text-sm rounded-xl px-4 py-3 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none"
                     min="1"
                   />
                   <button
@@ -1490,7 +1490,7 @@ export default function GroupChatClassic() {
 
                 <button
                   onClick={() => setShowStatusModal(false)}
-                  className="w-full px-4 py-3 mt-2 text-sm font-bold text-gray-900 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all border border-gray-200 active:scale-[0.98]"
+                  className="w-full px-4 py-3 mt-2 text-sm font-bold text-black bg-gray-50 hover:bg-gray-100 rounded-xl transition-all border border-gray-200 active:scale-[0.98]"
                 >
                   {t("Ακύρωση", "Cancel")}
                 </button>
@@ -1510,7 +1510,7 @@ export default function GroupChatClassic() {
                     <h3 className="text-base font-bold text-[#111827]">
                       {t("Προσθήκη Μελών", "Add Members")}
                     </h3>
-                    <p className="text-[11px] font-medium text-gray-900">
+                    <p className="text-[11px] font-medium text-black">
                       {t(
                         "Μπορείτε να προσθέσετε όσα άτομα θέλετε σε αυτή την ομάδα.",
                         "You can add as many people as you wish to this group.",
@@ -1523,7 +1523,7 @@ export default function GroupChatClassic() {
                     setShowAddMemberModal(false);
                     setMemberAddSearchQuery("");
                   }}
-                  className="text-gray-900 hover:text-gray-900 p-1.5 rounded-full hover:bg-gray-100 transition-colors"
+                  className="text-black hover:text-black p-1.5 rounded-full hover:bg-gray-100 transition-colors"
                   title={t("Κλείσιμο", "Close")}
                 >
                   <X className="w-5 h-5" />
@@ -1532,7 +1532,7 @@ export default function GroupChatClassic() {
 
               <div className="p-4 sm:p-5 bg-gray-50/50 border-b border-gray-100">
                 <div className="relative">
-                  <Search className="h-4 w-4 text-gray-900 absolute left-3 top-1/2 -translate-y-1/2" />
+                  <Search className="h-4 w-4 text-black absolute left-3 top-1/2 -translate-y-1/2" />
                   <input
                     type="text"
                     placeholder={t(
@@ -1577,7 +1577,7 @@ export default function GroupChatClassic() {
                             <span className="text-[13px] font-bold text-[#111827]">
                               {member.name}
                             </span>
-                            <span className="text-[10px] text-gray-900 font-medium flex items-center gap-1">
+                            <span className="text-[10px] text-black font-medium flex items-center gap-1">
                               {member.city}{" "}
                               {member.badges.includes("Payment verified") && (
                                 <ShieldCheck className="w-3 h-3 text-emerald-500" />
@@ -1611,8 +1611,8 @@ export default function GroupChatClassic() {
                       </div>
                     ))
                 ) : (
-                  <div className="text-center p-8 text-gray-900 flex flex-col items-center">
-                    <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-3 text-gray-900">
+                  <div className="text-center p-8 text-black flex flex-col items-center">
+                    <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-3 text-black">
                       <Check className="w-6 h-6" />
                     </div>
                     <p className="text-[13px] font-bold text-[#111827]">
@@ -1632,7 +1632,7 @@ export default function GroupChatClassic() {
               </div>
 
               <div className="p-4 sm:p-5 border-t border-gray-100 bg-gray-50 flex items-center justify-between">
-                <span className="text-xs font-bold text-gray-900">
+                <span className="text-xs font-bold text-black">
                   {t("Τρέχον μέγεθος:", "Current size:")} {group.members.length}
                 </span>
                 <button
@@ -1640,7 +1640,7 @@ export default function GroupChatClassic() {
                     setShowAddMemberModal(false);
                     setMemberAddSearchQuery("");
                   }}
-                  className="px-5 py-2.5 text-sm font-bold text-gray-900 bg-white hover:bg-gray-50 rounded-xl transition-all border border-gray-200 shadow-sm active:scale-[0.98]"
+                  className="px-5 py-2.5 text-sm font-bold text-black bg-white hover:bg-gray-50 rounded-xl transition-all border border-gray-200 shadow-sm active:scale-[0.98]"
                 >
                   {t("Τέλος", "Done")}
                 </button>
@@ -1653,7 +1653,7 @@ export default function GroupChatClassic() {
             <div className="bg-white rounded-2xl shadow-xl w-full max-w-4xl max-h-[90vh] flex flex-col border border-gray-100 animate-in zoom-in-95 duration-200 overflow-hidden relative">
               <button
                 onClick={() => setShowLiveRadarModal(false)}
-                className="absolute top-4 right-4 z-[200] bg-white rounded-full p-2 shadow-sm border border-gray-200 text-gray-900 hover:text-gray-900 transition-colors"
+                className="absolute top-4 right-4 z-[200] bg-white rounded-full p-2 shadow-sm border border-gray-200 text-black hover:text-black transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>

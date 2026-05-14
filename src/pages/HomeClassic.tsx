@@ -337,7 +337,7 @@ export default function HomeClassic() {
             )}
           </p>
 
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-3 text-[11.33px] font-bold tracking-wide text-gray-200 mb-6">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-3 text-[11.33px] font-bold tracking-wide text-gray-300 mb-6">
             <span className="flex items-center gap-1.5">
               <Users className="w-3.5 h-3.5 text-[#18D8DB]" />{" "}
               {t("home.hero.stat1", "Μικρες ομαδες")}
@@ -373,7 +373,7 @@ export default function HomeClassic() {
           {/* Search with suggestions */}
           <div className="flex gap-3 items-center">
             <div ref={searchRef} className="relative flex-1 max-w-md">
-              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200 z-10" />
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-black z-10" />
               <input
                 type="text"
                 value={searchQuery}
@@ -388,7 +388,7 @@ export default function HomeClassic() {
               {showSearchSuggestions && !searchQuery && (
                 <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-xl border border-gray-100 z-50 overflow-hidden">
                   <div className="px-3 pt-2 pb-1">
-                    <span className="text-[10px] font-bold text-gray-200 tracking-widest">
+                    <span className="text-[10px] font-bold text-black tracking-widest">
                       {t("Δημοφιλείς Αναζητήσεις", "Popular Searches")}
                     </span>
                   </div>
@@ -400,9 +400,9 @@ export default function HomeClassic() {
                         handleSearchChange(s);
                         setShowSearchSuggestions(false);
                       }}
-                      className="w-full text-left px-4 py-2.5 text-sm text-gray-900 hover:bg-cyan-50 hover:text-[#0E8B8D] transition-colors font-medium flex items-center gap-2"
+                      className="w-full text-left px-4 py-2.5 text-sm text-black hover:bg-cyan-50 hover:text-[#0E8B8D] transition-colors font-medium flex items-center gap-2"
                     >
-                      <Search className="w-3.5 h-3.5 text-gray-200" />
+                      <Search className="w-3.5 h-3.5 text-black" />
                       {s}
                     </button>
                   ))}
@@ -431,7 +431,7 @@ export default function HomeClassic() {
             <h3 className="text-[14.63px] font-bold text-[#111827]">
               {t("home.pending_feedback.title", "Εκκρεμής Αξιολόγηση")}
             </h3>
-            <p className="text-[11.33px] text-gray-900 font-medium mt-0.5 leading-relaxed">
+            <p className="text-[11.33px] text-black font-medium mt-0.5 leading-relaxed">
               {t(
                 "home.pending_feedback.body",
                 'Αξιολογήστε τα 3 μέλη από το "Comedy Night" για να ξεκλειδώσετε την επόμενη κράτησή σας.',
@@ -485,7 +485,7 @@ export default function HomeClassic() {
             <h3 className="font-bold text-[#111827] text-[14.63px] mb-1">
               {title}
             </h3>
-            <p className="text-[12.38px] leading-relaxed text-gray-900 font-medium">
+            <p className="text-[12.38px] leading-relaxed text-black font-medium">
               {body}
             </p>
           </div>
@@ -495,7 +495,7 @@ export default function HomeClassic() {
       {/* Categories & Filters */}
       <section className="space-y-4">
         <div>
-          <h2 className="text-[11.6px] font-bold text-gray-900 tracking-wide mb-3">
+          <h2 className="text-[11.6px] font-bold text-black tracking-wide mb-3">
             {t("home.explore_categories", "Εξερευνηση κατηγοριων")}
           </h2>
           <div ref={categoryScrollRef} className="flex flex-nowrap gap-2 overflow-x-auto pb-1 noscrollbar">
@@ -506,7 +506,7 @@ export default function HomeClassic() {
                 className={`whitespace-nowrap px-3.5 py-1 rounded-full text-[12.75px] font-bold shadow-sm transition-colors tracking-wide ${
                   activeCategory === cat
                     ? "bg-[#111827] text-white"
-                    : "bg-white border border-gray-200 text-gray-900 hover:text-[#111827] hover:bg-gray-50"
+                    : "bg-white border border-gray-200 text-black hover:text-[#111827] hover:bg-gray-50"
                 }`}
               >
                 {categoryTranslations[cat] ?? cat}
@@ -524,7 +524,7 @@ export default function HomeClassic() {
               className={`whitespace-nowrap px-3 py-1 rounded-full text-[11.82px] font-bold transition-colors border ${
                 tagFilter === tag
                   ? "bg-[#18D8DB]/20 border-[#18D8DB] text-[#0E8B8D]"
-                  : "bg-white border-gray-200 text-gray-900 hover:border-gray-300 hover:text-[#111827]"
+                  : "bg-white border-gray-200 text-black hover:border-gray-300 hover:text-[#111827]"
               }`}
             >
               {tagTranslations[tag] ?? tag}
@@ -625,7 +625,7 @@ export default function HomeClassic() {
                 {t("home.feed.sort.group_progress", "Πρόοδος Ομάδας")}
               </option>
             </select>
-            <ArrowDownUp className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3 h-3 text-gray-900 pointer-events-none" />
+            <ArrowDownUp className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3 h-3 text-black pointer-events-none" />
           </div>
         </div>
       </section>
@@ -636,13 +636,13 @@ export default function HomeClassic() {
           <div className="flex bg-gray-100 p-1 rounded-lg w-fit">
             <button
               onClick={() => setFeedType("For You")}
-              className={`px-4 py-1.5 rounded-md text-[12.73px] font-bold transition-colors ${feedType === "For You" ? "bg-white shadow-sm text-[#111827]" : "text-gray-900 hover:text-[#111827]"}`}
+              className={`px-4 py-1.5 rounded-md text-[12.73px] font-bold transition-colors ${feedType === "For You" ? "bg-white shadow-sm text-[#111827]" : "text-black hover:text-[#111827]"}`}
             >
               {t("home.feed.for_you", "Για Σένα")}
             </button>
             <button
               onClick={() => setFeedType("Discover")}
-              className={`px-4 py-1.5 rounded-md text-[12.73px] font-bold transition-colors ${feedType === "Discover" ? "bg-white shadow-sm text-[#111827]" : "text-gray-900 hover:text-[#111827]"}`}
+              className={`px-4 py-1.5 rounded-md text-[12.73px] font-bold transition-colors ${feedType === "Discover" ? "bg-white shadow-sm text-[#111827]" : "text-black hover:text-[#111827]"}`}
             >
               {t("home.feed.discover", "Ανακάλυψε")}
             </button>
@@ -654,7 +654,7 @@ export default function HomeClassic() {
             </button>
             <button
               onClick={() => navigate("/nearby")}
-              className="p-1.5 rounded-md transition-colors text-gray-900 hover:text-[#111827]"
+              className="p-1.5 rounded-md transition-colors text-black hover:text-[#111827]"
               title={t("Άνοιγμα Χάρτη", "Open Map")}
             >
               <MapIcon className="w-4 h-4" />
@@ -669,7 +669,7 @@ export default function HomeClassic() {
             ))
           ) : sortedEvents.length === 0 ? (
             <div className="col-span-1 sm:col-span-2 lg:col-span-3 text-center py-12 bg-gray-50 rounded-2xl border border-dashed border-gray-200">
-              <p className="text-gray-900 font-medium text-sm">
+              <p className="text-black font-medium text-sm">
                 {t(
                   "home.feed.no_events",
                   "Δεν βρέθηκαν εκδηλώσεις για τα κριτήριά σας.",

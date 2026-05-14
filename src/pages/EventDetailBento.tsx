@@ -39,17 +39,17 @@ function Group({ group, event, navigate }: { group: any; event: any; navigate: a
       
       <div className="flex justify-between items-start mb-3 mt-1">
         <div>
-          <div className="flex items-center gap-1.5 text-xs font-bold text-gray-900 tracking-wide mb-1">
+          <div className="flex items-center gap-1.5 text-xs font-bold text-black tracking-wide mb-1">
             <Users className="h-3.5 w-3.5" />
             {t('Ομαδα', 'Group')} {group.id.replace('g', '#')}
           </div>
-          <h4 className="text-[13px] font-bold text-gray-900 mb-0.5 line-clamp-1">{event.title}</h4>
+          <h4 className="text-[13px] font-bold text-black mb-0.5 line-clamp-1">{event.title}</h4>
           <span className="text-[9px] tracking-widest font-bold text-cyan-600 bg-cyan-50 px-2 py-0.5 rounded-full mb-2 inline-block shadow-sm">
             {event.category}
           </span>
           <div className="flex items-baseline gap-1 mt-1">
-             <span className="text-lg font-bold text-gray-900">{group.members.length}</span>
-             <span className="text-xs font-medium text-gray-900">/ {group.targetSize} {t('μέλη', 'members')}</span>
+             <span className="text-lg font-bold text-black">{group.members.length}</span>
+             <span className="text-xs font-medium text-black">/ {group.targetSize} {t('μέλη', 'members')}</span>
           </div>
         </div>
         
@@ -80,7 +80,7 @@ function Group({ group, event, navigate }: { group: any; event: any; navigate: a
                    </div>
                 ) : null}
               </div>
-              <span className="text-[9px] font-bold text-gray-900 mt-1">{t('Οικοδεσποτης', 'Host')}</span>
+              <span className="text-[9px] font-bold text-black mt-1">{t('Οικοδεσποτης', 'Host')}</span>
             </div>
           )}
         </div>
@@ -104,8 +104,8 @@ function Group({ group, event, navigate }: { group: any; event: any; navigate: a
       )}
       
       {!isDiscountEligible && (
-         <div className="flex items-center gap-1.5 text-xs text-gray-900 mb-4 bg-gray-50 p-2 rounded-md border border-gray-100">
-           <ShieldCheck className="h-4 w-4 text-gray-900" />
+         <div className="flex items-center gap-1.5 text-xs text-black mb-4 bg-gray-50 p-2 rounded-md border border-gray-100">
+           <ShieldCheck className="h-4 w-4 text-black" />
            <span className="font-medium">{t('Μικρή & ιδιωτική ομάδα', 'Small & private group')}</span>
          </div>
       )}
@@ -256,7 +256,7 @@ export default function EventDetailBento() {
     return <EventDetailSkeleton />;
   }
 
-  if (!event) return <div className="p-8 text-center text-gray-900 font-medium">{t('Η εκδήλωση δεν βρέθηκε', 'Event not found')}</div>;
+  if (!event) return <div className="p-8 text-center text-black font-medium">{t('Η εκδήλωση δεν βρέθηκε', 'Event not found')}</div>;
 
   return (
     <motion.div 
@@ -269,7 +269,7 @@ export default function EventDetailBento() {
         <div className="flex justify-between items-center">
           <button 
             onClick={() => navigate(-1)}
-            className="text-[10px] font-bold tracking-wide text-gray-900 hover:text-[#111827]"
+            className="text-[10px] font-bold tracking-wide text-black hover:text-[#111827]"
           >
             &larr; {t('Επιστροφή στην Ανακάλυψη', 'Back to Discover')}
           </button>
@@ -277,7 +277,7 @@ export default function EventDetailBento() {
           <div className="flex gap-2 flex-wrap justify-end">
             <button 
               onClick={handleSave}
-              className={`flex items-center gap-2 text-[10px] font-bold  tracking-wider transition-colors px-3 py-1 rounded-full ${isSaved ? 'text-cyan-800 bg-cyan-100' : 'text-gray-900 hover:text-cyan-600 bg-gray-50 hover:bg-gray-100'}`}
+              className={`flex items-center gap-2 text-[10px] font-bold  tracking-wider transition-colors px-3 py-1 rounded-full ${isSaved ? 'text-cyan-800 bg-cyan-100' : 'text-black hover:text-cyan-600 bg-gray-50 hover:bg-gray-100'}`}
             >
               <Bookmark className={`h-3.5 w-3.5 ${isSaved ? 'fill-current' : ''}`} />
               {isSaved ? t("Αποθηκεύτηκε", "Saved") : t("Αποθήκευση Εκδήλωσης", "Save Event")}
@@ -298,7 +298,7 @@ export default function EventDetailBento() {
             </button>
             <button 
               onClick={handleAddToCalendar}
-              className="flex items-center gap-2 text-[10px] font-bold  tracking-wider text-gray-900 hover:text-cyan-600 transition-colors bg-gray-50 hover:bg-gray-100 px-3 py-1.5 rounded-full"
+              className="flex items-center gap-2 text-[10px] font-bold  tracking-wider text-black hover:text-cyan-600 transition-colors bg-gray-50 hover:bg-gray-100 px-3 py-1.5 rounded-full"
             >
               <Calendar className="h-3.5 w-3.5" />
               {t('Προσθήκη στο Ημερολόγιο', 'Add to Calendar')}
@@ -349,29 +349,29 @@ export default function EventDetailBento() {
           <section className="space-y-4 text-[13px] text-[#111827] leading-relaxed bg-white rounded-xl border border-gray-200 p-5 md:p-6 shadow-sm">
              <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <div className="flex items-center gap-1.5 text-gray-900 font-bold tracking-wide text-[10px]">
+                  <div className="flex items-center gap-1.5 text-black font-bold tracking-wide text-[10px]">
                     <Calendar className="h-3.5 w-3.5" /> {t('Ημερομηνία', 'Date')}
                   </div>
                   <p className="font-medium text-[13px]">{format(parseISO(event.date), 'EEEE, MMMM d, yyyy')}</p>
                 </div>
                 <div className="space-y-1">
-                  <div className="flex items-center gap-1.5 text-gray-900 font-bold tracking-wide text-[10px]">
+                  <div className="flex items-center gap-1.5 text-black font-bold tracking-wide text-[10px]">
                     <Clock className="h-3.5 w-3.5" /> {t('Ώρα', 'Time')}
                   </div>
                   <p className="font-medium text-[13px]">{event.time} ({event.duration})</p>
-                  <p className="text-[11px] text-gray-900 mt-0.5 font-medium">{event.timeZone || t('Τοπική Ώρα', 'Local Time')}</p>
+                  <p className="text-[11px] text-black mt-0.5 font-medium">{event.timeZone || t('Τοπική Ώρα', 'Local Time')}</p>
                 </div>
                 <div className="space-y-3 col-span-2 sm:col-span-1">
                   <div className="space-y-1">
-                    <div className="flex items-center gap-1.5 text-gray-900 font-bold tracking-wide text-[10px]">
+                    <div className="flex items-center gap-1.5 text-black font-bold tracking-wide text-[10px]">
                       <MapPin className="h-3.5 w-3.5" /> {t('Τοποθεσία', 'Location')}
                     </div>
                     <p className="font-medium text-[13px]">{event.locationArea}</p>
-                    <p className="text-[11px] text-gray-900 mt-0.5">{t('Το ακριβές σημείο συνάντησης εμφανίζεται μετά την επιβεβαίωση.', 'Exact meeting point revealed upon confirmation.')}</p>
+                    <p className="text-[11px] text-black mt-0.5">{t('Το ακριβές σημείο συνάντησης εμφανίζεται μετά την επιβεβαίωση.', 'Exact meeting point revealed upon confirmation.')}</p>
                   </div>
                 </div>
                  <div className="space-y-1 col-span-2 sm:col-span-1">
-                  <div className="flex items-center gap-1.5 text-gray-900 font-bold tracking-wide text-[10px]">
+                  <div className="flex items-center gap-1.5 text-black font-bold tracking-wide text-[10px]">
                     <ShieldCheck className="h-3.5 w-3.5" /> {t('Κανόνες Συμμετοχής', 'Participation Rules')}
                   </div>
                   <div className="flex items-center gap-2">
@@ -384,7 +384,7 @@ export default function EventDetailBento() {
              <div className={`${isMapFullscreen ? 'fixed !inset-0 !z-[9999] bg-black !m-0 rounded-none !h-[100dvh]' : 'mt-6 w-full h-64 sm:h-80 rounded-lg'} bg-gray-100 overflow-hidden relative border border-gray-200 transition-all duration-300`}>
                   <button 
                     onClick={() => setIsMapFullscreen(!isMapFullscreen)}
-                    className="absolute top-4 right-4 z-10 p-2 bg-white/90 backdrop-blur rounded-lg shadow-md text-gray-900 hover:text-cyan-600 transition-colors"
+                    className="absolute top-4 right-4 z-10 p-2 bg-white/90 backdrop-blur rounded-lg shadow-md text-black hover:text-cyan-600 transition-colors"
                   >
                     {isMapFullscreen ? <Minimize className="h-5 w-5" /> : <Maximize className="h-5 w-5" />}
                   </button>
@@ -393,7 +393,7 @@ export default function EventDetailBento() {
                       <div className="w-full h-full flex items-center justify-center bg-[#e5e3df] p-4 text-center">
                         <div className="bg-white p-3 rounded-lg shadow-sm border border-red-100">
                           <AlertTriangle className="w-6 h-6 text-red-500 mx-auto mb-2" />
-                          <p className="text-[10px] text-gray-900">{t('Ο χάρτης δεν είναι διαθέσιμος. Παρακαλώ ελέγξτε το API key.', 'Map unavailable. Please check API key.')}</p>
+                          <p className="text-[10px] text-black">{t('Ο χάρτης δεν είναι διαθέσιμος. Παρακαλώ ελέγξτε το API key.', 'Map unavailable. Please check API key.')}</p>
                         </div>
                       </div>
                     }>
@@ -418,18 +418,18 @@ export default function EventDetailBento() {
                        <div className="w-24 h-24 sm:w-32 sm:h-32 bg-cyan-600/10 rounded-full flex items-center justify-center animate-pulse relative z-10 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                          <div className="w-4 h-4 bg-cyan-600 rounded-full border-2 border-white shadow-md"></div>
                        </div>
-                       <div className="absolute bottom-2 right-2 bg-white/90 backdrop-blur text-gray-900 text-[10px] px-2 py-1 rounded shadow-sm">{t('Ενεργή Προεπισκόπηση Χάρτη', 'Map Preview Active')}</div>
+                       <div className="absolute bottom-2 right-2 bg-white/90 backdrop-blur text-black text-[10px] px-2 py-1 rounded shadow-sm">{t('Ενεργή Προεπισκόπηση Χάρτη', 'Map Preview Active')}</div>
                     </div>
                   )}
              </div>
              
              <div className="pt-5 border-t border-gray-200 mt-5">
                <h3 className="text-[11px] font-bold text-[#111827] mb-2 tracking-wide">{t('Πληροφορίες για την εμπειρία', 'About the experience')}</h3>
-               <p className="text-[13px] text-gray-900 leading-relaxed font-medium">{event.description}</p>
+               <p className="text-[13px] text-black leading-relaxed font-medium">{event.description}</p>
                
                {event.externalLink && (
                  <div className="mt-4 pt-1">
-                   <a href={event.externalLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 border border-gray-200 text-gray-900 bg-white hover:bg-gray-50 hover:text-cyan-600 hover:border-cyan-200 transition-colors shadow-sm text-xs font-bold tracking-wide rounded-lg w-full sm:w-auto justify-center">
+                   <a href={event.externalLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 border border-gray-200 text-black bg-white hover:bg-gray-50 hover:text-cyan-600 hover:border-cyan-200 transition-colors shadow-sm text-xs font-bold tracking-wide rounded-lg w-full sm:w-auto justify-center">
                      <ExternalLink className="w-3.5 h-3.5" />
                      {t('Επίσημη Σελίδα Εκδήλωσης', 'Official Event Page')}
                    </a>
@@ -439,8 +439,8 @@ export default function EventDetailBento() {
                {event.tags && event.tags.length > 0 && (
                  <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-100">
                    {event.tags.map((tag: string) => (
-                     <Badge key={tag} variant="neutral" className="bg-gray-100 text-gray-900 hover:bg-gray-200 shadow-none border border-gray-200/60 px-3 py-1 text-xs cursor-pointer transition-colors" onClick={() => navigate(`/?search=${tag}`)}>
-                       <Hash className="h-3.5 w-3.5 mr-0.5 text-gray-900" />
+                     <Badge key={tag} variant="neutral" className="bg-gray-100 text-black hover:bg-gray-200 shadow-none border border-gray-200/60 px-3 py-1 text-xs cursor-pointer transition-colors" onClick={() => navigate(`/?search=${tag}`)}>
+                       <Hash className="h-3.5 w-3.5 mr-0.5 text-black" />
                        {tag}
                      </Badge>
                    ))}
@@ -468,7 +468,7 @@ export default function EventDetailBento() {
                             {organizer.name}
                           </Link>
                           {organizer.trustTier && (
-                             <Badge variant="outline" className={`text-[9px] py-0 px-1.5 shadow-none ${organizer.trustTier === '3_high_trust' ? 'bg-blue-50 text-blue-700 border-blue-200' : 'bg-gray-50 text-gray-900 border-gray-200'}`}>
+                             <Badge variant="outline" className={`text-[9px] py-0 px-1.5 shadow-none ${organizer.trustTier === '3_high_trust' ? 'bg-blue-50 text-blue-700 border-blue-200' : 'bg-gray-50 text-black border-gray-200'}`}>
                                {organizer.trustTier === '3_high_trust' ? t('ΥΨΗΛΗ ΕΜΠΙΣΤΟΣΥΝΗ', 'HIGH TRUST') : organizer.trustTier.replace(/_/g, ' ').toUpperCase()}
                              </Badge>
                           )}
@@ -476,7 +476,7 @@ export default function EventDetailBento() {
                             {organizer.reliabilityScore}% {t('ΑΞΙΟΠΙΣΤΙΑ', 'RELIABILITY')}
                           </Badge>
                         </div>
-                        <p className="text-xs text-gray-900 mt-0.5 font-medium">{organizer.bio || t('Επαληθευμένος Διοργανωτής • 12 εκδηλώσεις', 'Verified Organizer • 12 events hosted')}</p>
+                        <p className="text-xs text-black mt-0.5 font-medium">{organizer.bio || t('Επαληθευμένος Διοργανωτής • 12 εκδηλώσεις', 'Verified Organizer • 12 events hosted')}</p>
                       </div>
                     </div>
                     <Button variant="outline" size="sm" className="hidden sm:flex" onClick={() => navigate('/profile')}>
@@ -493,11 +493,11 @@ export default function EventDetailBento() {
                  <div className="grid grid-cols-2 gap-4">
                    <div className="bg-emerald-50/50 border border-emerald-100 p-4 rounded-xl">
                      <div className="text-[10px] font-bold text-emerald-700 mb-1 tracking-wider">{t('Δυσκολία', 'Difficulty')}</div>
-                     <div className="text-sm font-bold text-gray-900">{event.category === 'Hiking' ? t('Μέτρια / Έδαφος', 'Moderate / Terrain') : t('Εύκολο / Αναψυχή', 'Easy / Leisure')}</div>
+                     <div className="text-sm font-bold text-black">{event.category === 'Hiking' ? t('Μέτρια / Έδαφος', 'Moderate / Terrain') : t('Εύκολο / Αναψυχή', 'Easy / Leisure')}</div>
                    </div>
                    <div className="bg-amber-50/50 border border-amber-100 p-4 rounded-xl">
                      <div className="text-[10px] font-bold text-amber-700 mb-1 tracking-wider">{t('Εξοπλισμός / Σημειώσεις', 'Equipment / Notes')}</div>
-                     <div className="text-sm font-bold text-gray-900">{event.category === 'Hiking' ? t('Απαιτούνται μποτάκια πεζοπορίας. Φέρτε νερό.', 'Hiking boots required. Bring water.') : t('Διανυκτέρευση. Μοιρασμένα έξοδα.', 'Overnight stay. Shared expenses.')}</div>
+                     <div className="text-sm font-bold text-black">{event.category === 'Hiking' ? t('Απαιτούνται μποτάκια πεζοπορίας. Φέρτε νερό.', 'Hiking boots required. Bring water.') : t('Διανυκτέρευση. Μοιρασμένα έξοδα.', 'Overnight stay. Shared expenses.')}</div>
                    </div>
                  </div>
                </div>
@@ -507,22 +507,22 @@ export default function EventDetailBento() {
           {/* Contextual Context Note */}
           <section className="rounded-xl border border-gray-100 bg-gray-50/50 p-5 text-sm">
             <h3 className="text-[11px] font-bold text-[#111827] mb-3 tracking-wide">{t('Γιατί αυτή η ομάδα είναι αξιόπιστη', 'Why this group is reliable')}</h3>
-            <ul className="space-y-2.5 text-gray-900">
+            <ul className="space-y-2.5 text-black">
               <li className="flex items-start gap-2 text-xs">
-                <Users className="w-4 h-4 text-gray-900 shrink-0 mt-0.5" />
-                <span><strong className="text-gray-900">{t('Περιορισμός μικρής ομάδας.', 'Small group constraint.')}</strong> {t('Περιορίζεται σε ', 'Kept to ')}{event.maxParticipants || '3-6'}{t(' άτομα για καλύτερο συντονισμό και άνεση.', ' people for better coordination and comfort.')}</span>
+                <Users className="w-4 h-4 text-black shrink-0 mt-0.5" />
+                <span><strong className="text-black">{t('Περιορισμός μικρής ομάδας.', 'Small group constraint.')}</strong> {t('Περιορίζεται σε ', 'Kept to ')}{event.maxParticipants || '3-6'}{t(' άτομα για καλύτερο συντονισμό και άνεση.', ' people for better coordination and comfort.')}</span>
               </li>
               <li className="flex items-start gap-2 text-xs">
-                <ShieldCheck className="w-4 h-4 text-gray-900 shrink-0 mt-0.5" />
-                <span><strong className="text-gray-900">{t('Επιβεβαιωμένη συμμετοχή.', 'Confirmed participation.')}</strong> {t('Οι χρήστες πρέπει να δεσμευτούν για να συμμετάσχουν. Οι μη-εμφανίσεις παρακολουθούνται.', 'Users must commit to join. No-shows are tracked internally.')}</span>
+                <ShieldCheck className="w-4 h-4 text-black shrink-0 mt-0.5" />
+                <span><strong className="text-black">{t('Επιβεβαιωμένη συμμετοχή.', 'Confirmed participation.')}</strong> {t('Οι χρήστες πρέπει να δεσμευτούν για να συμμετάσχουν. Οι μη-εμφανίσεις παρακολουθούνται.', 'Users must commit to join. No-shows are tracked internally.')}</span>
               </li>
               <li className="flex items-start gap-2 text-xs">
-                <MapPin className="w-4 h-4 text-gray-900 shrink-0 mt-0.5" />
-                <span><strong className="text-gray-900">{t('Δημόσιο σημείο συνάντησης.', 'Public meeting point.')}</strong> {t('Η ακριβής τοποθεσία συνάντησης αποκαλύπτεται μόνο αφού επιβεβαιωθεί η ομάδα.', 'Exact meeting location is revealed only after the group is confirmed.')}</span>
+                <MapPin className="w-4 h-4 text-black shrink-0 mt-0.5" />
+                <span><strong className="text-black">{t('Δημόσιο σημείο συνάντησης.', 'Public meeting point.')}</strong> {t('Η ακριβής τοποθεσία συνάντησης αποκαλύπτεται μόνο αφού επιβεβαιωθεί η ομάδα.', 'Exact meeting location is revealed only after the group is confirmed.')}</span>
               </li>
               <li className="flex items-start gap-2 text-xs">
-                <CheckCircle className="w-4 h-4 text-gray-900 shrink-0 mt-0.5" />
-                <span><strong className="text-gray-900">{t('Ιδιωτικές αναφορές.', 'Private reports.')}</strong> {t('Οποιαδήποτε ανάρμοστη συμπεριφορά μπορεί να αναφερθεί ιδιωτικά και επηρεάζει τις βαθμολογίες αξιοπιστίας.', 'Any inappropriate behavior can be reported privately and affects reliability scores.')}</span>
+                <CheckCircle className="w-4 h-4 text-black shrink-0 mt-0.5" />
+                <span><strong className="text-black">{t('Ιδιωτικές αναφορές.', 'Private reports.')}</strong> {t('Οποιαδήποτε ανάρμοστη συμπεριφορά μπορεί να αναφερθεί ιδιωτικά και επηρεάζει τις βαθμολογίες αξιοπιστίας.', 'Any inappropriate behavior can be reported privately and affects reliability scores.')}</span>
               </li>
             </ul>
           </section>
@@ -531,7 +531,7 @@ export default function EventDetailBento() {
         {/* Right Column: Groups & Actions */}
         <div className="space-y-6 md:col-span-2 lg:col-span-1">
           <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm sticky top-24">
-            <h3 className="text-[11px] font-bold text-[#6B7280] tracking-wide mb-4">{t('Αυτόματη προτεινόμενη Μικρών Ομάδων', 'Auto-Suggest Small Groups')}</h3>
+            <h3 className="text-[11px] font-bold text-black tracking-wide mb-4">{t('Αυτόματη προτεινόμενη Μικρών Ομάδων', 'Auto-Suggest Small Groups')}</h3>
             <div className="mb-4 bg-cyan-50 border border-cyan-100 rounded-lg p-3 flex flex-col xl:flex-row xl:justify-between items-start xl:items-center gap-2 text-sm font-bold text-cyan-900">
               <span className="flex items-center gap-1.5"><Ticket className="h-4 w-4" /> {t('Συνολική Χωρητικότητα Εκδήλωσης', 'Overall Event Capacity')}</span>
               <span className="text-cyan-600 xl:text-cyan-900 bg-white xl:bg-transparent px-2 py-0.5 xl:p-0 rounded-full text-xs xl:text-sm border border-cyan-100 xl:border-transparent">{Math.max(0, spotsLeftEvent)} {t('θέσεις έμειναν', 'spots left')}</span>
@@ -547,7 +547,7 @@ export default function EventDetailBento() {
             {(eventGroups.length > 0 || groupSizeFilter !== 'All' || discountFilter) && (
               <div className="mb-4 space-y-2">
                 <div className="flex gap-2">
-                  <span className="text-[10px] font-bold text-gray-900 mt-1.5">{t('Φίλτρο:', 'Filter by:')}</span>
+                  <span className="text-[10px] font-bold text-black mt-1.5">{t('Φίλτρο:', 'Filter by:')}</span>
                   <div className="flex flex-wrap gap-2 flex-1">
                     <select 
                       value={groupSizeFilter} 
@@ -563,7 +563,7 @@ export default function EventDetailBento() {
                     {event.isPaid && event.groupDiscount && (
                       <button 
                         onClick={() => setDiscountFilter(!discountFilter)}
-                        className={`text-xs px-2 py-1 rounded border font-medium transition-colors ${discountFilter ? 'bg-emerald-100 border-emerald-300 text-emerald-800' : 'bg-gray-50 border-gray-200 text-gray-900 hover:bg-gray-100'}`}
+                        className={`text-xs px-2 py-1 rounded border font-medium transition-colors ${discountFilter ? 'bg-emerald-100 border-emerald-300 text-emerald-800' : 'bg-gray-50 border-gray-200 text-black hover:bg-gray-100'}`}
                       >
                         {t('Μόνο με Έκπτωση', 'Discount Only')}
                       </button>
@@ -573,12 +573,12 @@ export default function EventDetailBento() {
               </div>
             )}
             
-            <p className="text-xs text-gray-900 font-medium mb-4 leading-relaxed">
+            <p className="text-xs text-black font-medium mb-4 leading-relaxed">
               {t('Συνιστούμε ανεπιφύλακτα να δημιουργήσετε ή να συμμετάσχετε σε ομάδες 3-5 ατόμων.', 'We highly recommend joining or creating groups of 3-5 users to reduce awkwardness and ensure the event happens safely.')}
             </p>
             
             {eventGroups.length === 0 ? (
-              <div className="text-xs text-gray-900 mb-6 bg-gray-50 p-4 rounded-xl text-center border border-dashed border-gray-200 font-medium">
+              <div className="text-xs text-black mb-6 bg-gray-50 p-4 rounded-xl text-center border border-dashed border-gray-200 font-medium">
                 {t('Δεν έχουν δημιουργηθεί ομάδες ακόμα. Γίνετε ο πρώτος που θα ξεκινήσει μία!', 'No groups forming yet. Be the first to start one!')}
               </div>
             ) : (
@@ -591,14 +591,14 @@ export default function EventDetailBento() {
             
             <div className="space-y-4 pt-5 border-t border-gray-200">
               <div className="grid grid-cols-1 gap-3">
-                <Button variant="outline" className="w-full border-gray-200 text-gray-900 hover:bg-gray-50" size="lg" onClick={() => alert(t("Προστέθηκε στη λίστα αναμονής. Θα ειδοποιηθείτε αν ανοίξει θέση.", "Added to waitlist. We will notify you if a spot in a group opens up."))}>
+                <Button variant="outline" className="w-full border-gray-200 text-black hover:bg-gray-50" size="lg" onClick={() => alert(t("Προστέθηκε στη λίστα αναμονής. Θα ειδοποιηθείτε αν ανοίξει θέση.", "Added to waitlist. We will notify you if a spot in a group opens up."))}>
                   {t('Λίστα Αναμονής', 'Join Waitlist')}
                 </Button>
               </div>
-              <div className="text-[10px] text-gray-900 font-medium bg-gray-50 rounded text-center p-3 leading-relaxed tracking-wide">
+              <div className="text-[10px] text-black font-medium bg-gray-50 rounded text-center p-3 leading-relaxed tracking-wide">
                 {t('Δημιουργήστε νέα ομάδα 3-5 ατόμων. ', 'Create a new 3-5 person group. ')}
                 {event.isPaid ? (
-                  <span className="block mt-1 font-bold text-gray-900">{t('Η πληρωμή προεγκρίνεται. Χρεώνεται μόνο κατά την επιβεβαίωση.', 'Payment pre-authorized via official partner APIs. Discharges automatically on Group confirmation.')}</span>
+                  <span className="block mt-1 font-bold text-black">{t('Η πληρωμή προεγκρίνεται. Χρεώνεται μόνο κατά την επιβεβαίωση.', 'Payment pre-authorized via official partner APIs. Discharges automatically on Group confirmation.')}</span>
                 ) : (
                   <span className="block mt-1 font-bold">{t('Δωρεάν δημιουργία.', 'Free to start.')}</span>
                 )}
@@ -610,7 +610,7 @@ export default function EventDetailBento() {
       
       {/* Mobile Sticky CTA */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] md:hidden z-50 flex gap-3">
-        <Button variant="outline" className="flex-1 border-gray-200 text-gray-900" onClick={() => navigate(`/events/${eventId}/join`)}>
+        <Button variant="outline" className="flex-1 border-gray-200 text-black" onClick={() => navigate(`/events/${eventId}/join`)}>
           {t('Λίστα Αναμονής', 'Waitlist')}
         </Button>
         <Button className="flex-[2] bg-cyan-600 text-white hover:bg-cyan-700 shadow-sm" onClick={() => navigate(`/events/${eventId}/join`)}>
@@ -624,12 +624,12 @@ export default function EventDetailBento() {
           <div className="bg-white rounded-2xl p-6 md:p-8 max-w-sm w-full text-center relative shadow-2xl" onClick={e => e.stopPropagation()}>
             <button 
               onClick={() => setShowQRCode(false)}
-              className="absolute top-4 right-4 p-2 text-gray-900 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors"
+              className="absolute top-4 right-4 p-2 text-black hover:text-black bg-gray-100 hover:bg-gray-200 rounded-full transition-colors"
             >
               <X className="h-4 w-4" />
             </button>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">{t('Κοινοποίηση', 'Share Event')}</h3>
-            <p className="text-sm text-gray-900 mb-6">{t('Σαρώστε αυτό το QR για να δείτε την εκδήλωση', 'Scan this QR code to view the event')}</p>
+            <h3 className="text-xl font-bold text-black mb-2">{t('Κοινοποίηση', 'Share Event')}</h3>
+            <p className="text-sm text-black mb-6">{t('Σαρώστε αυτό το QR για να δείτε την εκδήλωση', 'Scan this QR code to view the event')}</p>
             <div className="bg-white p-4 rounded-xl shadow-inner border border-gray-100 inline-block">
               <QRCodeSVG 
                 value={window.location.href} 

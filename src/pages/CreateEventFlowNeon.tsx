@@ -92,7 +92,7 @@ export default function CreateEventFlowNeon() {
         <h1 className="text-2xl font-bold text-[#111827]">
           {t("Δημιουργία Εμπειρίας", "Create Experience")}
         </h1>
-        <p className="text-gray-900 text-sm mt-1">
+        <p className="text-black text-sm mt-1">
           {t(
             "Σχεδιάστε την τέλεια συνάντησή σας.",
             "Design your perfect real-world gathering.",
@@ -128,20 +128,20 @@ export default function CreateEventFlowNeon() {
 
               <div className="space-y-4">
                 <div>
-                  <label className="block text-[13px] font-semibold text-gray-900 capitalize tracking-tight mb-2">
+                  <label className="block text-[13px] font-semibold text-black capitalize tracking-tight mb-2">
                     {t("Εικόνα Εκδήλωσης", "Event Image")}
                   </label>
                   <div 
-                    className="w-full h-40 border-2 border-dashed border-gray-300 rounded-xl flex flex-col items-center justify-center text-gray-900 hover:bg-gray-50 hover:border-cyan-400 transition-colors cursor-pointer relative overflow-hidden"
+                    className="w-full h-40 border-2 border-dashed border-gray-300 rounded-xl flex flex-col items-center justify-center text-black hover:bg-gray-50 hover:border-cyan-400 transition-colors cursor-pointer relative overflow-hidden"
                     onClick={() => fileInputRef.current?.click()}
                   >
                     {imagePreview ? (
                        <img src={imagePreview} className="absolute inset-0 w-full h-full object-cover" alt="Event preview" />
                     ) : (
                        <>
-                         <Camera className="w-8 h-8 mb-2 text-gray-900" />
-                         <span className="text-sm font-bold text-gray-900 block">{t('Ανέβασμα Εικόνας', 'Upload Image')}</span>
-                         <span className="text-[11px] text-gray-900 mt-1 capitalize tracking-tight">{t('JPG, PNG έως 5MB', 'JPG, PNG up to 5MB')}</span>
+                         <Camera className="w-8 h-8 mb-2 text-black" />
+                         <span className="text-sm font-bold text-black block">{t('Ανέβασμα Εικόνας', 'Upload Image')}</span>
+                         <span className="text-[11px] text-black mt-1 capitalize tracking-tight">{t('JPG, PNG έως 5MB', 'JPG, PNG up to 5MB')}</span>
                        </>
                     )}
                   </div>
@@ -154,7 +154,7 @@ export default function CreateEventFlowNeon() {
                 </div>
 
                 <div>
-                  <label className="block text-[13px] font-semibold text-gray-900 capitalize tracking-tight mb-2">
+                  <label className="block text-[13px] font-semibold text-black capitalize tracking-tight mb-2">
                     {t("Τίτλος Εκδήλωσης", "Event Title")}
                   </label>
                   <input
@@ -170,7 +170,7 @@ export default function CreateEventFlowNeon() {
                 </div>
 
                 <div>
-                  <label className="block text-[13px] font-semibold text-gray-900 capitalize tracking-tight mb-2">
+                  <label className="block text-[13px] font-semibold text-black capitalize tracking-tight mb-2">
                     {t("Κατηγορία", "Category")}
                   </label>
                   <select
@@ -201,7 +201,7 @@ export default function CreateEventFlowNeon() {
                 </div>
 
                 <div>
-                  <label className="block text-[13px] font-semibold text-gray-900 capitalize tracking-tight mb-2">
+                  <label className="block text-[13px] font-semibold text-black capitalize tracking-tight mb-2">
                     {t("Περιγραφή", "Description")}
                   </label>
                   <textarea
@@ -243,7 +243,7 @@ export default function CreateEventFlowNeon() {
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[13px] font-semibold text-gray-900 capitalize tracking-tight mb-2 flex items-center gap-1.5">
+                    <label className="block text-[13px] font-semibold text-black capitalize tracking-tight mb-2 flex items-center gap-1.5">
                       <Calendar className="w-3.5 h-3.5" />{" "}
                       {t("Ημερομηνία", "Date")}
                     </label>
@@ -255,7 +255,7 @@ export default function CreateEventFlowNeon() {
                     />
                   </div>
                   <div>
-                    <label className="block text-[13px] font-semibold text-gray-900 capitalize tracking-tight mb-2 flex items-center gap-1.5">
+                    <label className="block text-[13px] font-semibold text-black capitalize tracking-tight mb-2 flex items-center gap-1.5">
                       <Clock className="w-3.5 h-3.5" /> {t("Ώρα", "Time")}
                     </label>
                     <input
@@ -268,7 +268,7 @@ export default function CreateEventFlowNeon() {
                 </div>
 
                 <div>
-                  <label className="block text-[13px] font-semibold text-gray-900 capitalize tracking-tight mb-2 flex items-center gap-1.5">
+                  <label className="block text-[13px] font-semibold text-black capitalize tracking-tight mb-2 flex items-center gap-1.5">
                     <Clock className="w-3.5 h-3.5" /> {t("Διάρκεια", "Duration")}
                   </label>
                   <select
@@ -293,7 +293,7 @@ export default function CreateEventFlowNeon() {
                 </div>
 
                 <div>
-                  <label className="block text-[13px] font-semibold text-gray-900 capitalize tracking-tight mb-2 flex items-center gap-1.5">
+                  <label className="block text-[13px] font-semibold text-black capitalize tracking-tight mb-2 flex items-center gap-1.5">
                     <MapPin className="w-3.5 h-3.5" />{" "}
                     {t("Τοποθεσία", "Location")}
                   </label>
@@ -308,10 +308,10 @@ export default function CreateEventFlowNeon() {
                       )}
                       className="w-full border border-gray-300 rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-cyan-600 focus:border-transparent outline-none transition-all"
                     />
-                    <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-900" />
+                    <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-black" />
                   </div>
                   <div className="w-full">
-                    <p className="text-[10px] text-gray-900 mb-2">
+                    <p className="text-[10px] text-black mb-2">
                       {t(
                         "Επιλέξτε το ακριβές σημείο στον χάρτη:",
                         "Select exact location on map:",
@@ -360,7 +360,7 @@ export default function CreateEventFlowNeon() {
 
               <div className="space-y-6">
                 <div>
-                  <label className="block text-[13px] font-semibold text-gray-900 capitalize tracking-tight mb-3">
+                  <label className="block text-[13px] font-semibold text-black capitalize tracking-tight mb-3">
                     {t("Ορατότητα", "Visibility")}
                   </label>
                   <div className="grid grid-cols-2 gap-3">
@@ -369,12 +369,12 @@ export default function CreateEventFlowNeon() {
                       onClick={() => setVisibility("public")}
                     >
                       <Globe
-                        className={`w-5 h-5 mb-2 ${visibility === "public" ? "text-cyan-600" : "text-gray-900"}`}
+                        className={`w-5 h-5 mb-2 ${visibility === "public" ? "text-cyan-600" : "text-black"}`}
                       />
                       <h4 className="text-sm font-bold text-[#111827] mb-1">
                         {t("Δημόσια", "Public")}
                       </h4>
-                      <p className="text-[10px] text-gray-900">
+                      <p className="text-[10px] text-black">
                         {t(
                           "Όλοι μπορούν να βρουν και να ζητήσουν να συμμετάσχουν.",
                           "Anyone can find and request to join.",
@@ -386,12 +386,12 @@ export default function CreateEventFlowNeon() {
                       onClick={() => setVisibility("private")}
                     >
                       <Lock
-                        className={`w-5 h-5 mb-2 ${visibility === "private" ? "text-cyan-600" : "text-gray-900"}`}
+                        className={`w-5 h-5 mb-2 ${visibility === "private" ? "text-cyan-600" : "text-black"}`}
                       />
                       <h4 className="text-sm font-bold text-[#111827] mb-1">
                         {t("Ιδιωτική", "Private")}
                       </h4>
-                      <p className="text-[10px] text-gray-900">
+                      <p className="text-[10px] text-black">
                         {t(
                           "Ορατή μόνο μέσω απευθείας συνδέσμου πρόσκλησης.",
                           "Only visible via direct invite link.",
@@ -402,7 +402,7 @@ export default function CreateEventFlowNeon() {
                 </div>
 
                 <div>
-                  <label className="block text-[13px] font-semibold text-gray-900 capitalize tracking-tight mb-2 flex items-center gap-1.5">
+                  <label className="block text-[13px] font-semibold text-black capitalize tracking-tight mb-2 flex items-center gap-1.5">
                     <Users className="w-3.5 h-3.5" />{" "}
                     {t("Όριο μεγέθους ομάδας", "Group Size limit")}
                   </label>
@@ -415,7 +415,7 @@ export default function CreateEventFlowNeon() {
                       onChange={(e) => setMaxAttendees(Number(e.target.value))}
                       className="w-20 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-cyan-600 focus:border-transparent outline-none text-center"
                     />
-                    <span className="text-sm text-gray-900 font-medium">
+                    <span className="text-sm text-black font-medium">
                       {t("άτομα το μέγιστο", "people maximum")}
                     </span>
                   </div>
@@ -453,7 +453,7 @@ export default function CreateEventFlowNeon() {
                 <h2 className="text-lg font-bold text-[#111827]">
                   {t("Έτοιμο για Δημοσίευση!", "Ready to Publish!")}
                 </h2>
-                <p className="text-sm text-gray-900 mt-1">
+                <p className="text-sm text-black mt-1">
                   {t(
                     "Αναθεωρήστε τις λεπτομέρειες πριν τη δημοσίευση.",
                     "Review your event details before sharing.",
@@ -463,7 +463,7 @@ export default function CreateEventFlowNeon() {
 
               <div className="bg-gray-50 rounded-xl p-4 space-y-3 text-sm">
                 <div className="flex justify-between pb-3 border-b border-gray-200">
-                  <span className="text-gray-900 font-medium">
+                  <span className="text-black font-medium">
                     {t("Τίτλος", "Title")}
                   </span>
                   <span className="font-bold text-[#111827] truncate max-w-[200px] text-right">
@@ -471,7 +471,7 @@ export default function CreateEventFlowNeon() {
                   </span>
                 </div>
                 <div className="flex justify-between pb-3 border-b border-gray-200">
-                  <span className="text-gray-900 font-medium">
+                  <span className="text-black font-medium">
                     {t("Ημερομηνία & Ώρα", "Date & Time")}
                   </span>
                   <span className="font-bold text-[#111827]">
@@ -479,7 +479,7 @@ export default function CreateEventFlowNeon() {
                   </span>
                 </div>
                 <div className="flex justify-between pb-3 border-b border-gray-200">
-                  <span className="text-gray-900 font-medium">
+                  <span className="text-black font-medium">
                     {t("Ορατότητα", "Visibility")}
                   </span>
                   <span className="font-bold text-[#111827] capitalize">
@@ -489,7 +489,7 @@ export default function CreateEventFlowNeon() {
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-900 font-medium">
+                  <span className="text-black font-medium">
                     {t("Χωρητικότητα", "Capacity")}
                   </span>
                   <span className="font-bold text-[#111827]">

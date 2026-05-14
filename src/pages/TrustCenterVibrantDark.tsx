@@ -16,7 +16,7 @@ export default function TrustCenterVibrantDark() {
       <div className="grid gap-4 md:grid-cols-2">
          <Card className="p-5 space-y-5">
            <div>
-             <h2 className="text-[10.9766035490675px] font-bold text-[#6B7280] tracking-wide mb-3 flex items-center gap-1.5">
+             <h2 className="text-[10.9766035490675px] font-bold text-white tracking-wide mb-3 flex items-center gap-1.5">
                <ShieldCheck className="h-3.5 w-3.5 text--400" />{t(`Κατάσταση Επαλήθευσης`, `Verification Status`)}</h2>
              <p className="text-[16.2px] font-bold text-white">{currentUser.trustTier}</p>
            </div>

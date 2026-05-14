@@ -43,12 +43,12 @@ function Group({ group, event, navigate }: { group: any; event: any; navigate: a
             <Users className="h-3.5 w-3.5" />
             {t('Ομαδα', 'Group')} {group.id.replace('g', '#')}
           </div>
-          <h4 className="text-[13px] font-bold text-gray-100 mb-0.5 line-clamp-1">{event.title}</h4>
+          <h4 className="text-[13px] font-bold text-white mb-0.5 line-clamp-1">{event.title}</h4>
           <span className="text-[9px] tracking-widest font-bold text-cyan-400 bg-emerald-900/30 px-2 py-0.5 rounded-full mb-2 inline-block shadow-sm">
             {event.category}
           </span>
           <div className="flex items-baseline gap-1 mt-1">
-             <span className="text-lg font-bold text-gray-100">{group.members.length}</span>
+             <span className="text-lg font-bold text-white">{group.members.length}</span>
              <span className="text-xs font-medium text-white">/ {group.targetSize} {t('μέλη', 'members')}</span>
           </div>
         </div>
@@ -493,11 +493,11 @@ export default function EventDetailVibrantDark() {
                  <div className="grid grid-cols-2 gap-4">
                    <div className="bg-emerald-50/50 border border-emerald-100 p-4 rounded-xl">
                      <div className="text-[10px] font-bold text--400 mb-1 tracking-wider">{t('Δυσκολία', 'Difficulty')}</div>
-                     <div className="text-sm font-bold text-gray-100">{event.category === 'Hiking' ? t('Μέτρια / Έδαφος', 'Moderate / Terrain') : t('Εύκολο / Αναψυχή', 'Easy / Leisure')}</div>
+                     <div className="text-sm font-bold text-white">{event.category === 'Hiking' ? t('Μέτρια / Έδαφος', 'Moderate / Terrain') : t('Εύκολο / Αναψυχή', 'Easy / Leisure')}</div>
                    </div>
                    <div className="bg-amber-50/50 border border-amber-100 p-4 rounded-xl">
                      <div className="text-[10px] font-bold text-amber-700 mb-1 tracking-wider">{t('Εξοπλισμός / Σημειώσεις', 'Equipment / Notes')}</div>
-                     <div className="text-sm font-bold text-gray-100">{event.category === 'Hiking' ? t('Απαιτούνται μποτάκια πεζοπορίας. Φέρτε νερό.', 'Hiking boots required. Bring water.') : t('Διανυκτέρευση. Μοιρασμένα έξοδα.', 'Overnight stay. Shared expenses.')}</div>
+                     <div className="text-sm font-bold text-white">{event.category === 'Hiking' ? t('Απαιτούνται μποτάκια πεζοπορίας. Φέρτε νερό.', 'Hiking boots required. Bring water.') : t('Διανυκτέρευση. Μοιρασμένα έξοδα.', 'Overnight stay. Shared expenses.')}</div>
                    </div>
                  </div>
                </div>
@@ -531,7 +531,7 @@ export default function EventDetailVibrantDark() {
         {/* Right Column: Groups & Actions */}
         <div className="space-y-6 md:col-span-2 lg:col-span-1">
           <div className="rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-sm sticky top-24">
-            <h3 className="text-[11px] font-bold text-[#6B7280] tracking-wide mb-4">{t('Αυτόματη προτεινόμενη Μικρών Ομάδων', 'Auto-Suggest Small Groups')}</h3>
+            <h3 className="text-[11px] font-bold text-white tracking-wide mb-4">{t('Αυτόματη προτεινόμενη Μικρών Ομάδων', 'Auto-Suggest Small Groups')}</h3>
             <div className="mb-4 bg-emerald-900/30 border border-emerald-800 rounded-lg p-3 flex flex-col xl:flex-row xl:justify-between items-start xl:items-center gap-2 text-sm font-bold text-cyan-400">
               <span className="flex items-center gap-1.5"><Ticket className="h-4 w-4" /> {t('Συνολική Χωρητικότητα Εκδήλωσης', 'Overall Event Capacity')}</span>
               <span className="text-cyan-400 xl:text-cyan-400 bg-gray-800 xl:bg-transparent px-2 py-0.5 xl:p-0 rounded-full text-xs xl:text-sm border border-emerald-800 xl:border-transparent">{Math.max(0, spotsLeftEvent)} {t('θέσεις έμειναν', 'spots left')}</span>
@@ -624,11 +624,11 @@ export default function EventDetailVibrantDark() {
           <div className="bg-gray-800 rounded-2xl p-6 md:p-8 max-w-sm w-full text-center relative shadow-2xl" onClick={e => e.stopPropagation()}>
             <button 
               onClick={() => setShowQRCode(false)}
-              className="absolute top-4 right-4 p-2 text-white hover:text-gray-100 bg-gray-700 hover:bg-gray-200 rounded-full transition-colors"
+              className="absolute top-4 right-4 p-2 text-white hover:text-white bg-gray-700 hover:bg-gray-200 rounded-full transition-colors"
             >
               <X className="h-4 w-4" />
             </button>
-            <h3 className="text-xl font-bold text-gray-100 mb-2">{t('Κοινοποίηση', 'Share Event')}</h3>
+            <h3 className="text-xl font-bold text-white mb-2">{t('Κοινοποίηση', 'Share Event')}</h3>
             <p className="text-sm text-white mb-6">{t('Σαρώστε αυτό το QR για να δείτε την εκδήλωση', 'Scan this QR code to view the event')}</p>
             <div className="bg-gray-800 p-4 rounded-xl shadow-inner border border-gray-800 inline-block">
               <QRCodeSVG 

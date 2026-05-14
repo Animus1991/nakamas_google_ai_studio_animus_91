@@ -41,13 +41,13 @@ export default function HelpCenterClassic() {
         <h1 className="text-[20.104264919475px] md:text-[26.7902365993px] font-black mb-2 relative z-10">{t(`Κέντρο Βοήθειας`, `Help Center`)}</h1>
         <p className="text-cyan-100 text-[16.2px] font-medium mb-6 relative z-10">{t(`Πώς μπορούμε να σας βοηθήσουμε;`, `How can we help you?`)}</p>
         <div className="relative max-w-md mx-auto z-10">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-900" />
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-black" />
           <input
             type="text"
             value={search}
             onChange={e => setSearch(e.target.value)}
             placeholder={t(`Αναζήτηση άρθρων...`, `Search articles...`)}
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl text-[16.2px] font-medium text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
+            className="w-full pl-10 pr-4 py-2.5 rounded-xl text-[16.2px] font-medium text-black focus:outline-none focus:ring-2 focus:ring-white"
           />
         </div>
       </div>
@@ -69,7 +69,7 @@ export default function HelpCenterClassic() {
 
       {/* FAQ Accordion */}
       <div>
-        <h2 className="text-[12.1125px] font-bold text-gray-900 tracking-wide mb-3">{t(`Συχνές Ερωτήσεις`, `Frequently Asked Questions`)}</h2>
+        <h2 className="text-[12.1125px] font-bold text-black tracking-wide mb-3">{t(`Συχνές Ερωτήσεις`, `Frequently Asked Questions`)}</h2>
         <div className="space-y-2">
           {faqs.map(faq => (
             <Card key={faq.id} className="overflow-hidden">
@@ -78,11 +78,11 @@ export default function HelpCenterClassic() {
                 className="w-full p-4 flex items-center justify-between text-left"
               >
                 <span className="font-bold text-[15.083739px] text-[#111827] pr-4">{faq.q}</span>
-                <ChevronDown className={`w-4 h-4 text-gray-900 shrink-0 transition-transform ${expandedFAQ === faq.id ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 text-black shrink-0 transition-transform ${expandedFAQ === faq.id ? 'rotate-180' : ''}`} />
               </button>
               {expandedFAQ === faq.id && (
                 <div className="px-4 pb-4 -mt-1">
-                  <p className="text-[13.5px] text-gray-900 font-medium leading-relaxed">{faq.a}</p>
+                  <p className="text-[13.5px] text-black font-medium leading-relaxed">{faq.a}</p>
                 </div>
               )}
             </Card>
@@ -92,7 +92,7 @@ export default function HelpCenterClassic() {
 
       {/* Articles */}
       <div>
-        <h2 className="text-[13.5px] font-bold text-gray-900 tracking-wide mb-3">{t(`Άρθρα Βοήθειας`, `Help Articles`)}</h2>
+        <h2 className="text-[13.5px] font-bold text-black tracking-wide mb-3">{t(`Άρθρα Βοήθειας`, `Help Articles`)}</h2>
         <div className="space-y-3">
           {filtered.map(article => (
             <Card key={article.id} className="p-4 flex items-center justify-between hover:border-cyan-200 cursor-pointer transition-colors">
@@ -100,7 +100,7 @@ export default function HelpCenterClassic() {
                 <span className="text-[12.5px] font-bold text-cyan-600 tracking-wide">{article.category}</span>
                 <h3 className="font-bold text-[16.2px] text-[#111827] mt-0.5">{article.title}</h3>
               </div>
-              <ChevronRight className="w-4 h-4 text-gray-900 shrink-0" />
+              <ChevronRight className="w-4 h-4 text-black shrink-0" />
             </Card>
           ))}
         </div>
@@ -110,7 +110,7 @@ export default function HelpCenterClassic() {
       <Card className="p-6 text-center">
         <MessageCircle className="w-8 h-8 text-cyan-600 mx-auto mb-3" />
         <h3 className="font-bold text-[#111827] mb-1">{t(`Χρειάζεστε περαιτέρω βοήθεια;`, `Need more help?`)}</h3>
-        <p className="text-[13.5px] text-gray-900 mb-2">{t(`Επικοινωνήστε μαζί μας`, `Contact our support team`)}</p>
+        <p className="text-[13.5px] text-black mb-2">{t(`Επικοινωνήστε μαζί μας`, `Contact our support team`)}</p>
         <div className="flex items-center justify-center gap-1.5 mb-4">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>

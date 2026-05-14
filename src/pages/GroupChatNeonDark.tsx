@@ -1352,7 +1352,7 @@ export default function GroupChatNeonDark() {
                   "Αυτή η αναφορά πηγαίνει απευθείας στην ομάδα ελέγχου. ",
                   "This report goes directly to the Nakamas moderation team. It will ",
                 )}
-                <span className="font-bold text-gray-200">
+                <span className="font-bold text-white">
                   {t("Δεν", "not")}
                 </span>
                 {t(
@@ -1435,7 +1435,7 @@ export default function GroupChatNeonDark() {
                     name="eta"
                     type="number"
                     placeholder={t("ETA (λεπτά)", "ETA (mins)")}
-                    className="flex-1 w-full bg-gray-900 border border-gray-700 text-gray-100 text-sm rounded-xl px-4 py-3 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none"
+                    className="flex-1 w-full bg-gray-900 border border-gray-700 text-white text-sm rounded-xl px-4 py-3 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none"
                     min="1"
                   />
                   <button

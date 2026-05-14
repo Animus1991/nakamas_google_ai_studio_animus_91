@@ -144,7 +144,7 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
           <span className="text-[10.61px] font-extrabold text-[#0E8B8D] tracking-wide leading-none mb-0.5">
             {month}
           </span>
-          <span className="text-lg font-black text-gray-900 leading-none">
+          <span className="text-lg font-black text-black leading-none">
             {day}
           </span>
         </div>
@@ -152,14 +152,14 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
         {/* Action buttons — top right */}
         <div className="absolute top-3 right-3 z-10 flex gap-2">
           <button
-            className="p-2 rounded-full shadow-sm backdrop-blur-md focus:outline-none transition-colors bg-white/80 hover:bg-white text-gray-900 hover:text-gray-900"
+            className="p-2 rounded-full shadow-sm backdrop-blur-md focus:outline-none transition-colors bg-white/80 hover:bg-white text-black hover:text-black"
             onClick={handleShare}
             title={t("Κοινοποίηση", "Share")}
           >
             <Share2 className="h-4 w-4" />
           </button>
           <button
-            className={`p-2 rounded-full shadow-sm backdrop-blur-md focus:outline-none transition-colors ${isSaved ? "bg-[#18D8DB]/20 text-[#0E8B8D]" : "bg-white/80 hover:bg-white text-gray-900 hover:text-[#0E8B8D]"}`}
+            className={`p-2 rounded-full shadow-sm backdrop-blur-md focus:outline-none transition-colors ${isSaved ? "bg-[#18D8DB]/20 text-[#0E8B8D]" : "bg-white/80 hover:bg-white text-black hover:text-[#0E8B8D]"}`}
             onClick={toggleSave}
             title={t("Αποθήκευση", "Save")}
           >
@@ -213,7 +213,7 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
                 )}
                 %
               </span>
-              <span className="text-[9.55px] font-semibold text-gray-900 capitalize tracking-wide">
+              <span className="text-[9.55px] font-semibold text-black capitalize tracking-wide">
                 {t("Ταίριασμα", "Match")}
               </span>
             </div>
@@ -221,7 +221,7 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
         </div>
 
         <div className="flex flex-col gap-2 mb-4">
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-gray-900 text-[12.73px] font-medium">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-black text-[12.73px] font-medium">
             <div className="flex items-center bg-gray-50 px-2 py-1 rounded-md">
               <Clock className="w-3.5 h-3.5 mr-1.5 text-cyan-500 shrink-0" />
               <span>{weekday}, {event.time}</span>
@@ -249,13 +249,13 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
             </div>
           ) : (
             <div className="h-24 w-full rounded-lg border border-gray-200 bg-gray-50 flex items-center justify-center mt-2">
-              <span className="text-gray-900 text-xs font-bold flex items-center gap-1">
+              <span className="text-black text-xs font-bold flex items-center gap-1">
                 <MapPin className="w-4 h-4" /> {event.locationArea}
               </span>
             </div>
           )}
-          <div className="flex items-center text-gray-900 text-[12.73px] font-medium mt-2">
-            <Users className="w-3.5 h-3.5 mr-2 text-gray-900 shrink-0" />
+          <div className="flex items-center text-black text-[12.73px] font-medium mt-2">
+            <Users className="w-3.5 h-3.5 mr-2 text-black shrink-0" />
             <span>
               {(event.maxParticipants || 40) - 12}{" "}
               {t("θέσεις έμειναν", "spots left")}
@@ -290,11 +290,11 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
                 <div className="absolute -bottom-0.5 -right-0.5 bg-green-500 w-2.5 h-2.5 rounded-full border-2 border-white"></div>
               </div>
               <div className="flex flex-col">
-                <span className="text-[10.93px] text-gray-900 font-semibold mb-0.5 capitalize">
+                <span className="text-[10.93px] text-black font-semibold mb-0.5 capitalize">
                   {t("event_card.organizer", "Organizer")}
                 </span>
                 <button
-                  className="text-xs font-bold text-gray-900 text-left hover:text-cyan-600 transition-colors line-clamp-1"
+                  className="text-xs font-bold text-black text-left hover:text-cyan-600 transition-colors line-clamp-1"
                   onClick={(e) => {
                     e.stopPropagation();
                     navigate(`/organizer/${organizer.id}`);
@@ -316,11 +316,11 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
             }}
             className="w-full flex items-center justify-between py-1.5 focus:outline-none"
           >
-            <span className="text-[12.02px] font-bold text-gray-900 flex items-center gap-1.5 capitalize tracking-tight">
+            <span className="text-[12.02px] font-bold text-black flex items-center gap-1.5 capitalize tracking-tight">
               <ShieldCheck className="w-3.5 h-3.5 text-cyan-600" />
               {t("Άφιξη & Ασφάλεια", "Arrival & Safety")}
             </span>
-            <span className="text-[10.93px] text-gray-900 font-medium">
+            <span className="text-[10.93px] text-black font-medium">
               {showSafetyPanel ? t("Απόκρυψη", "Hide") : t("Εμφάνιση", "Show")}
             </span>
           </button>
@@ -332,7 +332,7 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
             >
               {/* 1. Arrival Status */}
               <div className="space-y-1.5">
-                <p className="text-[12.02px] font-semibold text-gray-900 tracking-tight capitalize">
+                <p className="text-[12.02px] font-semibold text-black tracking-tight capitalize">
                   {t("Κατάσταση Άφιξης", "Arrival Status")}
                 </p>
                 <div className="grid grid-cols-2 gap-1.5">
@@ -345,7 +345,7 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
                     <button
                       key={status}
                       onClick={() => setArrivalStatus(status)}
-                      className={`text-[9.84px] font-bold py-1.5 px-2 rounded-lg border transition-colors ${arrivalStatus === status ? "bg-cyan-600 text-white border-cyan-600" : "bg-white text-gray-900 border-gray-200 hover:border-cyan-300"}`}
+                      className={`text-[9.84px] font-bold py-1.5 px-2 rounded-lg border transition-colors ${arrivalStatus === status ? "bg-cyan-600 text-white border-cyan-600" : "bg-white text-black border-gray-200 hover:border-cyan-300"}`}
                     >
                       {status}
                     </button>
@@ -411,7 +411,7 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
                           )}
                     </p>
                     <p
-                      className={`text-[9px] mt-0.5 ${isSharingLocation ? "text-cyan-600/80" : "text-gray-900"}`}
+                      className={`text-[9px] mt-0.5 ${isSharingLocation ? "text-cyan-600/80" : "text-black"}`}
                     >
                       {isSharingLocation
                         ? t(
@@ -425,7 +425,7 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
                     </p>
                   </div>
                   <MapPin
-                    className={`w-3.5 h-3.5 ${isSharingLocation ? "text-cyan-600" : "text-gray-900"}`}
+                    className={`w-3.5 h-3.5 ${isSharingLocation ? "text-cyan-600" : "text-black"}`}
                   />
                 </button>
               </div>
@@ -436,7 +436,7 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
         {/* Group progress + Join */}
         <div className="mt-auto pt-3 border-t border-gray-100">
           <div className="flex items-center justify-between mb-1.5">
-            <span className="text-[12.02px] font-bold text-gray-900 tracking-tight capitalize">
+            <span className="text-[12.02px] font-bold text-black tracking-tight capitalize">
               {t("event_card.forming", "Forming")}
             </span>
           </div>
@@ -446,7 +446,7 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
           <div className="flex items-center justify-between">
             <div className="flex gap-2">
               <button
-                className="text-[10.93px] text-gray-900 hover:text-[#0E8B8D] transition-colors font-medium underline underline-offset-2"
+                className="text-[10.93px] text-black hover:text-[#0E8B8D] transition-colors font-medium underline underline-offset-2"
                 onClick={getCalendarUrl}
                 title={t(
                   "Προσθήκη στο Google Calendar",
@@ -462,7 +462,7 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
                   e.stopPropagation();
                   navigate(`/events/${event.id}`);
                 }}
-                className="px-4 py-2 bg-gray-100 text-gray-900 text-[12.02px] font-bold rounded-full hover:bg-gray-200 transition-colors tracking-tight"
+                className="px-4 py-2 bg-gray-100 text-black text-[12.02px] font-bold rounded-full hover:bg-gray-200 transition-colors tracking-tight"
                 title={t("Λεπτομέρειες", "View Details")}
               >
                 {t("Λεπτομέρειες", "View Details")}
@@ -499,14 +499,14 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
                         "Live Location Sharing",
                       )}
                     </h3>
-                    <p className="text-[11px] font-medium text-gray-900">
+                    <p className="text-[11px] font-medium text-black">
                       {t("Προαιρετικό & Προσωρινό", "Optional & temporary")}
                     </p>
                   </div>
                 </div>
                 <button
                   onClick={() => setShowLocationConfigModal(false)}
-                  className="text-gray-900 hover:text-gray-900 p-1.5 rounded-full hover:bg-gray-100"
+                  className="text-black hover:text-black p-1.5 rounded-full hover:bg-gray-100"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -537,7 +537,7 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
                 )}
 
                 <div className="space-y-3">
-                  <h4 className="text-xs font-bold capitalize text-gray-900 tracking-tight">
+                  <h4 className="text-xs font-bold capitalize text-black tracking-tight">
                     {t("1. Ακρίβεια", "1. Precision")}
                   </h4>
                   <div className="grid grid-cols-2 gap-3">
@@ -551,11 +551,11 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
                       className={`p-3 rounded-xl border text-left flex flex-col h-full transition-all ${locationConfig.precision === "approximate" ? "border-[#111827] bg-gray-50 ring-1 ring-[#111827]" : "border-gray-200 hover:border-gray-300"}`}
                     >
                       <span
-                        className={`text-[13px] font-bold ${locationConfig.precision === "approximate" ? "text-[#111827]" : "text-gray-900"}`}
+                        className={`text-[13px] font-bold ${locationConfig.precision === "approximate" ? "text-[#111827]" : "text-black"}`}
                       >
                         {t("Κατά προσέγγιση", "Approximate")}
                       </span>
-                      <span className="text-[10px] text-gray-900 mt-1 leading-relaxed">
+                      <span className="text-[10px] text-black mt-1 leading-relaxed">
                         {t(
                           "Μόνο απόσταση & ETA, χωρίς χάρτη",
                           "Distance & ETA only, no map pin",
@@ -572,11 +572,11 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
                       className={`p-3 rounded-xl border text-left flex flex-col h-full transition-all ${locationConfig.precision === "exact" ? "border-[#111827] bg-gray-50 ring-1 ring-[#111827]" : "border-gray-200 hover:border-gray-300"}`}
                     >
                       <span
-                        className={`text-[13px] font-bold ${locationConfig.precision === "exact" ? "text-[#111827]" : "text-gray-900"}`}
+                        className={`text-[13px] font-bold ${locationConfig.precision === "exact" ? "text-[#111827]" : "text-black"}`}
                       >
                         {t("Ακριβής", "Exact")}
                       </span>
-                      <span className="text-[10px] text-gray-900 mt-1 leading-relaxed">
+                      <span className="text-[10px] text-black mt-1 leading-relaxed">
                         {t(
                           "Ακριβής παρακολούθηση GPS",
                           "Precise GPS live tracking",
@@ -587,7 +587,7 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
                 </div>
 
                 <div className="space-y-3">
-                  <h4 className="text-xs font-bold capitalize text-gray-900 tracking-tight">
+                  <h4 className="text-xs font-bold capitalize text-black tracking-tight">
                     {t("2. Κοινοποίηση Σε", "2. Share With")}
                   </h4>
                   <div className="flex flex-col gap-2">
@@ -630,7 +630,7 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
                               )}
                           </span>
                           {option === "organizer" && (
-                            <span className="text-[10px] text-gray-900 leading-relaxed">
+                            <span className="text-[10px] text-black leading-relaxed">
                               {t(
                                 "Ιδανικό για ξεναγήσεις & πεζοπορίες",
                                 "Best for guided hikes or escapes",
@@ -652,7 +652,7 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
                 </div>
 
                 <div className="space-y-3">
-                  <h4 className="text-xs font-bold capitalize text-gray-900 tracking-tight">
+                  <h4 className="text-xs font-bold capitalize text-black tracking-tight">
                     {t("3. Αυτόματη Λήξη", "3. Auto-Expiry")}
                   </h4>
                   <select
@@ -717,14 +717,14 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
               <h3 className="text-lg font-bold text-[#111827] mb-2">
                 {t("Σύνδεσμος Επαφής Εμπιστοσύνης", "Trusted Contact Link")}
               </h3>
-              <p className="text-xs font-medium leading-relaxed text-gray-900 mb-6">
+              <p className="text-xs font-medium leading-relaxed text-black mb-6">
                 {t(
                   "Αυτό δημιουργεί έναν προσωρινό σύνδεσμο ασφαλείας. Μοιραστείτε τον με ένα φίλο. Θα βλέπει την τοποθεσία σας μέχρι το τέλος της εκδήλωσης.",
                   "This creates a temporary safety link. Share this securely with a trusted friend or family member outside of Nakamas. They will see your live location until the event ends.",
                 )}
               </p>
               <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 flex items-center justify-between mb-6">
-                <span className="text-xs font-medium text-gray-900 truncate mr-2">
+                <span className="text-xs font-medium text-black truncate mr-2">
                   https://nakamas.app/safe/r9x2p
                 </span>
                 <button
@@ -742,7 +742,7 @@ export const EventCard = memo(function EventCard({ event }: EventCardProps) {
               <div className="flex gap-3">
                 <button
                   onClick={() => setShowSafetyLinkModal(false)}
-                  className="flex-1 px-4 py-3 text-sm font-bold text-gray-900 hover:bg-gray-50 rounded-xl transition-all active:scale-[0.98]"
+                  className="flex-1 px-4 py-3 text-sm font-bold text-black hover:bg-gray-50 rounded-xl transition-all active:scale-[0.98]"
                 >
                   {t("Ακύρωση", "Cancel")}
                 </button>

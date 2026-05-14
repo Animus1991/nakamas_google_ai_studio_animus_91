@@ -330,14 +330,14 @@ export default function HomeBentoDark() {
             </span>{" "}
             {t("home.hero.title3", "που ήδη θέλετε να ζήσετε.")}
           </h1>
-          <p className="text-gray-200 font-medium text-[14.42px] md:text-[16.48px] leading-relaxed max-w-xl mb-6">
+          <p className="text-white font-medium text-[14.42px] md:text-[16.48px] leading-relaxed max-w-xl mb-6">
             {t(
               "home.hero.subtitle",
               "Προσχωρήστε σε μικρές ομάδες για εκδηλώσεις, δραστηριότητες και κοντινές αποδράσεις — βασισμένες σε κοινά ενδιαφέροντα και διαθεσιμότητα.",
             )}
           </p>
 
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-3 text-[11.33px] font-bold tracking-wide text-gray-200 mb-6">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-3 text-[11.33px] font-bold tracking-wide text-white mb-6">
             <span className="flex items-center gap-1.5">
               <Users className="w-3.5 h-3.5 text-emerald-400" />{" "}
               {t("home.hero.stat1", "Μικρες ομαδες")}
@@ -373,7 +373,7 @@ export default function HomeBentoDark() {
           {/* Search with suggestions */}
           <div className="flex gap-3 items-center">
             <div ref={searchRef} className="relative flex-1 max-w-md">
-              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200 z-10" />
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-white z-10" />
               <input
                 type="text"
                 value={searchQuery}
@@ -388,7 +388,7 @@ export default function HomeBentoDark() {
               {showSearchSuggestions && !searchQuery && (
                 <div className="absolute top-full left-0 right-0 mt-2 bg-gray-800 border-gray-700 text-white rounded-xl shadow-xl border border-gray-800 z-50 overflow-hidden">
                   <div className="px-3 pt-2 pb-1">
-                    <span className="text-[10px] font-bold text-gray-200 tracking-widest">
+                    <span className="text-[10px] font-bold text-white tracking-widest">
                       {t("Δημοφιλείς Αναζητήσεις", "Popular Searches")}
                     </span>
                   </div>
@@ -400,9 +400,9 @@ export default function HomeBentoDark() {
                         handleSearchChange(s);
                         setShowSearchSuggestions(false);
                       }}
-                      className="w-full text-left px-4 py-2.5 text-sm text-gray-200 hover:bg-emerald-900/30 hover:text-emerald-400 transition-colors font-medium flex items-center gap-2"
+                      className="w-full text-left px-4 py-2.5 text-sm text-white hover:bg-emerald-900/30 hover:text-emerald-400 transition-colors font-medium flex items-center gap-2"
                     >
-                      <Search className="w-3.5 h-3.5 text-gray-200" />
+                      <Search className="w-3.5 h-3.5 text-white" />
                       {s}
                     </button>
                   ))}

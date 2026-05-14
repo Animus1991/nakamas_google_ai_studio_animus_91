@@ -317,7 +317,7 @@ export default function HomeBento() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 text-gray-900 p-6 md:p-10 rounded-[24px] shadow-sm relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-8"
+        className="bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 text-black p-6 md:p-10 rounded-[24px] shadow-sm relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-8"
       >
         <div className="relative z-10 flex-1">
           <div className="text-indigo-600 text-[14.21px] font-bold tracking-wide mb-4">
@@ -330,14 +330,14 @@ export default function HomeBento() {
             </span>{" "}
             {t("home.hero.title3", "που ήδη θέλετε να ζήσετε.")}
           </h1>
-          <p className="text-gray-900 font-medium text-[14.42px] md:text-[16.48px] leading-relaxed max-w-xl mb-6">
+          <p className="text-gray-200 font-medium text-[14.42px] md:text-[16.48px] leading-relaxed max-w-xl mb-6">
             {t(
               "home.hero.subtitle",
               "Προσχωρήστε σε μικρές ομάδες για εκδηλώσεις, δραστηριότητες και κοντινές αποδράσεις — βασισμένες σε κοινά ενδιαφέροντα και διαθεσιμότητα.",
             )}
           </p>
 
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-3 text-[11.33px] font-bold tracking-wide text-gray-900 mb-6">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-3 text-[11.33px] font-bold tracking-wide text-gray-300 mb-6">
             <span className="flex items-center gap-1.5">
               <Users className="w-3.5 h-3.5 text-indigo-600" />{" "}
               {t("home.hero.stat1", "Μικρες ομαδες")}
@@ -373,7 +373,7 @@ export default function HomeBento() {
           {/* Search with suggestions */}
           <div className="flex gap-3 items-center">
             <div ref={searchRef} className="relative flex-1 max-w-md">
-              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-900 z-10" />
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-black z-10" />
               <input
                 type="text"
                 value={searchQuery}
@@ -383,12 +383,12 @@ export default function HomeBento() {
                   "home.hero.search_placeholder",
                   "Αναζήτηση εμπειριών...",
                 )}
-                className="w-full h-11 pl-10 pr-4 rounded-full border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#18D8DB]/60 text-sm font-medium"
+                className="w-full h-11 pl-10 pr-4 rounded-full border border-gray-200 bg-gray-50 text-black placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#18D8DB]/60 text-sm font-medium"
               />
               {showSearchSuggestions && !searchQuery && (
                 <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-xl border border-gray-100 z-50 overflow-hidden">
                   <div className="px-3 pt-2 pb-1">
-                    <span className="text-[10px] font-bold text-gray-900 tracking-widest">
+                    <span className="text-[10px] font-bold text-black tracking-widest">
                       {t("Δημοφιλείς Αναζητήσεις", "Popular Searches")}
                     </span>
                   </div>
@@ -400,9 +400,9 @@ export default function HomeBento() {
                         handleSearchChange(s);
                         setShowSearchSuggestions(false);
                       }}
-                      className="w-full text-left px-4 py-2.5 text-sm text-gray-900 hover:bg-cyan-50 hover:text-[#0E8B8D] transition-colors font-medium flex items-center gap-2"
+                      className="w-full text-left px-4 py-2.5 text-sm text-black hover:bg-cyan-50 hover:text-[#0E8B8D] transition-colors font-medium flex items-center gap-2"
                     >
-                      <Search className="w-3.5 h-3.5 text-gray-900" />
+                      <Search className="w-3.5 h-3.5 text-black" />
                       {s}
                     </button>
                   ))}
@@ -411,7 +411,7 @@ export default function HomeBento() {
             </div>
             <button
               onClick={() => navigate("/trust")}
-              className="hidden sm:flex items-center justify-center bg-gray-100 hover:bg-gray-200 border border-gray-200 text-gray-900 px-5 h-11 rounded-full text-xs font-bold transition-colors whitespace-nowrap"
+              className="hidden sm:flex items-center justify-center bg-gray-100 hover:bg-gray-200 border border-gray-200 text-black px-5 h-11 rounded-full text-xs font-bold transition-colors whitespace-nowrap"
             >
               {t("home.hero.how_groups", "Πώς λειτουργούν οι ομάδες")}
             </button>
@@ -431,7 +431,7 @@ export default function HomeBento() {
             <h3 className="text-[14.63px] font-bold text-[#111827]">
               {t("home.pending_feedback.title", "Εκκρεμής Αξιολόγηση")}
             </h3>
-            <p className="text-[11.33px] text-gray-900 font-medium mt-0.5 leading-relaxed">
+            <p className="text-[11.33px] text-black font-medium mt-0.5 leading-relaxed">
               {t(
                 "home.pending_feedback.body",
                 'Αξιολογήστε τα 3 μέλη από το "Comedy Night" για να ξεκλειδώσετε την επόμενη κράτησή σας.',
@@ -441,7 +441,7 @@ export default function HomeBento() {
         </div>
         <button
           onClick={() => navigate("/plans")}
-          className="text-[12.38px] tracking-wider font-bold bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 text-gray-900 px-4 py-2 rounded-full whitespace-nowrap hover:bg-black w-full sm:w-auto shadow-sm transition-colors"
+          className="text-[12.38px] tracking-wider font-bold bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 text-black px-4 py-2 rounded-full whitespace-nowrap hover:bg-black w-full sm:w-auto shadow-sm transition-colors"
         >
           {t("home.pending_feedback.cta", "Αξιολόγηση")}
         </button>
@@ -485,7 +485,7 @@ export default function HomeBento() {
             <h3 className="font-bold text-[#111827] text-[14.63px] mb-1">
               {title}
             </h3>
-            <p className="text-[12.38px] leading-relaxed text-gray-900 font-medium">
+            <p className="text-[12.38px] leading-relaxed text-black font-medium">
               {body}
             </p>
           </div>
@@ -495,7 +495,7 @@ export default function HomeBento() {
       {/* Categories & Filters */}
       <section className="space-y-4">
         <div>
-          <h2 className="text-[11.6px] font-bold text-gray-900 tracking-wide mb-3">
+          <h2 className="text-[11.6px] font-bold text-black tracking-wide mb-3">
             {t("home.explore_categories", "Εξερευνηση κατηγοριων")}
           </h2>
           <div ref={categoryScrollRef} className="flex flex-nowrap gap-2 overflow-x-auto pb-1 noscrollbar">
@@ -505,8 +505,8 @@ export default function HomeBento() {
                 onClick={() => setActiveCategory(cat)}
                 className={`whitespace-nowrap px-3.5 py-1 rounded-full text-[12.75px] font-bold shadow-sm transition-colors tracking-wide ${
                   activeCategory === cat
-                    ? "bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 text-gray-900"
-                    : "bg-white border border-gray-200 text-gray-900 hover:text-[#111827] hover:bg-gray-50"
+                    ? "bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 text-black"
+                    : "bg-white border border-gray-200 text-black hover:text-[#111827] hover:bg-gray-50"
                 }`}
               >
                 {categoryTranslations[cat] ?? cat}
@@ -524,7 +524,7 @@ export default function HomeBento() {
               className={`whitespace-nowrap px-3 py-1 rounded-full text-[11.82px] font-bold transition-colors border ${
                 tagFilter === tag
                   ? "bg-[#18D8DB]/20 border-[#18D8DB] text-[#0E8B8D]"
-                  : "bg-white border-gray-200 text-gray-900 hover:border-gray-300 hover:text-[#111827]"
+                  : "bg-white border-gray-200 text-black hover:border-gray-300 hover:text-[#111827]"
               }`}
             >
               {tagTranslations[tag] ?? tag}
@@ -625,7 +625,7 @@ export default function HomeBento() {
                 {t("home.feed.sort.group_progress", "Πρόοδος Ομάδας")}
               </option>
             </select>
-            <ArrowDownUp className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3 h-3 text-gray-900 pointer-events-none" />
+            <ArrowDownUp className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3 h-3 text-black pointer-events-none" />
           </div>
         </div>
       </section>
@@ -636,13 +636,13 @@ export default function HomeBento() {
           <div className="flex bg-gray-100 p-1 rounded-lg w-fit">
             <button
               onClick={() => setFeedType("For You")}
-              className={`px-4 py-1.5 rounded-md text-[12.73px] font-bold transition-colors ${feedType === "For You" ? "bg-white shadow-sm text-[#111827]" : "text-gray-900 hover:text-[#111827]"}`}
+              className={`px-4 py-1.5 rounded-md text-[12.73px] font-bold transition-colors ${feedType === "For You" ? "bg-white shadow-sm text-[#111827]" : "text-black hover:text-[#111827]"}`}
             >
               {t("home.feed.for_you", "Για Σένα")}
             </button>
             <button
               onClick={() => setFeedType("Discover")}
-              className={`px-4 py-1.5 rounded-md text-[12.73px] font-bold transition-colors ${feedType === "Discover" ? "bg-white shadow-sm text-[#111827]" : "text-gray-900 hover:text-[#111827]"}`}
+              className={`px-4 py-1.5 rounded-md text-[12.73px] font-bold transition-colors ${feedType === "Discover" ? "bg-white shadow-sm text-[#111827]" : "text-black hover:text-[#111827]"}`}
             >
               {t("home.feed.discover", "Ανακάλυψε")}
             </button>
@@ -654,7 +654,7 @@ export default function HomeBento() {
             </button>
             <button
               onClick={() => navigate("/nearby")}
-              className="p-1.5 rounded-md transition-colors text-gray-900 hover:text-[#111827]"
+              className="p-1.5 rounded-md transition-colors text-black hover:text-[#111827]"
               title={t("Άνοιγμα Χάρτη", "Open Map")}
             >
               <MapIcon className="w-4 h-4" />
@@ -669,7 +669,7 @@ export default function HomeBento() {
             ))
           ) : sortedEvents.length === 0 ? (
             <div className="col-span-1 sm:col-span-2 lg:col-span-3 text-center py-12 bg-gray-50 rounded-2xl border border-dashed border-gray-200">
-              <p className="text-gray-900 font-medium text-sm">
+              <p className="text-black font-medium text-sm">
                 {t(
                   "home.feed.no_events",
                   "Δεν βρέθηκαν εκδηλώσεις για τα κριτήριά σας.",

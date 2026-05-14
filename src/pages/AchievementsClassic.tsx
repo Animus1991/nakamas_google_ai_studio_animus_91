@@ -48,7 +48,7 @@ export default function AchievementsClassic() {
     <div className="mx-auto max-w-full space-y-6 animate-in slide-in-from-bottom-4 duration-500 fade-in pb-20 md:pb-0">
       <div>
         <h1 className="text-[20.104264919475px] md:text-[26.7902365993px] font-bold text-[#111827]">{t(`Επιτεύγματα`, `Achievements`)}</h1>
-        <p className="text-gray-900 font-medium text-[13.551608211075px] md:text-[16.25212883329px] mt-1">{t(`Κερδίστε badges και XP μέσα από συμμετοχές`, `Earn badges and XP through participation`)}</p>
+        <p className="text-black font-medium text-[13.551608211075px] md:text-[16.25212883329px] mt-1">{t(`Κερδίστε badges και XP μέσα από συμμετοχές`, `Earn badges and XP through participation`)}</p>
       </div>
 
       {/* Level progress */}
@@ -60,11 +60,11 @@ export default function AchievementsClassic() {
             </div>
             <div>
               <p className="text-[18px] font-bold text-[#111827]">{t(`Επίπεδο`, `Level`)} {level}</p>
-              <p className="text-[12.1125px] text-gray-900 font-medium">{totalXP} XP {t(`συνολικά`, `total`)}</p>
+              <p className="text-[12.1125px] text-black font-medium">{totalXP} XP {t(`συνολικά`, `total`)}</p>
             </div>
           </div>
           <div className="text-right">
-            <p className="text-[12.1125px] font-bold text-gray-900 tracking-wide">{t(`Επόμενο επίπεδο`, `Next level`)}</p>
+            <p className="text-[12.1125px] font-bold text-black tracking-wide">{t(`Επόμενο επίπεδο`, `Next level`)}</p>
             <p className="text-[14.535px] font-bold text-[#111827]">{200 - (totalXP % 200)} XP</p>
           </div>
         </div>
@@ -82,7 +82,7 @@ export default function AchievementsClassic() {
             </div>
             <div>
               <p className="text-[13.8px] font-bold text-[#111827]">{t(`Ημερήσια Πρόκληση`, `Daily Challenge`)}</p>
-              <p className="text-[11.2px] text-gray-900 font-medium">{t(`Στείλε μήνυμα σε μια ομάδα σήμερα`, `Send a message in a group today`)}</p>
+              <p className="text-[11.2px] text-black font-medium">{t(`Στείλε μήνυμα σε μια ομάδα σήμερα`, `Send a message in a group today`)}</p>
             </div>
           </div>
           <div className="text-right">
@@ -105,7 +105,7 @@ export default function AchievementsClassic() {
             key={tab.key}
             onClick={() => setActiveTab(tab.key)}
             className={`pb-3 text-[13.5px] font-bold tracking-wide transition-colors whitespace-nowrap ${
-              activeTab === tab.key ? 'border-b-2 border-cyan-600 text-cyan-900' : 'text-gray-900 hover:text-[#111827]'
+              activeTab === tab.key ? 'border-b-2 border-cyan-600 text-cyan-900' : 'text-black hover:text-[#111827]'
             }`}
           >
             {tab.label}
@@ -129,18 +129,18 @@ export default function AchievementsClassic() {
                       <h4 className="text-[13.5px] font-bold text-[#111827] truncate">{a.title}</h4>
                       {a.unlocked && <Award className="w-3 h-3 text-amber-500 shrink-0" />}
                     </div>
-                    <p className="text-[12.5px] text-gray-900 font-medium mt-0.5 line-clamp-1">{a.description}</p>
+                    <p className="text-[12.5px] text-black font-medium mt-0.5 line-clamp-1">{a.description}</p>
                     <div className="flex items-center gap-2 mt-2">
                       <div className="flex-1 bg-gray-100 h-1.5 rounded-full overflow-hidden">
                         <div className={`h-full rounded-full transition-all ${a.unlocked ? 'bg-cyan-500' : 'bg-gray-300'}`} style={{ width: `${pct}%` }} />
                       </div>
-                      <span className="text-[11.2px] font-bold text-gray-900">{a.progress}/{a.maxProgress}</span>
+                      <span className="text-[11.2px] font-bold text-black">{a.progress}/{a.maxProgress}</span>
                     </div>
                   </div>
                   <div className="flex flex-col items-end gap-1 shrink-0">
                     <span className="text-[11.2px] font-bold text-cyan-600 bg-cyan-50 px-1.5 py-0.5 rounded">+{a.xp}XP</span>
                     {a.unlocked && (
-                      <button className="text-[10px] font-bold text-gray-900 hover:text-cyan-600 flex items-center gap-0.5 transition-colors">
+                      <button className="text-[10px] font-bold text-black hover:text-cyan-600 flex items-center gap-0.5 transition-colors">
                         <Share2 className="w-2.5 h-2.5" />{t(`Κοινοπ.`, `Share`)}
                       </button>
                     )}
@@ -159,18 +159,18 @@ export default function AchievementsClassic() {
               <Flame className="w-5 h-5 text-orange-500" />
               <div>
                 <p className="text-[18px] font-bold text-[#111827]">3 {t(`ημέρες σερί`, `day streak`)}</p>
-                <p className="text-[12.5px] text-gray-900 font-medium">{t(`Συνεχίστε να συμμετέχετε!`, `Keep participating!`)}</p>
+                <p className="text-[12.5px] text-black font-medium">{t(`Συνεχίστε να συμμετέχετε!`, `Keep participating!`)}</p>
               </div>
             </div>
             <div className="flex gap-2 justify-between">
               {[t(`Δε`, `Mo`), t(`Τρ`, `Tu`), t(`Τε`, `We`), t(`Πε`, `Th`), t(`Πα`, `Fr`), t(`Σα`, `Sa`), t(`Κυ`, `Su`)].map((day, i) => (
                 <div key={i} className="flex flex-col items-center gap-1">
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center text-[12.5px] font-bold ${
-                    streakDays[i] ? 'bg-orange-100 text-orange-600 border-2 border-orange-300' : 'bg-gray-100 text-gray-900'
+                    streakDays[i] ? 'bg-orange-100 text-orange-600 border-2 border-orange-300' : 'bg-gray-100 text-black'
                   }`}>
                     {streakDays[i] ? <Flame className="w-3.5 h-3.5" /> : ''}
                   </div>
-                  <span className="text-[11.2px] font-medium text-gray-900">{day}</span>
+                  <span className="text-[11.2px] font-medium text-black">{day}</span>
                 </div>
               ))}
             </div>
@@ -181,15 +181,15 @@ export default function AchievementsClassic() {
             <div className="grid grid-cols-3 gap-3">
               <div className="text-center">
                 <p className="text-[23px] font-black text-[#111827]">3</p>
-                <p className="text-[11.2px] text-gray-900 font-medium">{t(`Τρέχον`, `Current`)}</p>
+                <p className="text-[11.2px] text-black font-medium">{t(`Τρέχον`, `Current`)}</p>
               </div>
               <div className="text-center">
                 <p className="text-[23px] font-black text-[#111827]">7</p>
-                <p className="text-[11.2px] text-gray-900 font-medium">{t(`Μέγιστο`, `Longest`)}</p>
+                <p className="text-[11.2px] text-black font-medium">{t(`Μέγιστο`, `Longest`)}</p>
               </div>
               <div className="text-center">
                 <p className="text-[23px] font-black text-[#111827]">12</p>
-                <p className="text-[11.2px] text-gray-900 font-medium">{t(`Εκδηλώσεις`, `Events`)}</p>
+                <p className="text-[11.2px] text-black font-medium">{t(`Εκδηλώσεις`, `Events`)}</p>
               </div>
             </div>
           </Card>
@@ -202,15 +202,15 @@ export default function AchievementsClassic() {
             <div key={entry.rank} className={`flex items-center gap-3 px-4 py-3 border-b border-gray-50 last:border-0 ${entry.rank === 4 ? 'bg-cyan-50/50' : ''}`}>
               <span className={`w-6 h-6 rounded-full flex items-center justify-center text-[12.5px] font-black ${
                 entry.rank === 1 ? 'bg-amber-100 text-amber-700' :
-                entry.rank === 2 ? 'bg-gray-200 text-gray-900' :
-                entry.rank === 3 ? 'bg-orange-100 text-orange-700' : 'bg-gray-100 text-gray-900'
+                entry.rank === 2 ? 'bg-gray-200 text-black' :
+                entry.rank === 3 ? 'bg-orange-100 text-orange-700' : 'bg-gray-100 text-black'
               }`}>
                 {entry.rank}
               </span>
               <img src={entry.avatar} alt="" className="w-7 h-7 rounded-full border border-gray-200" />
               <span className={`flex-1 text-[13.5px] font-medium ${entry.rank === 4 ? 'font-bold text-cyan-700' : 'text-[#111827]'}`}>{entry.name}</span>
-              <span className="text-[12.5px] font-bold text-gray-900">{entry.xp} XP</span>
-              {entry.rank <= 3 && <Trophy className={`w-3.5 h-3.5 ${entry.rank === 1 ? 'text-amber-500' : entry.rank === 2 ? 'text-gray-900' : 'text-orange-400'}`} />}
+              <span className="text-[12.5px] font-bold text-black">{entry.xp} XP</span>
+              {entry.rank <= 3 && <Trophy className={`w-3.5 h-3.5 ${entry.rank === 1 ? 'text-amber-500' : entry.rank === 2 ? 'text-black' : 'text-orange-400'}`} />}
             </div>
           ))}
         </Card>

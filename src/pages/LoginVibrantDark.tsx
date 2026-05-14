@@ -46,7 +46,7 @@ export default function LoginVibrantDark() {
                   )}
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-gray-100 group-hover:text-cyan-400">{user.name}</div>
+                  <div className="text-sm font-bold text-white group-hover:text-cyan-400">{user.name}</div>
                   <div className="text-[10px] text-white">{user.isOrganizer ? t('Διοργανωτής', 'Organizer') : t('Χρήστης', 'User')} • {user.city}</div>
                 </div>
               </button>

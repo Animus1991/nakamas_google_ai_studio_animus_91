@@ -38,7 +38,7 @@ export default function WalletNeonDark() {
             <Clock className="w-4 h-4" />
             <h3 className="text-xs font-bold tracking-wide">{t('Εκκρεμεί εξόφληση', 'Pending Clearing')}</h3>
           </div>
-          <p className="text-3xl font-bold text-gray-200 mb-2">€85.00</p>
+          <p className="text-3xl font-bold text-white mb-2">€85.00</p>
           <p className="text-[10px] text-white font-medium leading-tight">
             {t('Έσοδα από πρόσφατες εκδηλώσεις. Εξοφλούνται 3-5 ημέρες μετά την ολοκλήρωση.', 'Revenue from recently completed events. Clears 3-5 days after event completion.')}
           </p>

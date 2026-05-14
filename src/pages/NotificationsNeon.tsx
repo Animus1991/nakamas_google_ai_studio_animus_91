@@ -32,7 +32,7 @@ export default function NotificationsNeon() {
       time: t(`Πριν 3 ώρες`, `3 hours ago`),
       read: true,
       icon: Calendar,
-      color: 'bg-gray-100 text-gray-900'
+      color: 'bg-gray-100 text-black'
     },
     {
       id: 'n4',
@@ -41,7 +41,7 @@ export default function NotificationsNeon() {
       time: t(`Πριν 2 μέρες`, `2 days ago`),
       read: true,
       icon: CheckCircle2,
-      color: 'bg-gray-100 text-gray-900'
+      color: 'bg-gray-100 text-black'
     },
     {
       id: 'n5',
@@ -62,7 +62,7 @@ export default function NotificationsNeon() {
       <div className="flex justify-between items-end">
         <div>
           <h1 className="text-[22.33807213275px] md:text-[26.7902365993px] font-bold text-[#111827]">{t(`Ειδοποιήσεις`, `Notifications`)}</h1>
-          <p className="text-gray-900 font-medium text-[13.551608211075px] md:text-[16.25212883329px] mt-1">{t(`Μείνετε ενημερωμένοι`, `Stay up to date`)}</p>
+          <p className="text-black font-medium text-[13.551608211075px] md:text-[16.25212883329px] mt-1">{t(`Μείνετε ενημερωμένοι`, `Stay up to date`)}</p>
         </div>
         <button className="text-[14.2457535px] font-bold text-cyan-600 hover:text-cyan-700">
           {t(`Σήμανση όλων ως αναγνωσμένα`, `Mark all as read`)}
@@ -72,7 +72,7 @@ export default function NotificationsNeon() {
       {/* Today */}
       {todayNotifs.length > 0 && (
         <div className="space-y-3">
-          <h3 className="text-[12.1125px] font-bold text-gray-900 tracking-wide">{t(`Σήμερα`, `Today`)}</h3>
+          <h3 className="text-[12.1125px] font-bold text-black tracking-wide">{t(`Σήμερα`, `Today`)}</h3>
           {todayNotifs.map((notif) => {
             const Icon = notif.icon;
             return (
@@ -82,7 +82,7 @@ export default function NotificationsNeon() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-[13.5px] leading-relaxed text-[#111827] font-medium">{notif.message}</p>
-                  <span className="text-[11.25px] font-bold text-gray-900 tracking-wide mt-1 block">{notif.time}</span>
+                  <span className="text-[11.25px] font-bold text-black tracking-wide mt-1 block">{notif.time}</span>
                   {notif.type === 'match' && (
                     <button onClick={() => navigate('/plans')} className="mt-2 text-[11.2px] font-bold text-cyan-700 bg-cyan-100 px-2.5 py-1 rounded-full hover:bg-cyan-200 transition-colors inline-flex items-center gap-1">
                       {t(`Δείτε ομάδα`, `View group`)} <ArrowRight className="w-2.5 h-2.5" />
@@ -104,7 +104,7 @@ export default function NotificationsNeon() {
       {/* Earlier */}
       {earlierNotifs.length > 0 && (
         <div className="space-y-3">
-          <h3 className="text-[11.2px] font-bold text-gray-900 tracking-wide">{t(`Προηγούμενες`, `Earlier`)}</h3>
+          <h3 className="text-[11.2px] font-bold text-black tracking-wide">{t(`Προηγούμενες`, `Earlier`)}</h3>
           {earlierNotifs.map((notif) => {
             const Icon = notif.icon;
             return (
@@ -113,8 +113,8 @@ export default function NotificationsNeon() {
                   <Icon className="w-5 h-5" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-[13.5px] leading-relaxed text-gray-900">{notif.message}</p>
-                  <span className="text-[11.25px] font-bold text-gray-900 tracking-wide mt-1 block">{notif.time}</span>
+                  <p className="text-[13.5px] leading-relaxed text-black">{notif.message}</p>
+                  <span className="text-[11.25px] font-bold text-black tracking-wide mt-1 block">{notif.time}</span>
                 </div>
               </div>
             );

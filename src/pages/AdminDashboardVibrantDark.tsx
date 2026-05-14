@@ -15,22 +15,22 @@ export default function AdminDashboardVibrantDark() {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         <Card className="p-4 border-t-4 border-t-blue-500">
-          <h3 className="text-[12.1125px] font-bold text-[#6B7280] tracking-wider">{t(`Ενεργοί`, `Active`)}</h3>
+          <h3 className="text-[12.1125px] font-bold text-white tracking-wider">{t(`Ενεργοί`, `Active`)}</h3>
           <p className="text-[25px] font-black text-white mt-1">127</p>
           <p className="text-[11.2px] text-green-500 font-bold flex items-center gap-0.5"><TrendingUp className="w-2.5 h-2.5" />+8%</p>
         </Card>
         <Card className="p-4 border-t-4 border-t-cyan-500">
-          <h3 className="text-[12.1125px] font-bold text-[#6B7280] tracking-wider">{t(`Αναφορές`, `Reports`)}</h3>
+          <h3 className="text-[12.1125px] font-bold text-white tracking-wider">{t(`Αναφορές`, `Reports`)}</h3>
           <p className="text-[25px] font-black text-white mt-1">4</p>
           <p className="text-[11.2px] text-amber-500 font-bold">{t(`εκκρεμείς`, `pending`)}</p>
         </Card>
         <Card className="p-4 border-t-4 border-t-red-500">
-          <h3 className="text-[12.1125px] font-bold text-[#6B7280] tracking-wider">{t(`Αποκλεισμένοι`, `Banned`)}</h3>
+          <h3 className="text-[12.1125px] font-bold text-white tracking-wider">{t(`Αποκλεισμένοι`, `Banned`)}</h3>
           <p className="text-[25px] font-black text-white mt-1">1</p>
           <p className="text-[11.2px] text-white font-medium">{t(`συνολικά`, `total`)}</p>
         </Card>
         <Card className="p-4 border-t-4 border-t-emerald-500">
-          <h3 className="text-[12.1125px] font-bold text-[#6B7280] tracking-wider">{t(`Εκδηλώσεις`, `Events`)}</h3>
+          <h3 className="text-[12.1125px] font-bold text-white tracking-wider">{t(`Εκδηλώσεις`, `Events`)}</h3>
           <p className="text-[25px] font-black text-white mt-1">48</p>
           <p className="text-[11.2px] text-white font-medium">{t(`αυτή τη βδομάδα`, `this week`)}</p>
         </Card>
@@ -78,7 +78,7 @@ export default function AdminDashboardVibrantDark() {
                  </div>
               </div>
               <div className="flex gap-2">
-                <button className="text-[18px]  tracking-wider bg-gray-700 hover:bg-gray-200 text-gray-200 px-3 py-1.5 rounded font-bold transition-colors shadow-sm border border-gray-700">{t(`Εξέταση`, `Review`)}</button>
+                <button className="text-[18px]  tracking-wider bg-gray-700 hover:bg-gray-200 text-white px-3 py-1.5 rounded font-bold transition-colors shadow-sm border border-gray-700">{t(`Εξέταση`, `Review`)}</button>
                 <button className="text-[18px]  tracking-wider bg-red-50 hover:bg-red-100 text--400 px-3 py-1.5 rounded font-bold transition-colors border border-red-200">{t(`Αποκλεισμός`, `Ban`)}</button>
               </div>
             </Card>

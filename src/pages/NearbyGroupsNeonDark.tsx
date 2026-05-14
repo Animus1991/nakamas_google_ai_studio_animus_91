@@ -270,7 +270,7 @@ export default function NearbyGroupsNeonDark() {
                 }}
               >
                 {!isSelected && (
-                  <div className="bg-gray-800 text-gray-100 text-xs font-bold px-2 py-1 rounded shadow-lg mb-1 group-hover:-translate-y-1 transition-transform whitespace-nowrap border border-gray-700">
+                  <div className="bg-gray-800 text-white text-xs font-bold px-2 py-1 rounded shadow-lg mb-1 group-hover:-translate-y-1 transition-transform whitespace-nowrap border border-gray-700">
                     {group.category} • {(1.2 + idx * 0.8).toFixed(1)}km
                   </div>
                 )}
@@ -481,7 +481,7 @@ export default function NearbyGroupsNeonDark() {
             <div className="w-full h-full flex items-center justify-center bg-[#e5e3df] p-8 text-center">
               <div className="bg-gray-800 p-6 rounded-xl shadow-lg max-w-sm border border-red-100">
                 <AlertTriangle className="w-10 h-10 text-red-500 mx-auto mb-3" />
-                <h3 className="font-bold text-gray-100 mb-2">Map Error</h3>
+                <h3 className="font-bold text-white mb-2">Map Error</h3>
                 <p className="text-xs text-white">
                   There was a problem loading the map.
                 </p>
